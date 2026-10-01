@@ -1,9 +1,80 @@
-<!--
-  Plain full-height shell. Sprint 1 adds the admin dashboard layout
-  (UDashboardGroup + sidebar); Sprint 3 adds the navigation-free guest layout.
--->
+<script setup lang="ts">
+import type { NavigationMenuItem } from '@nuxt/ui'
+
+const { can } = useCurrentUser()
+
+interface NavLink extends NavigationMenuItem {
+  permission?: string
+}
+
+const sections: { label: string, links: NavLink[] }[] = [
+  {
+    label: 'Overview',
+    links: [
+      { label: 'Home', icon: 'i-lucide-house', to: '/' },
+    ],
+  },
+  {
+    label: 'Access control',
+    links: [
+      { label: 'Users', icon: 'i-lucide-users', to: '/admin/users', permission: 'users.view' },
+      { label: 'Roles', icon: 'i-lucide-shield', to: '/admin/roles', permission: 'roles.view' },
+      { label: 'Permissions', icon: 'i-lucide-key-round', to: '/admin/permissions', permission: 'permissions.view' },
+    ],
+  },
+]
+
+// Each section becomes one navigation group; sections with nothing visible are dropped.
+const navigation = computed<NavigationMenuItem[][]>(() => sections
+  .map(section => ({
+    label: section.label,
+    links: section.links
+      .filter(link => !link.permission || can(link.permission))
+      .map(({ permission: _permission, ...link }) => link),
+  }))
+  .filter(section => section.links.length > 0)
+  .map(section => [{ label: section.label, type: 'label' as const }, ...section.links]))
+</script>
+
 <template>
-  <div class="min-h-dvh bg-default text-default">
+  <UDashboardGroup unit="rem">
+    <UDashboardSidebar
+      collapsible
+      resizable
+      class="bg-elevated/25"
+      :ui="{ footer: 'lg:border-t lg:border-default' }"
+    >
+      <template #header="{ collapsed }">
+        <NuxtLink
+          to="/"
+          class="flex items-center gap-2 overflow-hidden"
+          aria-label="CSMF-MRS home"
+        >
+          <UIcon
+            name="i-lucide-clipboard-check"
+            class="size-6 shrink-0 text-primary"
+          />
+          <span
+            v-if="!collapsed"
+            class="truncate font-semibold text-highlighted"
+          >CSMF-MRS</span>
+        </NuxtLink>
+      </template>
+
+      <template #default="{ collapsed }">
+        <UNavigationMenu
+          :collapsed="collapsed"
+          :items="navigation"
+          orientation="vertical"
+          tooltip
+        />
+      </template>
+
+      <template #footer="{ collapsed }">
+        <AppUserMenu :collapsed="collapsed" />
+      </template>
+    </UDashboardSidebar>
+
     <slot />
-  </div>
+  </UDashboardGroup>
 </template>

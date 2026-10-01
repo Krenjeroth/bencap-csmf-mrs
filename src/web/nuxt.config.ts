@@ -50,13 +50,21 @@ export default defineNuxtConfig({
     // Overridden by NUXT_PUBLIC_SANCTUM_BASE_URL.
     baseUrl: 'http://csmf-mrs:8003',
     mode: 'cookie',
-    client: {
-      // Sprint 1 adds Fortify login and GET /api/v1/me; until then there is
-      // no user endpoint to ask on page load.
-      initialRequest: false,
-    },
+    // Fortify routes live under /api, as in PRJ-itsms (src/api/config/fortify.php).
     endpoints: {
+      csrf: '/sanctum/csrf-cookie',
+      login: '/api/login',
+      logout: '/api/logout',
       user: '/api/v1/me',
+    },
+    redirect: {
+      keepRequestedRoute: true,
+      // useSignIn() decides where to go after sign-in (two-factor step,
+      // pending account step, or the requested page).
+      onLogin: false,
+      onLogout: '/login',
+      onAuthOnly: '/login',
+      onGuestOnly: '/',
     },
   },
 })

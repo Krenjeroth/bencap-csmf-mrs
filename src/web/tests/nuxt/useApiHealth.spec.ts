@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from 'vitest'
 import { mountSuspended, registerEndpoint } from '@nuxt/test-utils/runtime'
 import { flushPromises } from '@vue/test-utils'
-import IndexPage from '~/pages/index.vue'
+import ApiStatusCard from '~/components/app/ApiStatusCard.vue'
 
 const OK_BODY = { status: 'ok', app: 'CSMF-MRS', database: 'ok', time: '2026-10-01T10:00:00+08:00' }
 
@@ -64,24 +64,23 @@ describe('useApiHealth', () => {
   })
 })
 
-describe('index page', () => {
+describe('ApiStatusCard', () => {
   it('shows Online once the health check succeeds', async () => {
     answerHealth(200, OK_BODY)
 
-    const page = await mountSuspended(IndexPage)
+    const card = await mountSuspended(ApiStatusCard)
     await flushPromises()
 
-    expect(page.get('[data-testid="health-badge"]').text()).toBe('Online')
-    expect(page.text()).toContain('Client Satisfaction Measurement Form Management and Reporting System')
+    expect(card.get('[data-testid="health-badge"]').text()).toBe('Online')
   })
 
   it('tells the user how to start the API when it does not answer properly', async () => {
     answerHealth(502, '<html><body>Bad Gateway</body></html>')
 
-    const page = await mountSuspended(IndexPage)
+    const card = await mountSuspended(ApiStatusCard)
     await flushPromises()
 
-    expect(page.get('[data-testid="health-badge"]').text()).toBe('Offline')
-    expect(page.get('[data-testid="health-hint"]').text()).toContain('php artisan serve --host=csmf-mrs --port=8003')
+    expect(card.get('[data-testid="health-badge"]').text()).toBe('Offline')
+    expect(card.get('[data-testid="health-hint"]').text()).toContain('php artisan serve --host=csmf-mrs --port=8003')
   })
 })

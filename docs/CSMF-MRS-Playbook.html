@@ -216,8 +216,8 @@ footer.foot .wrap { padding-block: 18px 28px; }
       <span>Repository <b class="mono">github.com/Krenjeroth/bencap-csmf-mrs</b></span>
       <span>Workspace <b class="mono">PRJ-csmf-mrs</b></span>
       <span>Dev ports <b class="mono">csmf-mrs:8030</b> web · <b class="mono">csmf-mrs:8003</b> API</span>
-      <span>Draft <b>v0.3 · 2026-10-01</b></span>
-      <span>Status <b>Sprint 0 done · Q1, Q3, Q4, Q16, Q20 decided</b></span>
+      <span>Draft <b>v0.4 · 2026-10-01</b></span>
+      <span>Status <b>Sprints 0–1 done · Q1, Q3, Q4, Q16, Q20 decided</b></span>
     </div>
     <div class="legend">
       <span class="chip c-asis">As provided</span> taken verbatim from the source files
@@ -1111,7 +1111,7 @@ NUXT_PUBLIC_SANCTUM_BASE_URL=http://csmf-mrs:8003</pre></div>
         <li><b>Errors</b> use Laravel's defaults: 422 <code>{"message", "errors": {field: [..]}}</code>; 401, 403, 404, 419 (CSRF) and 429 return <code>{"message"}</code>. The guest UI maps field keys to inline messages.</li>
         <li><b>IDs</b> are UUID strings for users, feedback and kiosks, and integers for lookups. Dates are <code>YYYY-MM-DD</code>; timestamps are ISO 8601 with the <code>+08:00</code> offset.</li>
         <li><b>Pagination</b> takes <code>?page=&amp;per_page=</code> (max 100). Sorting takes <code>?sort=-transaction_date</code> from a whitelist per endpoint.</li>
-        <li><b>Auth</b> for the SPA is a Sanctum cookie session (call <code>GET /sanctum/csrf-cookie</code> first). The kiosk sends <code>Authorization: Bearer &lt;token&gt;</code> with the ability <code>kiosk:submit</code>.</li>
+        <li><b>Auth</b> for the SPA is a Sanctum cookie session (call <code>GET /sanctum/csrf-cookie</code> first; Fortify routes are under <code>/api</code>). Full Sprint 1 contracts: <code>docs/api/README.md</code>. The kiosk sends <code>Authorization: Bearer &lt;token&gt;</code> with the ability <code>kiosk:submit</code>.</li>
         <li><b>Throttles</b> are named limiters: <code>public-read</code> (60 per minute per IP), <code>feedback-submit</code> (10 per minute and 50 per day per IP), <code>login</code> (5 per minute per email+IP) and <code>export</code> (10 per minute per user).</li>
       </ul>
     </section>
@@ -1127,15 +1127,17 @@ NUXT_PUBLIC_SANCTUM_BASE_URL=http://csmf-mrs:8003</pre></div>
           <tr><td class="mono">GET</td><td class="mono">/api/v1/public/offices/{slug}/services</td><td>throttle:public-read</td><td>Active services of the office</td></tr>
           <tr><td class="mono">GET</td><td class="mono">/api/v1/public/form-definition</td><td>throttle:public-read</td><td>Questions, options, regions, signed <code>form_token</code> (issued-at)</td></tr>
           <tr><td class="mono">POST</td><td class="mono">/api/v1/public/feedback</td><td>throttle:feedback-submit</td><td>Submit a feedback form</td></tr>
-          <tr class="group"><td colspan="4">Authentication (Fortify, stateful)</td></tr>
+          <tr class="group"><td colspan="4">Authentication (Fortify, stateful, prefix /api as in PRJ-itsms)</td></tr>
           <tr><td class="mono">GET</td><td class="mono">/sanctum/csrf-cookie</td><td>none</td><td>Sets the XSRF-TOKEN cookie</td></tr>
-          <tr><td class="mono">POST</td><td class="mono">/login</td><td>throttle:login</td><td>Email and password; responds <code>{"two_factor": true}</code> when 2FA is enabled</td></tr>
-          <tr><td class="mono">POST</td><td class="mono">/two-factor-challenge</td><td>login session</td><td><code>code</code> or <code>recovery_code</code></td></tr>
-          <tr><td class="mono">POST</td><td class="mono">/logout</td><td>auth</td><td>Ends the session</td></tr>
-          <tr><td class="mono">PUT</td><td class="mono">/user/password</td><td>auth</td><td>Change own password</td></tr>
-          <tr><td class="mono">POST · DELETE</td><td class="mono">/user/two-factor-authentication</td><td>auth + password.confirm</td><td>Enable or disable 2FA; then <code>GET /user/two-factor-qr-code</code> and <code>POST /user/confirmed-two-factor-authentication</code></td></tr>
-          <tr><td class="mono">GET</td><td class="mono">/api/v1/me</td><td>auth:sanctum</td><td>Current user, roles, permissions and office (nuxt-auth-sanctum <code>userEndpoint</code>)</td></tr>
+          <tr><td class="mono">POST</td><td class="mono">/api/login</td><td>throttle:login</td><td>Email and password; responds <code>{"two_factor": true}</code> when 2FA is enabled</td></tr>
+          <tr><td class="mono">POST</td><td class="mono">/api/two-factor-challenge</td><td>login session</td><td><code>code</code> or <code>recovery_code</code></td></tr>
+          <tr><td class="mono">POST</td><td class="mono">/api/logout</td><td>auth</td><td>Ends the session</td></tr>
+          <tr><td class="mono">PUT</td><td class="mono">/api/user/password</td><td>auth</td><td>Change own password</td></tr>
+          <tr><td class="mono">POST · DELETE</td><td class="mono">/api/user/two-factor-authentication</td><td>auth + password.confirm</td><td>Enable or disable 2FA; then <code>GET /api/user/two-factor-qr-code</code> and <code>POST /api/user/confirmed-two-factor-authentication</code></td></tr>
+          <tr><td class="mono">GET</td><td class="mono">/api/v1/me</td><td>auth:sanctum</td><td>Current user, roles and permissions (nuxt-auth-sanctum user endpoint). Returned without a <code>data</code> wrapper</td></tr>
           <tr class="group"><td colspan="4">Admin (auth:sanctum)</td></tr>
+          <tr><td class="mono">GET</td><td class="mono">/api/v1/admin/role-options</td><td>users.view</td><td>Role names for pickers <span class="chip c-ok">Added S1</span></td></tr>
+          <tr><td class="mono">GET</td><td class="mono">/api/v1/admin/permission-options</td><td>roles.view</td><td>Permission names for the role editor <span class="chip c-ok">Added S1</span></td></tr>
           <tr><td class="mono">GET · POST</td><td class="mono">/api/v1/admin/users</td><td>users.view · users.create</td><td>List and filter; create</td></tr>
           <tr><td class="mono">GET · PUT · DELETE</td><td class="mono">/api/v1/admin/users/{uuid}</td><td>users.view · users.update · users.delete</td><td>Show, update, soft-delete</td></tr>
           <tr><td class="mono">PUT</td><td class="mono">/api/v1/admin/users/{uuid}/roles</td><td>users.update</td><td>Sync roles <code>{"role_ids":[1]}</code></td></tr>
@@ -1835,7 +1837,7 @@ class StoreFeedbackRequest extends FormRequest
 </div>
 </main>
 
-<footer class="foot"><div class="wrap">CSMF-MRS Master Playbook · draft v0.3 · 2026-10-01 · Prepared for Krenjer Jan J. Sapitola · Sources: CSMF-MRS.txt, 2026 services.docx, CSMF blank form.xlsx, Picture.jpg, Picture1.jpg</div></footer>
+<footer class="foot"><div class="wrap">CSMF-MRS Master Playbook · draft v0.4 · 2026-10-01 · Prepared for Krenjer Jan J. Sapitola · Sources: CSMF-MRS.txt, 2026 services.docx, CSMF blank form.xlsx, Picture.jpg, Picture1.jpg</div></footer>
 
 <script>
 /* ---------- Source data (verbatim) ---------- */
@@ -2184,11 +2186,11 @@ const SPRINTS = [
     tests: ["API: 8 Pest tests (health ok, 503 degraded, no version leak, /up, 405 on writes) pass twice in a row","Web: 8 Vitest tests (composable states, page Online/Offline) pass twice in a row","migrate:fresh run twice cleanly","Live smoke: GET /api/v1/health 200 with database ok; CORS header names only the web origin"],
     exit: ["Both apps start on their pinned ports (needs the csmf-mrs hosts entry)","Q1, Q3, Q4, Q16, Q20 decided 2026-10-01","First CI run happens on the first push to GitHub"],
     commits: ["Initialize repository and project docs","Scaffold Laravel 12 API with health endpoint","Scaffold Nuxt 4 web app with status page","Add CI workflow and Dependabot"] },
-  { id: "S1", name: "Identity & access", wk: "Weeks 3–4", goal: "Staff can sign in securely, and the System Administrator manages users, roles and permissions.",
-    tasks: ["UUID users (HasUuids) and fix sessions + personal_access_tokens for UUIDs","roles, permissions, role_user, permission_role migrations; models with belongsToMany","Seed roles, the permission catalog (2.6) and the role-permission matrix (upsert, idempotent)","php artisan csmf:create-sysadmin: reads SYSADMIN_NAME/EMAIL, prompts for the password, refuses if one exists","Fortify headless: login, logout, 2FA, password update; registration and reset disabled","Gate::before for is_system roles; Policies for User, Role, Permission","EnsureTwoFactorEnabled and must_change_password middleware","Audit log: table, AuditObserver, auth event listeners","Nuxt: login page (public layout), 2FA challenge, dashboard shell (UDashboardGroup + UDashboardSidebar), permission middleware","Admin pages: Users, Roles (permission checklist), Permissions"],
-    tests: ["Login success, wrong password, 6th attempt returns 429, inactive user rejected","Role × endpoint authorization matrix","Cannot delete or demote yourself; cannot delete an is_system role","Every mutation writes exactly one audit row; password never appears in audit JSON","Playwright: login → 2FA → dashboard → logout"],
-    exit: ["System Administrator signs in with 2FA and creates an Admin user","Authorization matrix tests pass"],
-    commits: ["feat(api): uuid users and rbac tables","feat(api): fortify headless auth with 2fa","feat(web): login and dashboard shell"] },
+  { id: "S1", name: "Identity & access", wk: "Done 2026-10-01", goal: "Staff can sign in securely, and the System Administrator manages users, roles and permissions.",
+    tasks: ["UUID users (HasUuids, UUIDv7) with must_change_password, is_active, soft deletes; sessions and personal_access_tokens use UUID owners","roles, permissions, role_user, permission_role exactly as specified; PermissionCatalog seeded idempotently (33 permissions)","System Administrator re-synced to every permission on each seed; Admin defaults applied only when first created","php artisan csmf:create-sysadmin: name/email from options or SYSADMIN_* config, hidden password prompt, refuses if an active one exists","Fortify headless under /api (as PRJ-itsms): login, logout, two-factor, password change; registration, email reset and passkeys off","Gate::before maps permission titles to abilities; AccountGuard enforces no self-lockout and no escalation, for System Administrators too","password.changed and two-factor.enforced middleware on all admin routes","Append-only audit log: model observer plus sign-in, password and two-factor events","Admin API: users (with one-time passwords and resets), roles, permissions, role/permission option lookups; GET /api/v1/me","Nuxt: login, two-factor challenge, forced password change, two-factor setup with recovery codes, dashboard shell with permission-filtered sidebar","Admin pages: Users (search, filters, add, edit, roles, reset, delete), Roles (permission checklist by resource), Permissions","Office scoping for Admin moves to Sprint 2, together with the offices table and users.office_id"],
+    tests: ["API: 265 Pest tests, including a 20-endpoint × 6-caller authorization matrix, lockout rules, seeders run twice, audit immutability","Web: 54 Vitest tests (sign-in page, middleware, permission checks, list composable, error parsing, dashboard shell)","Browser check on csmf-mrs:8030: sign in, Users and Roles pages, add user with one-time password, two-factor setup through password confirmation to recovery codes","Playwright E2E for this flow moves to Sprint 3, when Playwright is set up in tests/e2e"],
+    exit: ["A System Administrator signs in with two-factor and creates an Admin user","Authorization matrix tests pass"],
+    commits: ["Add identity, RBAC and audit trail to the API","Add sign-in, account security and access-control screens"] },
   { id: "S2", name: "Master data", wk: "Weeks 5–6", goal: "Offices, service types and the cleaned 2026 services list are in the system and maintainable.",
     tasks: ["offices (with parent_id, slug), service_types, services (office_id, service_type_id, charter_year) migrations","Seeders: offices from 1.5 plus any confirmed additions (Q5); service types Internal/External; regions; sqd_questions","Services seeder from the signed-off cleaned list (Q6) in database/seeders/data/services-2026.php, upserted on (office_id, name, charter_year)","php artisan csmf:import-services {csv} --year=2027 for the annual Standard Change, with a dry-run diff","CRUD APIs + Policies + Resources; delete blocked when referenced, deactivate instead","Admin pages with UTable filters, office tree view, active toggles"],
     tests: ["Seeders run twice with identical row counts","Service name unique per office and year; 255-char boundary; 256 rejected","Cannot delete a service type in use; cannot delete an office with services","Import dry-run reports adds, unchanged and deactivations without writing"],

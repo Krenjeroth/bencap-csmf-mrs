@@ -1,71 +1,54 @@
 <script setup lang="ts">
-import type { ApiHealthState } from '~/composables/useApiHealth'
+definePageMeta({ middleware: ['sanctum:auth'] })
+useHead({ title: 'Home · CSMF-MRS' })
 
-useHead({ title: 'CSMF-MRS' })
+const { user, can } = useCurrentUser()
 
-const { state, checkedAt, check } = useApiHealth()
-onMounted(check)
-
-const status: Record<ApiHealthState, { label: string, color: 'neutral' | 'success' | 'warning' | 'error', icon: string, hint: string }> = {
-  checking: { label: 'Checking', color: 'neutral', icon: 'i-lucide-loader-circle', hint: 'Contacting the API.' },
-  ok: { label: 'Online', color: 'success', icon: 'i-lucide-circle-check', hint: 'The API and database are reachable.' },
-  degraded: { label: 'Database down', color: 'warning', icon: 'i-lucide-triangle-alert', hint: 'The API is running but cannot reach the database. Check that XAMPP\'s database server is started.' },
-  unreachable: { label: 'Offline', color: 'error', icon: 'i-lucide-circle-x', hint: 'The API did not answer. Start it with: php artisan serve --host=csmf-mrs --port=8003' },
-}
-
-const current = computed(() => status[state.value])
+const shortcuts = computed(() => [
+  { label: 'Users', description: 'Add staff accounts, assign roles, reset passwords.', icon: 'i-lucide-users', to: '/admin/users', permission: 'users.view' },
+  { label: 'Roles', description: 'Decide what each role can see and do.', icon: 'i-lucide-shield', to: '/admin/roles', permission: 'roles.view' },
+  { label: 'Permissions', description: 'Review the permission catalog.', icon: 'i-lucide-key-round', to: '/admin/permissions', permission: 'permissions.view' },
+].filter(item => can(item.permission)))
 </script>
 
 <template>
-  <main class="mx-auto flex min-h-dvh max-w-2xl flex-col justify-center gap-8 px-4 py-12">
-    <header class="flex flex-col gap-2">
-      <p class="text-xs font-semibold uppercase tracking-widest text-secondary">
-        Provincial Government of Benguet
-      </p>
-      <h1 class="text-3xl font-bold text-highlighted text-balance">
-        Client Satisfaction Measurement Form Management and Reporting System
-      </h1>
-      <p class="text-muted">
-        Collects ARTA client satisfaction feedback from every office and turns it into summary reports.
-      </p>
-    </header>
+  <UDashboardPanel id="home">
+    <template #header>
+      <UDashboardNavbar title="Home">
+        <template #leading>
+          <UDashboardSidebarCollapse />
+        </template>
+      </UDashboardNavbar>
+    </template>
 
-    <UCard>
-      <div class="flex flex-wrap items-center justify-between gap-4">
+    <template #body>
+      <div class="flex max-w-4xl flex-col gap-6">
         <div class="flex flex-col gap-1">
-          <span class="text-sm font-medium text-highlighted">System status</span>
-          <span
-            class="text-sm text-muted"
-            data-testid="health-hint"
-          >{{ current.hint }}</span>
+          <h1 class="text-2xl font-semibold text-highlighted text-balance">
+            Welcome, {{ user?.name }}
+          </h1>
+          <p class="text-muted">
+            The dashboard with feedback figures arrives once offices, services and the feedback form are in place.
+          </p>
         </div>
-        <UBadge
-          :color="current.color"
-          :icon="current.icon"
-          variant="subtle"
-          size="lg"
-          data-testid="health-badge"
+
+        <div
+          v-if="shortcuts.length"
+          class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
         >
-          {{ current.label }}
-        </UBadge>
-      </div>
-      <template #footer>
-        <div class="flex items-center justify-between gap-4">
-          <span class="text-xs text-dimmed tabular-nums">
-            {{ checkedAt ? `Last checked ${checkedAt.toLocaleTimeString('en-PH')}` : 'Not checked yet' }}
-          </span>
-          <UButton
-            icon="i-lucide-refresh-cw"
-            color="neutral"
-            variant="outline"
-            size="sm"
-            :loading="state === 'checking'"
-            @click="check"
-          >
-            Check again
-          </UButton>
+          <UPageCard
+            v-for="item in shortcuts"
+            :key="item.to"
+            :title="item.label"
+            :description="item.description"
+            :icon="item.icon"
+            :to="item.to"
+            variant="subtle"
+          />
         </div>
-      </template>
-    </UCard>
-  </main>
+
+        <AppApiStatusCard class="max-w-xl" />
+      </div>
+    </template>
+  </UDashboardPanel>
 </template>

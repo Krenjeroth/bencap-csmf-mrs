@@ -48,9 +48,16 @@ cd src/api
 composer install
 cp .env.example .env
 php artisan key:generate
-php artisan migrate
+php artisan migrate --seed
+php artisan csmf:create-sysadmin
 php artisan serve --host=csmf-mrs --port=8003
 ```
+
+`migrate --seed` creates the System Administrator and Admin roles and the
+permission catalog (safe to re-run). `csmf:create-sysadmin` creates the
+first account; it asks for the password at a hidden prompt. On first
+sign-in you will be asked to turn on two-factor login (any authenticator
+app works).
 
 Check it: <http://csmf-mrs:8003/api/v1/health> should return
 `{"status":"ok", ...}`.
@@ -63,8 +70,8 @@ npm install
 npm run dev
 ```
 
-Open <http://csmf-mrs:8030>. The status card shows **Online** when the
-API and database are reachable.
+Open <http://csmf-mrs:8030> and sign in. The status card on the sign-in
+page shows **Online** when the API and database are reachable.
 
 Ports are fixed per the workspace `CLAUDE.md`: web `8030`, API `8003`.
 Never bind port 80, which XAMPP's Apache uses for other projects.
@@ -87,6 +94,8 @@ to `src/api/.env` (and optionally `src/web/.env.example` to
 
 ## Status
 
-Sprint 0 (foundation & governance) complete. Next: Sprint 1, identity and
-access (UUID users, Fortify login with two-factor, roles and permissions).
+Sprint 1 (identity & access) complete: sign-in with two-factor, forced
+password change for temporary passwords, Users / Roles / Permissions
+screens, append-only audit log. API contracts: [docs/api](docs/api/README.md).
+Next: Sprint 2, master data (offices, service types, the 2026 services list).
 See the playbook's Tab 04 for the roadmap.

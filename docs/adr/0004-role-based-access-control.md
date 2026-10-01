@@ -38,7 +38,17 @@ the specified schema.
 
 ## Consequences
 
-- Every admin route needs a Policy check, and Sprint 1 ships an
-  authorization matrix test (each endpoint × each role).
+- Every admin route declares its permission with `can:` route middleware,
+  and Sprint 1 ships an authorization matrix test (each endpoint × each
+  caller type).
+- Lockout and escalation rules (no self-delete, keep one active System
+  Administrator, only a System Administrator grants that role) live in
+  `App\Services\AccountGuard`, not in Policies: `Gate::before` lets a
+  System Administrator pass every Policy, and these rules must bind them
+  too. Office scoping for Admin (Sprint 2) uses Policies and query scopes,
+  where the System Administrator bypass is the intended behaviour.
+- Pickers on other screens use small lookup endpoints (`/role-options`
+  needs `users.view`, `/permission-options` needs `roles.view`), so a
+  user can assign roles without access to the Roles screen.
 - Adding a permission in the UI has no effect until code checks it.
   Catalog permissions referenced in code are marked protected.
