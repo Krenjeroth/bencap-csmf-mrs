@@ -1,0 +1,124 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  api:
+    name: API (Laravel / Pest / Pint) on ${{ matrix.db.name }}
+    runs-on: ubuntu-latest
+
+    # Same schema must work on the dev server (MariaDB 10.4, XAMPP) and on
+    # MySQL 8 (PRJ-itsms CI). See docs/adr/0002-database-server.md.
+    strategy:
+      fail-fast: false
+      matrix:
+        db:
+          - { name: mysql-8.0, image: "mysql:8.0" }
+          - { name: mariadb-10.4, image: "mariadb:10.4" }
+
+    services:
+      database:
+        image: ${{ matrix.db.image }}
+        env:
+          MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+          MYSQL_DATABASE: db_csmf_mrs_test
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h 127.0.0.1"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=5
+
+    defaults:
+      run:
+        working-directory: src/api
+
+    env:
+      DB_CONNECTION: mysql
+      DB_HOST: 127.0.0.1
+      DB_PORT: 3306
+      DB_DATABASE: db_csmf_mrs_test
+      DB_USERNAME: root
+      DB_PASSWORD: ""
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+          extensions: mbstring, pdo_mysql, bcmath, ctype, json, tokenizer, xml
+          coverage: none
+
+      - name: Cache Composer packages
+        uses: actions/cache@v4
+        with:
+          path: src/api/vendor
+          key: composer-${{ hashFiles('src/api/composer.lock') }}
+          restore-keys: composer-
+
+      - name: Install dependencies
+        run: composer install --no-interaction --prefer-dist --no-progress
+
+      - name: Audit dependencies
+        run: composer audit --no-interaction
+
+      - name: Prepare environment
+        run: |
+          cp .env.example .env
+          php artisan key:generate
+
+      - name: Lint (Pint, PSR-12)
+        run: vendor/bin/pint --test
+
+      - name: Migrate twice (idempotency check)
+        run: |
+          php artisan migrate:fresh --force
+          php artisan migrate:fresh --force
+
+      - name: Run tests (Pest)
+        run: php artisan test
+
+  web:
+    name: Web (Nuxt lint / typecheck / Vitest / build)
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: src/web
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: src/web/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Audit production dependencies
+        run: npm audit --omit=dev --audit-level=high
+
+      - name: Lint (ESLint)
+        run: npm run lint
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Run tests (Vitest)
+        run: npm test
+
+      - name: Build
+        run: npm run build

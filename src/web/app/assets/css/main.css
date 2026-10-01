@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+/*
+ * CSMF-MRS theme (playbook 1.4): Benguet pine primary, muted seal gold for
+ * official accents, slate neutrals, off-white ground so it is easy on the eyes.
+ */
+@theme static {
+  --font-sans: "Public Sans", system-ui, sans-serif;
+
+  --color-pine-50: #eef6f3;
+  --color-pine-100: #d5e9e1;
+  --color-pine-200: #aed4c6;
+  --color-pine-300: #7fb9a5;
+  --color-pine-400: #529a83;
+  --color-pine-500: #357e68;
+  --color-pine-600: #2a6754;
+  --color-pine-700: #225445;
+  --color-pine-800: #1c4439;
+  --color-pine-900: #17382f;
+  --color-pine-950: #0c201a;
+
+  --color-seal-50: #fbf6ea;
+  --color-seal-100: #f3e9d2;
+  --color-seal-200: #e6d1a3;
+  --color-seal-300: #d6b56f;
+  --color-seal-400: #c49a48;
+  --color-seal-500: #ad8432;
+  --color-seal-600: #9a7424;
+  --color-seal-700: #7c5c1e;
+  --color-seal-800: #664b1d;
+  --color-seal-900: #563f1c;
+  --color-seal-950: #31220c;
+}
+
+:root {
+  --ui-bg: var(--ui-color-neutral-50);
+  --ui-radius: 0.375rem;
+}
+
+.dark {
+  --ui-bg: var(--ui-color-neutral-950);
+}

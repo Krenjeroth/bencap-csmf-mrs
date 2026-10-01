@@ -1,0 +1,51 @@
+# ── Secrets — never commit real environment files, anywhere in this repo ──
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.*.example
+
+# ── OS / editor cruft ──
+.DS_Store
+Thumbs.db
+.idea
+.vscode
+.fleet
+.nova
+.zed
+
+# ── src/api (Laravel) — mirrors src/api/.gitignore as a monorepo-wide
+#    safety net in case files land outside that subtree ──
+/src/api/vendor
+/src/api/node_modules
+/src/api/public/build
+/src/api/public/hot
+/src/api/public/storage
+/src/api/storage/*.key
+/src/api/storage/pail
+/src/api/.phpunit.cache
+/src/api/.phpunit.result.cache
+/src/api/auth.json
+
+# ── src/web (Nuxt) — mirrors src/web/.gitignore ──
+/src/web/node_modules
+/src/web/.nuxt
+/src/web/.output
+/src/web/.nitro
+/src/web/.cache
+/src/web/.data
+/src/web/dist
+
+# ── src/mobile (Flutter, added Sprint 7) ──
+/src/mobile/.dart_tool
+/src/mobile/build
+/src/mobile/.flutter-plugins
+/src/mobile/.flutter-plugins-dependencies
+
+# ── tests/e2e (Playwright, added Sprint 3) ──
+/tests/e2e/test-results
+/tests/e2e/playwright-report
+
+# ── logs ──
+*.log
+npm-debug.log
+yarn-error.log
