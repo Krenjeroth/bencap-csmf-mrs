@@ -21,6 +21,11 @@ class UserResource extends JsonResource
             'must_change_password' => $this->must_change_password,
             'two_factor_enabled' => $this->hasEnabledTwoFactor(),
             'last_login_at' => $this->last_login_at?->toIso8601String(),
+            'office' => $this->whenLoaded('office', fn () => $this->office ? [
+                'id' => $this->office->id,
+                'code' => $this->office->code,
+                'name' => $this->office->name,
+            ] : null),
             'roles' => $this->whenLoaded('roles', fn () => $this->roles->map(fn (Role $role) => [
                 'id' => $role->id,
                 'title' => $role->title,

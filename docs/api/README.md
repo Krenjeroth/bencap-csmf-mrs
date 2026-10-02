@@ -69,10 +69,12 @@ and return Laravel's `{"data", "links", "meta"}`.
 |---|---|---|---|
 | GET | `/role-options` | `users.view` | `{"data":[{"id","title","is_system"}]}` for role pickers |
 | GET | `/permission-options` | `roles.view` | `{"data":[{"id","title","resource","description"}]}` |
-| GET | `/users` | `users.view` | Filters `role_id`, `status=active\|inactive`; sort `name`, `email`, `created_at`, `last_login_at` |
-| POST | `/users` | `users.create` | `name`, `email`, `role_ids[]`, `is_active?` → `201 {"data": user, "temporary_password"}` (shown once) |
+| GET | `/office-options` | `users.view`, `offices.view` or `services.view` | `{"data":[{"id","code","name","is_active"}]}` in charter order |
+| GET | `/service-type-options` | `services.view` | `{"data":[{"id","type"}]}` |
+| GET | `/users` | `users.view` | Filters `role_id`, `office_id`, `status=active\|inactive`; sort `name`, `email`, `created_at`, `last_login_at`. Rows include `office` (`{"id","code","name"}` or null) |
+| POST | `/users` | `users.create` | `name`, `email`, `role_ids[]`, `is_active?`, `office_id?` → `201 {"data": user, "temporary_password"}` (shown once) |
 | GET | `/users/{uuid}` | `users.view` | |
-| PUT | `/users/{uuid}` | `users.update` | `name?`, `email?`, `is_active?`; deactivating signs the user out everywhere |
+| PUT | `/users/{uuid}` | `users.update` | `name?`, `email?`, `is_active?`, `office_id?` (null removes the office); deactivating signs the user out everywhere |
 | DELETE | `/users/{uuid}` | `users.delete` | Soft delete; `204` |
 | PUT | `/users/{uuid}/roles` | `users.update` | `role_ids[]` |
 | POST | `/users/{uuid}/reset-password` | `users.update` | `reset_two_factor?` → `{"temporary_password"}`; signs the user out everywhere |
@@ -81,6 +83,12 @@ and return Laravel's `{"data", "links", "meta"}`.
 | PUT | `/roles/{id}/permissions` | `roles.update` | `permission_ids[]` |
 | GET / POST | `/permissions` | `permissions.view` / `permissions.create` | Create: `title` (`resource.action`), `description?`; System Administrator gets it automatically |
 | GET / PUT / DELETE | `/permissions/{id}` | `permissions.view` / `permissions.update` / `permissions.delete` | |
+| GET / POST | `/offices` | `offices.view` / `offices.create` | List: filter `status`; sort `sort_order` (default), `code`, `name`; rows include `services_count`, `active_services_count`, `users_count`. Create: `code`, `name`, `slug?` (guest form address `/f/{slug}`, made from the code when empty), `is_active?`, `sort_order?` |
+| GET / PUT / DELETE | `/offices/{id}` | `offices.view` / `offices.update` / `offices.delete` | Delete only when no service or user account refers to it |
+| GET / POST | `/service-types` | `service-types.view` / `service-types.create` | List is not paged: `{"data":[{"id","type","description","services_count"}]}`. Create: `type`, `description?` |
+| GET / PUT / DELETE | `/service-types/{id}` | `service-types.view` / `service-types.update` / `service-types.delete` | Delete only when no service uses it |
+| GET / POST | `/services` | `services.view` / `services.create` | List: filters `office_id`, `service_type_id`, `charter_year`, `status`; sort `sort_order` (charter order, default), `name`, `charter_year`. Create: `office_id`, `service_type_id`, `name` (unique per office and charter year), `charter_year?` (default this year), `is_active?`, `sort_order?` (default end of the office's list) |
+| GET / PUT / DELETE | `/services/{id}` | `services.view` / `services.update` / `services.delete` | Delete only when no feedback refers to it |
 
 ### Rules that return 422 for everyone, including System Administrators
 
@@ -94,6 +102,22 @@ and return Laravel's `{"data", "links", "meta"}`.
 - A role still assigned to users cannot be deleted.
 - Catalog permissions (`is_protected`) cannot be renamed or deleted; their
   description can be edited.
+- An office, service type or service still in use cannot be deleted;
+  deactivate it instead.
+
+### Office limit
+
+A user with an assigned office who is not a System Administrator only sees
+and changes that office's services: another office's service returns 404,
+and creating a service in (or moving one to) another office returns 422.
+Such a user can also only assign accounts to their own office.
+
+### Importing a charter's services
+
+`php artisan csmf:import-services <file> [--year=] [--dry-run] [--retire-previous]`
+loads a `services-YYYY.json` list (format: `database/seeders/data/services-2026.json`).
+Safe to re-run: services already present are left unchanged.
+`--retire-previous` deactivates active services from earlier charter years.
 
 Every change above, and every sign-in event, is written to the append-only
 `audit_logs` table (who, IP, user agent, URL, old and new values; passwords

@@ -1,0 +1,1212 @@
+{
+  "source": "Provincial Government of Benguet Citizen’s Charter 2026 (1st Edition)",
+  "charter_year": 2026,
+  "note": "Sub-services are written as \"Parent – Service\". Internal services follow the decision in docs/citizens-charter-review.md (2026-10-02); everything else is External.",
+  "services": [
+    {
+      "office_code": "OG",
+      "name": "Issuance of Governor's Endorsement / Recommendation",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG",
+      "name": "Scheduling of Courtesy Call / Appointment with the Governor",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG",
+      "name": "Endorsement of Patients for PhilHealth Sponsorship",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG",
+      "name": "Transportation Service Request",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG",
+      "name": "Assistance To Provincial School Board (PSB) Teachers",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG",
+      "name": "Assistance To Medical Students (Study Now, Pay Later Program)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG",
+      "name": "Assistance to Provincial Scholars (The College Educational Scholarship Program)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-Records",
+      "name": "Receiving and Dispatching of Communications",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-Records",
+      "name": "Receiving and Dispatching of Financial Documents",
+      "service_type": "Internal"
+    },
+    {
+      "office_code": "OG-IT",
+      "name": "Request for Outdoor LED Wall Postings (Paid)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-IT",
+      "name": "Request for Outdoor LED Wall Postings",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-IT",
+      "name": "Provide CCTV Footage Requests",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-PESO",
+      "name": "Employment Facilitation",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-BAC",
+      "name": "Sale and Issuance of Bidding Documents",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-BAC",
+      "name": "Provide updates on Verbal Request/s for follow-up/s",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-BAC",
+      "name": "Issuance of Procurement Documents and Records",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-CAO",
+      "name": "Assistance/Participation/Validation and/or Monitoring of Barangay Activities of SK, NGOs, and CSOs Coordinated in the Office",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-SDO",
+      "name": "Financial Assistance for Athletes Representing the Province of Benguet All Levels",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-SDO",
+      "name": "Coordination/Administration/Technical Assistance of Sports Activities in the Promotion of Philippine Sport at All Levels",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-SDO",
+      "name": "Partnership/Information Dissemination in the Promotion of Philippine Sports at All Levels",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-BTS",
+      "name": "Enrollment for Scholarship Program",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-BTS",
+      "name": "Enrollment for Regular Program",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-BTS",
+      "name": "Enrollment for OWWA's Skills for Employment Scholarship Program",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-BTS",
+      "name": "Assessment for Scholarship Beneficiaries",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-BTS",
+      "name": "Assessment of Regular/Walk-in applicants",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-BTS",
+      "name": "Request for School Credentials and Certifications",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-BTS",
+      "name": "Assistance to the Conduct of Community-Based Training (CBT)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-BTS",
+      "name": "Assistance to the Conduct of Community Service",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-PDRRMO",
+      "name": "Disaster Preparedness – Provision of Capability Building",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-PDRRMO",
+      "name": "Disaster Response – Transport Services (Ambulance, Cadaver, Other Logistics)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-PDRRMO",
+      "name": "Disaster Response – Heavy Equipment Support Services",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-PDRRMO",
+      "name": "Disaster Response – Damage Assessment Inspection",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-PDRRMO",
+      "name": "Disaster Response – Emergency Response (Normal Days/During Disaster)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-PDRRMO",
+      "name": "Rehabilitation and Recovery – Provision of Emergency Goods (Food and Non-food Items), Relief and Recovery Assistance",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-PDRRMO",
+      "name": "Rehabilitation and Recovery – Request for Funding from the LDRRMF (Structural and Non-structural PPAs)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-PTCAO",
+      "name": "Assistance to Researchers and Students",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-PTCAO",
+      "name": "Assistance to Excursionists, Tourists and Media",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-PTCAO",
+      "name": "Receiving and Dispatching of Official Communications",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-PTCAO",
+      "name": "Acceptance of Project Proposals to the National Commission for Culture and the Arts (NCCA)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-PTCAO",
+      "name": "Rental of Cultural Instruments and Benguet Traditional Attire",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-PTCAO",
+      "name": "Assistance to Researchers and Students (Museum)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-PTCAO",
+      "name": "Assistance to Museum Clients/Guests",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-PWO",
+      "name": "Acceptance of Person Deprived of Liberty (PDL) committed by PNP, NBI, and other law enforcement agencies",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-PWO",
+      "name": "Acceptance of Person Deprived of Liberty visitors/lawyers",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-PWO",
+      "name": "Received Court Orders from different courts",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-PWO",
+      "name": "Requests for Certificate of Detention/Discharge/GCTA/TASTM",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-Provincial Library",
+      "name": "Registration of Library Clients",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-Provincial Library",
+      "name": "Assistance to Library Clients on their researches",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-Provincial Library",
+      "name": "Borrowing of library reading materials for overnight-use",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-Provincial Library",
+      "name": "Assistance to Online services through the Technology for Economic Development - Digital Transformation Center (Tech4Ed)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OG-Provincial Library",
+      "name": "General Clearance",
+      "service_type": "Internal"
+    },
+    {
+      "office_code": "OVG",
+      "name": "Livelihood Assistance Proposals to SP MSME Accredited Associations",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OVG",
+      "name": "Request for a Vehicle and Driving Services",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OVG",
+      "name": "Request for an Appointment with the Provincial Vice Governor",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OVG",
+      "name": "Request For the Enforcement of Laws and Ordinances",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PAccO",
+      "name": "Issue Certifications (a. Premium and loan payments; b. claims on traveling expenses and other benefits)",
+      "service_type": "Internal"
+    },
+    {
+      "office_code": "PAccO",
+      "name": "Issue Certified Copies of Disbursement Vouchers and/or its' supporting documents",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PAgO",
+      "name": "Issue Agricultural Production/Data",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PAgO",
+      "name": "Acquisition of Planting Materials",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PAgO",
+      "name": "Technical Guidance/Assistance (Inquiries, Referral, Submission of Documents)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PAgO",
+      "name": "Renting out of facilities",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PAgO",
+      "name": "Livelihood Loan Assistance",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PAgO",
+      "name": "Cold Chain Services",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PAgO",
+      "name": "Validation / Monitoring & inspection services for Project/Program proposals related to INS, FMR and Mechanization Matters",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PAssO",
+      "name": "Processing and Approval of Tax Declaration of Real Property (TDRP)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PAssO",
+      "name": "Certified/Plain copy of Sketch Plan, Section map and Tax Mapping Control Roll (TMCR); Technical Assistance.",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PAssO",
+      "name": "Annotation/Cancellation of Mortgage and other Legal Orders",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PAssO",
+      "name": "Issuance of Certified Copy of TDRP and Supporting Documents (with or without TDRP number)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PAssO",
+      "name": "Issuance of Certificate of Property Holdings/Non-Property, Assessment, Non-encumbrance, etc.",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PAssO",
+      "name": "History of Real Property",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PBO",
+      "name": "Assist Walk-in Municipal/Barangay Officials Regarding Budgetary Matters",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PBO",
+      "name": "Assistance to Municipal/Barangay Officials Regarding Budgetary Matters",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PEO",
+      "name": "Issue Road Right-of- Way Certification",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PEO",
+      "name": "Perform Materials Testing Procedures",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PEO",
+      "name": "Provide Transportation Services",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PEO",
+      "name": "Perform Preventive & Corrective Maintenance Services",
+      "service_type": "Internal"
+    },
+    {
+      "office_code": "PENRO-LGU",
+      "name": "Issue Quarry Permit",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PENRO-LGU",
+      "name": "Issue Small Scale Mining Contract/Permit",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PENRO-LGU",
+      "name": "Issue Ore Transport Permit",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PENRO-LGU",
+      "name": "Issue Mineral Processor's Permit",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PGSO",
+      "name": "Serve Purchase Orders",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PGSO",
+      "name": "Inspection and Acceptance of Deliveries",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PGSO",
+      "name": "Renting Out of Facilities",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PHO",
+      "name": "Microbiological Water Analysis",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PHO",
+      "name": "NTP Laboratory - Xpert MTB RIF Assay",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PHO",
+      "name": "Provision of Technical Assistance",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PHO",
+      "name": "Issuance of Vaccines, Medicines and Medical Supplies",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PHO",
+      "name": "Issuance of Environmental Health and Sanitation Certificate",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PHO",
+      "name": "Request for Repair & Preventive Maintenance of Bio-Medical Equipment",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PHO",
+      "name": "Consultation Services at Benguet Provincial Health Office Yaman ng Kalusugan Program (YAKAP) Clinic",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PHRMDO",
+      "name": "Issuance of HR Documents (Service Records, Certificate of Employment, Earned Leaves) and Other HR Records",
+      "service_type": "Internal"
+    },
+    {
+      "office_code": "PLO",
+      "name": "Rendition of Legal Advice/Opinion/Counseling",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PLO",
+      "name": "Issuance of Certified True Copy of Official Documents",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PPDO",
+      "name": "Verification/Request Project/s Listings and Prioritized Projects and Other Documents",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PPDO",
+      "name": "Validation/ Inspection/ Monitoring of Social, Economic, and Infrastructure Projects/ Issuance of Validation/Inspection, and Monitoring Reports",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PPDO",
+      "name": "Provision of Development Plans, Investment programs, maps, demographic data, Physical and Socio-Economic Data, and reports such as Semestral and Annual Projects Status, and Others.",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PSWDO",
+      "name": "Financial Assistance to Individuals in Crisis Situation (AICS)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PSWDO",
+      "name": "Children in Conflict with the Law for Admission at Bahay Pag-asa",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PSWDO",
+      "name": "Children in Conflict with the Law (with court decision) for transfer to Rehabilitation Center",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PSWDO",
+      "name": "Food for work, Food Assistance",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PSWDO",
+      "name": "Food Assistance",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PSWDO",
+      "name": "Provision of Assistive Devices",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PSWDO",
+      "name": "Livelihood Loan Assistance Program (Maximum-1,000,000.00; Minimum-100,000.00)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PTO",
+      "name": "Collection of tax on Transfer of Real Property Ownership",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PTO",
+      "name": "Collection of Tax on Sand, Gravel, and Other Quarry Resources to Contractors",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PTO",
+      "name": "Collection of Sand and Gravel Tax and Issuance of Delivery Receipts to the Permittee",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PTO",
+      "name": "Collection of Real Property Tax",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PTO",
+      "name": "Collection of Professional Tax",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PTO",
+      "name": "Collection of Franchise Tax & Tax on Printing & Publication",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PTO",
+      "name": "Collection of Annual Fixed Tax on Delivery Trucks/ Vans",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PTO",
+      "name": "Collection of Fees and Issuance of Provincial Permit/ Clearance",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PTO",
+      "name": "Collection of certification Fees, Verification Fees, Rentals, Occupation Fees, Tuition Fees, Bid Documents, Other Fees and Charges",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PTO",
+      "name": "Payment of Approved Vouchers and Payrolls",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PTO",
+      "name": "Release of Approved Checks in Payment of Obligations",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PTO",
+      "name": "Collection of Payment of Telephone Bills (personal calls), Loans, Bid and Performance Securities, and Other Miscellaneous payments",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PTO",
+      "name": "Receipts of Other Agency Transfer Fund",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PTO",
+      "name": "Collection of Remittance of Revenue Division, Field Cashiers, and other Accountable Officers",
+      "service_type": "Internal"
+    },
+    {
+      "office_code": "PTO",
+      "name": "Collection of Remittance of Municipal Treasurers on Provincial Shares",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PTO",
+      "name": "Issuance of Accountable Forms",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PVO",
+      "name": "Issuance of Veterinary Health Certificate (VHC) and Veterinary Shipping Permit (VSP)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PVO",
+      "name": "Vaccination of Animals",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PVO",
+      "name": "Deworming of Animals",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PVO",
+      "name": "Supplementation of Animals with Vitamins and Minerals",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PVO",
+      "name": "Treatment of Animals",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PVO",
+      "name": "Consultation",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PVO",
+      "name": "Spay and Neuter of Pets",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PVO",
+      "name": "Castration of Livestock",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PVO",
+      "name": "Animal Disease Surveillance/ Investigation",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PVO",
+      "name": "Biosecurity Assessment of Animal Facilities",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PVO",
+      "name": "Animal Quarantine Inspection",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PVO",
+      "name": "Artificial Insemination (AI) of Swine",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PVO",
+      "name": "Artificial Insemination (AI) of Ruminant Animals (Sheep, Goat, Cattle and Carabao)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PVO",
+      "name": "Natural Breeding of Cattle",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PVO",
+      "name": "Animal Dispersal and Buck loan",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PVO",
+      "name": "Livelihood Loan Assistance (Minimum-PHP100,000.00; Maximum- PHP1,000,000.00)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PVO",
+      "name": "Fingerlings (Tilapia) Dispersal",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PVO",
+      "name": "Calamity Assistance",
+      "service_type": "External"
+    },
+    {
+      "office_code": "PVO",
+      "name": "Support to Families with Stunted Children",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OSSP",
+      "name": "Provision of Resolutions, Ordinances, and other Legislative Records",
+      "service_type": "External"
+    },
+    {
+      "office_code": "OSSP",
+      "name": "Provision of Certifications",
+      "service_type": "External"
+    },
+    {
+      "office_code": "ADH",
+      "name": "OPD Consultation",
+      "service_type": "External"
+    },
+    {
+      "office_code": "ADH",
+      "name": "Pharmacy Services",
+      "service_type": "External"
+    },
+    {
+      "office_code": "ADH",
+      "name": "Billing",
+      "service_type": "External"
+    },
+    {
+      "office_code": "ADH",
+      "name": "Ambulance Services",
+      "service_type": "External"
+    },
+    {
+      "office_code": "ADH",
+      "name": "Referral of Patients to other Facilities",
+      "service_type": "External"
+    },
+    {
+      "office_code": "ADH",
+      "name": "Availing of X-ray Services",
+      "service_type": "External"
+    },
+    {
+      "office_code": "DMDH",
+      "name": "OPD Consultation",
+      "service_type": "External"
+    },
+    {
+      "office_code": "DMDH",
+      "name": "Dispensing of Medicines",
+      "service_type": "External"
+    },
+    {
+      "office_code": "DMDH",
+      "name": "Paying old Accounts",
+      "service_type": "External"
+    },
+    {
+      "office_code": "DMDH",
+      "name": "Request for an Ambulance",
+      "service_type": "External"
+    },
+    {
+      "office_code": "DMDH",
+      "name": "Referring a Patient to Higher Facilities",
+      "service_type": "External"
+    },
+    {
+      "office_code": "DMDH",
+      "name": "Emergency Room Consultation",
+      "service_type": "External"
+    },
+    {
+      "office_code": "DMDH",
+      "name": "Patients Who Will Undergo Operation",
+      "service_type": "External"
+    },
+    {
+      "office_code": "DMDH",
+      "name": "Admission of Patient",
+      "service_type": "External"
+    },
+    {
+      "office_code": "DMDH",
+      "name": "Discharge of Patient",
+      "service_type": "External"
+    },
+    {
+      "office_code": "DMDH",
+      "name": "Laboratory Services",
+      "service_type": "External"
+    },
+    {
+      "office_code": "DMDH",
+      "name": "Provision of X-Ray and Ultrasound",
+      "service_type": "External"
+    },
+    {
+      "office_code": "DMDH",
+      "name": "Provision of Dental Services",
+      "service_type": "External"
+    },
+    {
+      "office_code": "DMDH",
+      "name": "Provision of Medical Assistance for Indigent Financially Incapacitated Patient (MAIFIP)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "DMDH",
+      "name": "Provision of Hemodialysis",
+      "service_type": "External"
+    },
+    {
+      "office_code": "IDH",
+      "name": "OPD Consultation",
+      "service_type": "External"
+    },
+    {
+      "office_code": "IDH",
+      "name": "Buying Medicines",
+      "service_type": "External"
+    },
+    {
+      "office_code": "IDH",
+      "name": "Referring Patient to Higher Facilities",
+      "service_type": "External"
+    },
+    {
+      "office_code": "IDH",
+      "name": "Emergency Room Consultation",
+      "service_type": "External"
+    },
+    {
+      "office_code": "IDH",
+      "name": "Patients who will Undergo Operation (Minor, Local Anesthesia)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "IDH",
+      "name": "Admission of Patient",
+      "service_type": "External"
+    },
+    {
+      "office_code": "IDH",
+      "name": "Discharge of Patient",
+      "service_type": "External"
+    },
+    {
+      "office_code": "IDH",
+      "name": "Hematology",
+      "service_type": "External"
+    },
+    {
+      "office_code": "IDH",
+      "name": "Clinical Microscopy & Microbiology",
+      "service_type": "External"
+    },
+    {
+      "office_code": "IDH",
+      "name": "Clinical Blood Chemistry",
+      "service_type": "External"
+    },
+    {
+      "office_code": "IDH",
+      "name": "Immunology/Serology",
+      "service_type": "External"
+    },
+    {
+      "office_code": "IDH",
+      "name": "X-Ray Procedure – Out Patient clients",
+      "service_type": "External"
+    },
+    {
+      "office_code": "IDH",
+      "name": "X-Ray Procedure – In Patient Clients",
+      "service_type": "External"
+    },
+    {
+      "office_code": "KDH",
+      "name": "OPD Consultation",
+      "service_type": "External"
+    },
+    {
+      "office_code": "KDH",
+      "name": "Emergency Room Consultation",
+      "service_type": "External"
+    },
+    {
+      "office_code": "KDH",
+      "name": "Animal Bite Treatment Service",
+      "service_type": "External"
+    },
+    {
+      "office_code": "KDH",
+      "name": "Medical Certificate",
+      "service_type": "External"
+    },
+    {
+      "office_code": "KDH",
+      "name": "Certificate of Live Birth",
+      "service_type": "External"
+    },
+    {
+      "office_code": "KDH",
+      "name": "Certificate of Death",
+      "service_type": "External"
+    },
+    {
+      "office_code": "KDH",
+      "name": "Ancillary Services - Laboratory",
+      "service_type": "External"
+    },
+    {
+      "office_code": "KDH",
+      "name": "Ancillary Services - Radiology",
+      "service_type": "External"
+    },
+    {
+      "office_code": "KDH",
+      "name": "Ancillary Services - Pharmacy",
+      "service_type": "External"
+    },
+    {
+      "office_code": "KDH",
+      "name": "Paying of OPD/ER Patients – Not covered by Insurance",
+      "service_type": "External"
+    },
+    {
+      "office_code": "KDH",
+      "name": "Paying of OPD/ER Patients – Covered by MAIFIPP (Medical Assistance to Indigent and Financially Incapacitated Patients Program)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "KDH",
+      "name": "Admitted and Discharged Patients",
+      "service_type": "External"
+    },
+    {
+      "office_code": "KDH",
+      "name": "Referral of Patients to Higher Facilities",
+      "service_type": "External"
+    },
+    {
+      "office_code": "NBDH",
+      "name": "Provision of Out-Patient Consultation",
+      "service_type": "External"
+    },
+    {
+      "office_code": "NBDH",
+      "name": "Provision of Emergency Management to Patients at the Emergency Room",
+      "service_type": "External"
+    },
+    {
+      "office_code": "NBDH",
+      "name": "Provision of Services for Admitted Patients",
+      "service_type": "External"
+    },
+    {
+      "office_code": "NBDH",
+      "name": "Provision of Services to Discharged Patients",
+      "service_type": "External"
+    },
+    {
+      "office_code": "NBDH",
+      "name": "Provision of Medical Certificate, Medico-Legal Certificate, Medical Records and Consent to Release Patient's Medical Information",
+      "service_type": "External"
+    },
+    {
+      "office_code": "NBDH",
+      "name": "Provision of PhilHealth Claims/Processing",
+      "service_type": "External"
+    },
+    {
+      "office_code": "NBDH",
+      "name": "Provision of Drugs and Medicines to Patients and Billing of Discharges – Provision of Drugs and Medicines",
+      "service_type": "External"
+    },
+    {
+      "office_code": "NBDH",
+      "name": "Provision of Drugs and Medicines to Patients and Billing of Discharges – Billing of Discharges",
+      "service_type": "External"
+    },
+    {
+      "office_code": "NBDH",
+      "name": "Provision of Drugs and Medicines to Patients and Billing of Discharges – Provision of Diagnostic",
+      "service_type": "External"
+    },
+    {
+      "office_code": "NBDH",
+      "name": "Provision of Drugs and Medicines to Patients and Billing of Discharges – Provision of X-Ray and Ultrasound",
+      "service_type": "External"
+    },
+    {
+      "office_code": "NBDH",
+      "name": "Provision of Dental Services",
+      "service_type": "External"
+    },
+    {
+      "office_code": "NBDH",
+      "name": "Provision of Medical Assistance for Indigent Financially Incapacitated Patient (MAIFIP)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "NBDH",
+      "name": "Provision of Referral of Patients to Higher Facilities",
+      "service_type": "External"
+    },
+    {
+      "office_code": "NBDH",
+      "name": "Provision of OR/DR Complex",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Out- Patient Department (OPD) Consultation - Internal Medicine",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "OPD Consultation – Hemodialysis Unit – OPD Consultation of Chronic Kidney Disease Stage 5 Patients",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "OPD Consultation – Hemodialysis Unit – Hemodialysis Initiation",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "OPD Consultation – Hemodialysis Unit – OPD Hemodialysis",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Out- Patient Department (OPD) Consultation - OB-Gyne",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Out-Patient Department (OPD) Consultation - Pedia",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "OPD Consultation – Surgery – Special Services – Club Foot Management",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "OPD Consultation – Surgery – General Surgery",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "OPD Consultation – Surgery – Uro Surgery",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "OPD Consultation – Surgery – Orthopedics",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "OPD Consultation – Surgery – Ophthalmology",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "OPD Consultation – Surgery – HEENT",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "OPD – Animal Bite Treatment Center (ABTC)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Management of NTP (TB) Program",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Central Treatment Room – Admission Of Patient",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Central Treatment Room – Electrocardiogram (ECG) Procedure",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Central Treatment Room – Tetanus Toxoid Injection",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Radiology Department – A.1 X-Ray Procedures: OPD (Paying Patients)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Radiology Department – A.2 X-Ray Procedures: OPD (Patients Availing Malasakit/Yakap Services)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Radiology Department – A.3 X-Ray Procedures: ER and In-Patients",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Radiology Department – B.1 Ultrasound Procedures: OPD (Paying Patients)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Radiology Department – B.2 Ultrasound Procedures: OPD (Patients Availing Malasakit/Yakap Services)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Radiology Department – B.3 Ultrasound Procedures: Emergency Room and In-Patients",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Radiology Department – C.1 Mammogram – OPD (Paying Patients)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Radiology Department – C.2 Mammogram – OPD (Patients Availing Malasakit/Yakap Services)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Radiology Department – D.1 CT-Scan – OPD (Paying Patients)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Radiology Department – D.2 CT-Scan – OPD (Patients Availing Malasakit Services)",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Radiology Department – D.3 CT-Scan – Emergency Room (E.R.) and In-Patients",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Discharge Of Patient",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Admission of Patient",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Pharmacy Section",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Department Of Pathology And Laboratory Medicine",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Dental Department",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Cash Section",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Dispensing Of Supply for Outpatient Department",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Mental Health Unit - Psychology",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Registration of Certificate of Death",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Registration of Certificate of Live Birth",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Social Services Office – Classification of Patient",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Social Services Office – Social Work Intervention",
+      "service_type": "External"
+    },
+    {
+      "office_code": "BeGH",
+      "name": "Social Services Office – MALASAKIT Center Assistance",
+      "service_type": "External"
+    }
+  ]
+}

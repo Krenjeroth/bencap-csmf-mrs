@@ -2,16 +2,16 @@
 
 namespace App\Http\Requests\Admin;
 
-class ListUsersRequest extends ListRequest
+class ListOfficesRequest extends ListRequest
 {
     protected function sortable(): array
     {
-        return ['name', 'email', 'created_at', 'last_login_at'];
+        return ['sort_order', 'code', 'name'];
     }
 
     protected function defaultSort(): string
     {
-        return 'name';
+        return 'sort_order';
     }
 
     /** @return array<string, mixed> */
@@ -19,9 +19,7 @@ class ListUsersRequest extends ListRequest
     {
         return [
             ...parent::rules(),
-            'role_id' => ['nullable', 'integer', 'exists:roles,id'],
             'status' => ['nullable', 'in:active,inactive'],
-            'office_id' => ['nullable', 'integer', 'exists:offices,id'],
         ];
     }
 }

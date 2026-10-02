@@ -17,7 +17,7 @@ class MeResource extends UserResource
     /** @return array<string, mixed> */
     public function toArray(Request $request): array
     {
-        $this->resource->loadMissing('roles.permissions');
+        $this->resource->loadMissing(['roles.permissions', 'office']);
         $isSystem = $this->isSystemAdministrator();
 
         return [

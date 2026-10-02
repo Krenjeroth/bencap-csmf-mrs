@@ -47,6 +47,20 @@ class AccountGuard
     }
 
     /**
+     * A user limited to one office may only place accounts in that office,
+     * so the office limit cannot be widened through the Users screen.
+     */
+    public function assertMayAssignOffice(User $actor, ?int $officeId): void
+    {
+        $scope = $actor->scopedOfficeId();
+        if ($scope !== null && $officeId !== $scope) {
+            throw ValidationException::withMessages([
+                'office_id' => 'You can only assign accounts to your own office.',
+            ]);
+        }
+    }
+
+    /**
      * Only a System Administrator may grant or remove the System
      * Administrator role, so users.update cannot be used to self-escalate.
      *

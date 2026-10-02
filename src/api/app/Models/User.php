@@ -5,6 +5,7 @@ namespace App\Models;
 use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -36,6 +37,7 @@ class User extends Authenticatable
         'password',
         'must_change_password',
         'is_active',
+        'office_id',
     ];
 
     /** @var list<string> */
@@ -66,6 +68,22 @@ class User extends Authenticatable
             'last_login_at' => 'datetime',
             'two_factor_confirmed_at' => 'datetime',
         ];
+    }
+
+    /** @return BelongsTo<Office, $this> */
+    public function office(): BelongsTo
+    {
+        return $this->belongsTo(Office::class);
+    }
+
+    /**
+     * The office this account's data is limited to, or null for no limit.
+     * System Administrators see every office (ADR 0004); other users with an
+     * assigned office see only that office's records.
+     */
+    public function scopedOfficeId(): ?int
+    {
+        return $this->isSystemAdministrator() ? null : $this->office_id;
     }
 
     /** @return BelongsToMany<Role, $this> */

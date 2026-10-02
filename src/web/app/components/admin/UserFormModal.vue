@@ -1,16 +1,21 @@
 <script setup lang="ts">
 import { z } from 'zod'
 import type { Form, FormSubmitEvent } from '@nuxt/ui'
-import type { CreatedUser, Resource, RoleSummary, User } from '~/types/api'
+import type { CreatedUser, OfficeOption, Resource, RoleSummary, User } from '~/types/api'
 import { parseApiError } from '~/utils/apiError'
 
 /**
  * Create or edit a staff account. Creating returns a one-time password,
  * shown once inside this modal. Role changes go to PUT /users/{id}/roles.
+ * Without an office the account sees every office; a user limited to one
+ * office can only place accounts there (the API enforces it too).
  */
 const props = defineProps<{
   user: User | null
   roleOptions: RoleSummary[]
+  officeOptions: OfficeOption[]
+  /** Office the signed-in user is limited to, or null. */
+  lockedOfficeId: number | null
 }>()
 const open = defineModel<boolean>('open', { required: true })
 const emit = defineEmits<{ saved: [user: User] }>()
@@ -23,12 +28,13 @@ const schema = z.object({
   name: z.string().trim().min(1, 'Enter the full name.').max(150, 'Use 150 characters or fewer.'),
   email: z.email('Enter a valid email address.').max(255),
   is_active: z.boolean(),
+  office_id: z.number().nullable(),
   role_ids: z.array(z.number()),
 })
 type Schema = z.output<typeof schema>
 
 const form = useTemplateRef<Form<Schema>>('form')
-const state = reactive<Schema>({ name: '', email: '', is_active: true, role_ids: [] })
+const state = reactive<Schema>({ name: '', email: '', is_active: true, office_id: null, role_ids: [] })
 const submitting = ref(false)
 const created = ref<{ email: string, password: string } | null>(null)
 
@@ -42,6 +48,18 @@ const roleItems = computed(() => props.roleOptions.map(role => ({
   disabled: isSelf.value || (role.is_system && !me.value?.is_system_administrator),
 })))
 
+// The picker needs a non-null value, so "no office" is the string 'none'.
+const officeItems = computed(() => [
+  { label: 'No office (sees all offices)', value: 'none', disabled: props.lockedOfficeId !== null },
+  ...props.officeOptions
+    .filter(office => office.is_active || office.id === props.user?.office?.id)
+    .map(office => ({ label: `${office.code} – ${office.name}`, value: String(office.id), disabled: props.lockedOfficeId !== null && office.id !== props.lockedOfficeId })),
+])
+const officeChoice = computed({
+  get: () => (state.office_id === null ? 'none' : String(state.office_id)),
+  set: (value: string) => { state.office_id = value === 'none' ? null : Number(value) },
+})
+
 watch(open, (isOpen) => {
   if (!isOpen) {
     return
@@ -50,6 +68,7 @@ watch(open, (isOpen) => {
   state.name = props.user?.name ?? ''
   state.email = props.user?.email ?? ''
   state.is_active = props.user?.is_active ?? true
+  state.office_id = props.user ? (props.user.office?.id ?? null) : props.lockedOfficeId
   state.role_ids = props.user?.roles?.map(role => role.id) ?? []
   form.value?.clear()
 }, { immediate: true })
@@ -68,7 +87,10 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       created.value = { email: saved.email, password: response.temporary_password }
     }
     else {
-      const { role_ids, ...details } = event.data
+      const { role_ids, office_id, ...rest } = event.data
+      // Send the office only when it changed, so an office-limited editor
+      // can still edit other details of an account outside their office.
+      const details = office_id === (props.user.office?.id ?? null) ? rest : { ...rest, office_id }
       saved = (await client<Resource<User>>(`/api/v1/admin/users/${props.user.id}`, { method: 'put', body: details })).data
       const before = props.user.roles?.map(role => role.id) ?? []
       if (!isSelf.value && !sameRoles(before, role_ids)) {
@@ -143,6 +165,20 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
             type="email"
             class="w-full"
             autocomplete="off"
+          />
+        </UFormField>
+
+        <UFormField
+          label="Office"
+          name="office_id"
+          :description="lockedOfficeId !== null ? 'You can only assign accounts to your own office.' : 'Limits what the account sees to one office. System Administrators always see every office.'"
+        >
+          <USelectMenu
+            id="user-office"
+            v-model="officeChoice"
+            :items="officeItems"
+            value-key="value"
+            class="w-full"
           />
         </UFormField>
 

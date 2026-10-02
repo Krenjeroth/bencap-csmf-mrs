@@ -25,12 +25,13 @@ class UserController extends Controller
         [$column, $direction] = $request->sortColumn();
 
         $users = User::query()
-            ->with('roles')
+            ->with(['roles', 'office'])
             ->when($request->search(), fn ($q, $term) => $q->where(fn ($w) => $w
                 ->where('name', 'like', $term)
                 ->orWhere('email', 'like', $term)))
             ->when($request->validated('role_id'), fn ($q, $roleId) => $q->whereHas('roles', fn ($r) => $r->whereKey($roleId)))
             ->when($request->validated('status'), fn ($q, $status) => $q->where('is_active', $status === 'active'))
+            ->when($request->validated('office_id'), fn ($q, $officeId) => $q->where('office_id', $officeId))
             ->orderBy($column, $direction)
             ->orderBy('id')
             ->paginate($request->perPage())
@@ -56,7 +57,7 @@ class UserController extends Controller
 
     public function show(User $user): UserResource
     {
-        return new UserResource($user->load('roles'));
+        return new UserResource($user->load(['roles', 'office']));
     }
 
     public function update(UpdateUserRequest $request, User $user): UserResource

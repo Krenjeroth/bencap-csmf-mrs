@@ -1,7 +1,10 @@
 <?php
 
+use App\Models\Office;
 use App\Models\Permission;
 use App\Models\Role;
+use App\Models\Service;
+use App\Models\ServiceType;
 use App\Models\User;
 
 /*
@@ -14,6 +17,22 @@ use App\Models\User;
 dataset('admin endpoints', [
     'role options' => ['GET', '/api/v1/admin/role-options', 'users.view'],
     'permission options' => ['GET', '/api/v1/admin/permission-options', 'roles.view'],
+    'service type options' => ['GET', '/api/v1/admin/service-type-options', 'services.view'],
+    'list offices' => ['GET', '/api/v1/admin/offices', 'offices.view'],
+    'create office' => ['POST', '/api/v1/admin/offices', 'offices.create'],
+    'show office' => ['GET', '/api/v1/admin/offices/{office}', 'offices.view'],
+    'update office' => ['PUT', '/api/v1/admin/offices/{office}', 'offices.update'],
+    'delete office' => ['DELETE', '/api/v1/admin/offices/{office}', 'offices.delete'],
+    'list service types' => ['GET', '/api/v1/admin/service-types', 'service-types.view'],
+    'create service type' => ['POST', '/api/v1/admin/service-types', 'service-types.create'],
+    'show service type' => ['GET', '/api/v1/admin/service-types/{service_type}', 'service-types.view'],
+    'update service type' => ['PUT', '/api/v1/admin/service-types/{service_type}', 'service-types.update'],
+    'delete service type' => ['DELETE', '/api/v1/admin/service-types/{service_type}', 'service-types.delete'],
+    'list services' => ['GET', '/api/v1/admin/services', 'services.view'],
+    'create service' => ['POST', '/api/v1/admin/services', 'services.create'],
+    'show service' => ['GET', '/api/v1/admin/services/{service}', 'services.view'],
+    'update service' => ['PUT', '/api/v1/admin/services/{service}', 'services.update'],
+    'delete service' => ['DELETE', '/api/v1/admin/services/{service}', 'services.delete'],
     'list users' => ['GET', '/api/v1/admin/users', 'users.view'],
     'create user' => ['POST', '/api/v1/admin/users', 'users.create'],
     'show user' => ['GET', '/api/v1/admin/users/{user}', 'users.view'],
@@ -36,11 +55,21 @@ dataset('admin endpoints', [
 
 function resolveUri(string $uri): string
 {
-    return strtr($uri, [
-        '{user}' => User::factory()->create()->id,
-        '{role}' => (string) Role::factory()->create()->id,
-        '{permission}' => (string) Permission::factory()->create()->id,
-    ]);
+    $makers = [
+        '{user}' => fn () => User::factory()->create()->id,
+        '{role}' => fn () => Role::factory()->create()->id,
+        '{permission}' => fn () => Permission::factory()->create()->id,
+        '{office}' => fn () => Office::factory()->create()->id,
+        '{service_type}' => fn () => ServiceType::factory()->create()->id,
+        '{service}' => fn () => Service::factory()->create()->id,
+    ];
+    foreach ($makers as $placeholder => $make) {
+        if (str_contains($uri, $placeholder)) {
+            $uri = str_replace($placeholder, (string) $make(), $uri);
+        }
+    }
+
+    return $uri;
 }
 
 it('requires sign-in', function (string $method, string $uri) {

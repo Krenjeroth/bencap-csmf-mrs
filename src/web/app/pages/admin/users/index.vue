@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { DropdownMenuItem, TableColumn } from '@nuxt/ui'
-import type { RoleSummary, User } from '~/types/api'
+import type { User } from '~/types/api'
 import { parseApiError } from '~/utils/apiError'
 
 definePageMeta({ middleware: ['sanctum:auth', 'permission'], permission: 'users.view' })
@@ -9,24 +9,28 @@ useHead({ title: 'Users · CSMF-MRS' })
 const client = useSanctumClient()
 const { user: me, can } = useCurrentUser()
 const toast = useToast()
+const { roles: roleOptions, offices: officeOptions, loadRoles, loadOffices } = useOptions()
 
-const { query, rows, total, loading, error, load } = useAdminList<User>('/api/v1/admin/users', { sort: 'name', role_id: undefined, status: undefined })
+// Same rule as User::scopedOfficeId() on the API.
+const lockedOfficeId = computed(() => (me.value?.is_system_administrator ? null : me.value?.office?.id ?? null))
 
-const roleOptions = ref<RoleSummary[]>([])
-onMounted(async () => {
+const { query, rows, total, loading, error, load } = useAdminList<User>('/api/v1/admin/users', { sort: 'name', role_id: undefined, office_id: undefined, status: undefined })
+
+onMounted(() => {
   load()
-  try {
-    roleOptions.value = (await client<{ data: RoleSummary[] }>('/api/v1/admin/role-options')).data
-  }
-  catch (e) {
-    toast.add({ title: parseApiError(e).message, color: 'error' })
-  }
+  loadRoles()
+  loadOffices()
 })
 
 const roleFilterItems = computed(() => [{ label: 'All roles', value: 'all' }, ...roleOptions.value.map(r => ({ label: r.title, value: String(r.id) }))])
 const roleFilter = computed({
   get: () => (query.role_id === undefined ? 'all' : String(query.role_id)),
   set: (value: string) => { query.role_id = value === 'all' ? undefined : Number(value) },
+})
+const officeFilterItems = computed(() => [{ label: 'All offices', value: 'all' }, ...officeOptions.value.map(o => ({ label: o.code, value: String(o.id) }))])
+const officeFilter = computed({
+  get: () => (query.office_id === undefined ? 'all' : String(query.office_id)),
+  set: (value: string) => { query.office_id = value === 'all' ? undefined : Number(value) },
 })
 const statusFilter = computed({
   get: () => (query.status as string | undefined) ?? 'all',
@@ -46,6 +50,7 @@ const sortItems = [
 
 const columns: TableColumn<User>[] = [
   { accessorKey: 'name', header: 'User' },
+  { id: 'office', header: 'Office' },
   { id: 'roles', header: 'Roles' },
   { id: 'status', header: 'Status' },
   { id: 'two_factor', header: 'Two-factor' },
@@ -186,6 +191,14 @@ function rowActions(user: User): DropdownMenuItem[][] {
             class="w-44"
             aria-label="Filter by role"
           />
+          <USelectMenu
+            id="users-office-filter"
+            v-model="officeFilter"
+            :items="officeFilterItems"
+            value-key="value"
+            class="w-40"
+            aria-label="Filter by office"
+          />
           <USelect
             id="users-status-filter"
             v-model="statusFilter"
@@ -233,6 +246,17 @@ function rowActions(user: User): DropdownMenuItem[][] {
             </span>
             <span class="truncate text-sm text-muted">{{ row.original.email }}</span>
           </div>
+        </template>
+        <template #office-cell="{ row }">
+          <span
+            v-if="row.original.office"
+            class="font-mono text-sm"
+            :title="row.original.office.name"
+          >{{ row.original.office.code }}</span>
+          <span
+            v-else
+            class="text-sm text-dimmed"
+          >All offices</span>
         </template>
         <template #roles-cell="{ row }">
           <div class="flex flex-wrap gap-1">
@@ -308,6 +332,8 @@ function rowActions(user: User): DropdownMenuItem[][] {
         v-model:open="formOpen"
         :user="editing"
         :role-options="roleOptions"
+        :office-options="officeOptions"
+        :locked-office-id="lockedOfficeId"
         @saved="load"
       />
 

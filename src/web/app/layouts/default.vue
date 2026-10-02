@@ -15,6 +15,14 @@ const sections: { label: string, links: NavLink[] }[] = [
     ],
   },
   {
+    label: 'Service catalog',
+    links: [
+      { label: 'Offices', icon: 'i-lucide-building-2', to: '/admin/offices', permission: 'offices.view' },
+      { label: 'Services', icon: 'i-lucide-list-checks', to: '/admin/services', permission: 'services.view' },
+      { label: 'Service types', icon: 'i-lucide-tags', to: '/admin/service-types', permission: 'service-types.view' },
+    ],
+  },
+  {
     label: 'Access control',
     links: [
       { label: 'Users', icon: 'i-lucide-users', to: '/admin/users', permission: 'users.view' },

@@ -1,0 +1,3459 @@
+[
+  {
+    "office_code": "OG",
+    "parent": null,
+    "title": "Issuance of Governor's Endorsement / Recommendation",
+    "name": "Issuance of Governor's Endorsement / Recommendation",
+    "office_division": "Provincial Governor's Office - Main",
+    "classification": "Simple",
+    "transaction": "Government-to-Citizens (G2C)",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Residents of the Province of Benguet Students requesting scholarship endorsements Patients seeking medical assistance from national agencies Municipal and Barangay Local Government Units Civil Society Organizations and Institutions Provincial government offices and employees",
+    "description": "Issuance of an endorsement or recommendation letter from the Provincial Governor to support requests of individuals, organizations, local government units, and other entities to national government agencies, private institutions, hospitals, schools, and other offices."
+  },
+  {
+    "office_code": "OG",
+    "parent": null,
+    "title": "Scheduling of Courtesy Call / Appointment with the Governor",
+    "name": "Scheduling of Courtesy Call / Appointment with the Governor",
+    "office_division": "Provincial Governor's Office - Main",
+    "classification": "Simple",
+    "transaction": "Government-to-Citizens (G2C), Government-to-Businesses (G2B), Government-to-Government (G2G)",
+    "transaction_types": [
+      "G2C",
+      "G2B",
+      "G2G"
+    ],
+    "who_may_avail": "Local Government Officials National Government Agencies Civil Society Organizations and Private Institutions Provincial Government Offices Individuals with official matters or concerns",
+    "description": "Facilitation and scheduling of courtesy calls or appointments with the Provincial Governor for individuals, government officials, organizations, partner agencies, and other stakeholders to discuss official matters, programs, concerns, or collaborative initiatives."
+  },
+  {
+    "office_code": "OG",
+    "parent": null,
+    "title": "Endorsement of Patients for PhilHealth Sponsorship",
+    "name": "Endorsement of Patients for PhilHealth Sponsorship",
+    "office_division": "Provincial Governor's Office - Main",
+    "classification": "Simple",
+    "transaction": "Government-to-Citizens (G2C), Government-to-Businesses (G2B), Government-to-Government (G2G)",
+    "transaction_types": [
+      "G2C",
+      "G2B",
+      "G2G"
+    ],
+    "who_may_avail": "Local Government Officials National Government Agencies Civil Society Organizations and Private Institutions Provincial Government Offices Individuals with official matters or concerns",
+    "description": null
+  },
+  {
+    "office_code": "OG",
+    "parent": null,
+    "title": "Transportation Service Request",
+    "name": "Transportation Service Request",
+    "office_division": "Provincial Governor's Office - Main",
+    "classification": "Simple",
+    "transaction": "Government-to-Citizens (G2C), Government-to-Businesses (G2B), Government-to-Government (G2G)",
+    "transaction_types": [
+      "G2C",
+      "G2B",
+      "G2G"
+    ],
+    "who_may_avail": "Provincial Government Offices LGUs and Partner Agencies Individuals with approved requests",
+    "description": null
+  },
+  {
+    "office_code": "OG",
+    "parent": null,
+    "title": "Assistance To Provincial School Board (PSB) Teachers",
+    "name": "Assistance To Provincial School Board (PSB) Teachers",
+    "office_division": "Provincial Governor's Office - Administrative",
+    "classification": "Simple",
+    "transaction": "Government-to-Citizens (G2C)",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Professional Regulation Commission (PRC) Licensed Teachers endorsed by DepEd Benguet-Division Office/Schools Division Superintendent",
+    "description": null
+  },
+  {
+    "office_code": "OG",
+    "parent": null,
+    "title": "Assistance To Medical Students (Study Now, Pay Later Program)",
+    "name": "Assistance To Medical Students (Study Now, Pay Later Program)",
+    "office_division": "Provincial Governor's Office - Administrative",
+    "classification": "Simple",
+    "transaction": "Government-to-Citizens (G2C)",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Medicine Students",
+    "description": "The Study Now, Pay Later Program of the provincial government of Benguet is a local government educational assistance initiative aimed at helping financially constrained but qualified students pursue higher education, especially Doctor of Medicine. Under this program, the province loans financial support (actual tuition fee and book allowance) to selected Benguet-born and resident students so they can study first and repay the loan later. The program was established through the enactment of Provincial Ordinance No. 2017-08 which was revised to update its provisions to align with current circumstances. The latest revision was through Provincial Ordinance No. 2024-339."
+  },
+  {
+    "office_code": "OG",
+    "parent": null,
+    "title": "Assistance to Provincial Scholars (The College Educational Scholarship Program)",
+    "name": "Assistance to Provincial Scholars (The College Educational Scholarship Program)",
+    "office_division": "Provincial Governor's Office - Administrative Division",
+    "classification": "Simple",
+    "transaction": "Government-to-Citizens (G2C)",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Indigent students from Benguet",
+    "description": "The provision of a College Educational Scholarship Program is intended for the poor but deserving students in the Province of Benguet. This is by virtue of Provincial Ordinance No. 04-92 as amended by the Provincial Ordinance No. 2019-216. Said ordinance stipulates to have on grantee from each of the 140 barangays in the Province of Benguet every year for the college education program; one grantee from each of the 14 Dep-Ed Benguet Districts for the Alternative Learning System (ALS) Program; and four grantees for sports or technical skills program every year."
+  },
+  {
+    "office_code": "OG-Records",
+    "parent": null,
+    "title": "Receiving and Dispatching of Communications",
+    "name": "Receiving and Dispatching of Communications",
+    "office_division": "PGO - Administrative Records-Section",
+    "classification": "Simple to Highly Technical",
+    "transaction": "G2C-Government to Citizens/G2G-Government to Government",
+    "transaction_types": [
+      "G2C",
+      "G2G"
+    ],
+    "who_may_avail": "External & Internal Clients",
+    "description": "The Provincial Governor's Office - Records Section serves as the central receiving unit for all internal and external communications. It utilizes the Document Tracking System (DTS) to facilitate easy tracking and retrieval of documents and to monitor the flow of financial transactions."
+  },
+  {
+    "office_code": "OG-Records",
+    "parent": null,
+    "title": "Receiving and Dispatching of Financial Documents",
+    "name": "Receiving and Dispatching of Financial Documents",
+    "office_division": "PGO - Administrative Records-Section",
+    "classification": "Simple to Highly Technical",
+    "transaction": "G2G-Government to Government",
+    "transaction_types": [
+      "G2G"
+    ],
+    "who_may_avail": "Internal Clients",
+    "description": "The Provincial Governor's Office - Records Section serves as the central receiving unit for all internal financial documents. It utilizes the Document Tracking System (DTS) to facilitate easy tracking and retrieval of documents and to monitor the flow of financial transactions."
+  },
+  {
+    "office_code": "OG-IT",
+    "parent": null,
+    "title": "Request for Outdoor LED Wall Postings (Paid)",
+    "name": "Request for Outdoor LED Wall Postings (Paid)",
+    "office_division": "Provincial Governor's Office - Information Technology",
+    "classification": "Simple",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Clients/Citizens",
+    "description": "The Benguet Provincial Capitol uses the outdoor LED Wall to inform the public on current activities and announcements. This enables the organization to efficiently disseminate information effectively. It can also accommodate public's request for advertisement with a corresponding rate based on the Revenue Code of the Province."
+  },
+  {
+    "office_code": "OG-IT",
+    "parent": null,
+    "title": "Request for Outdoor LED Wall Postings",
+    "name": "Request for Outdoor LED Wall Postings",
+    "office_division": "Provincial Governor's Office - Information Technology",
+    "classification": "Simple",
+    "transaction": "Government to Government",
+    "transaction_types": [
+      "G2G"
+    ],
+    "who_may_avail": "Provincial departments/other agencies",
+    "description": "The Benguet Provincial Capitol uses the outdoor LED Wall to inform the public on current activities and announcements of the different departments in the Provincial Capitol or other agencies."
+  },
+  {
+    "office_code": "OG-IT",
+    "parent": null,
+    "title": "Provide CCTV Footage Requests",
+    "name": "Provide CCTV Footage Requests",
+    "office_division": "Provincial Governor's Office - Information Technology",
+    "classification": "Simple",
+    "transaction": "Government to Government",
+    "transaction_types": [
+      "G2G"
+    ],
+    "who_may_avail": "Provincial departments/other agencies",
+    "description": "The Benguet Provincial Capitol uses CCTV systems to secure the premises of the organization, its employees and clientele."
+  },
+  {
+    "office_code": "OG-PESO",
+    "parent": null,
+    "title": "Employment Facilitation",
+    "name": "Employment Facilitation",
+    "office_division": "Provincial Governor's Office - Public Employment Service Office",
+    "classification": "Simple",
+    "transaction": "G2G - Government to Government, G2B - Government to Business, G2C - Government to Citizen",
+    "transaction_types": [
+      "G2C",
+      "G2B",
+      "G2G"
+    ],
+    "who_may_avail": "Citizen, Company, Client, Jobseekers who can avail the service",
+    "description": null
+  },
+  {
+    "office_code": "OG-BAC",
+    "parent": null,
+    "title": "Sale and Issuance of Bidding Documents",
+    "name": "Sale and Issuance of Bidding Documents",
+    "office_division": "Provincial Governor's Office-Procurement Division",
+    "classification": "Simple",
+    "transaction": "Government to Businesses (G2B)",
+    "transaction_types": [
+      "G2B"
+    ],
+    "who_may_avail": "Government to Businesses (G2B)",
+    "description": null
+  },
+  {
+    "office_code": "OG-BAC",
+    "parent": null,
+    "title": "Provide updates on Verbal Request/s for follow-up/s",
+    "name": "Provide updates on Verbal Request/s for follow-up/s",
+    "office_division": "Provincial Governor's Office - Procurement Division",
+    "classification": "Simple",
+    "transaction": "Government to Businesses (G2B)",
+    "transaction_types": [
+      "G2B"
+    ],
+    "who_may_avail": "All Offices, External, Internal, Suppliers/ Dealers and Contractors",
+    "description": null
+  },
+  {
+    "office_code": "OG-BAC",
+    "parent": null,
+    "title": "Issuance of Procurement Documents and Records",
+    "name": "Issuance of Procurement Documents and Records",
+    "office_division": "PGO-Procurement Division",
+    "classification": "Simple",
+    "transaction": "Government to Businesses (G2B)",
+    "transaction_types": [
+      "G2B"
+    ],
+    "who_may_avail": "All Offices, External, Internal, Suppliers/ Dealers and Contractors",
+    "description": null
+  },
+  {
+    "office_code": "OG-CAO",
+    "parent": null,
+    "title": "Assistance/Participation/Validation and/or Monitoring of Barangay Activities of SK, NGOs, and CSOs Coordinated in the Office",
+    "name": "Assistance/Participation/Validation and/or Monitoring of Barangay Activities of SK, NGOs, and CSOs Coordinated in the Office",
+    "office_division": "PGO - 1 Affairs Office",
+    "classification": "Simple",
+    "transaction": "G2G - Government to Government, G2N - Government to Non- Government Organization, CSO-Civil Society Organization, G2C - Government to Citizen",
+    "transaction_types": [
+      "G2C",
+      "G2G",
+      "G2N"
+    ],
+    "who_may_avail": "Citizen, Company, Client",
+    "description": null
+  },
+  {
+    "office_code": "OG-SDO",
+    "parent": null,
+    "title": "Financial Assistance for Athletes Representing the Province of Benguet All Levels",
+    "name": "Financial Assistance for Athletes Representing the Province of Benguet All Levels",
+    "office_division": "Provincial Governor's Office - Sports Development Office",
+    "classification": "Simple",
+    "transaction": "G2C - Government to Citizen, G2N - Government to Non- government Organization, CSO-Civil Society Organization, G2C- Government to Citizen",
+    "transaction_types": [
+      "G2C",
+      "G2N"
+    ],
+    "who_may_avail": "Citizen, Company, Client",
+    "description": "This program is intended for athletes from Benguet who shall be participating in local, national and/or international competitions."
+  },
+  {
+    "office_code": "OG-SDO",
+    "parent": null,
+    "title": "Coordination/Administration/Technical Assistance of Sports Activities in the Promotion of Philippine Sport at All Levels",
+    "name": "Coordination/Administration/Technical Assistance of Sports Activities in the Promotion of Philippine Sport at All Levels",
+    "office_division": "PGO - Sports Development Office",
+    "classification": "Simple",
+    "transaction": "G2G - Government to Government, G2N -Government to Non- Government Organization, CSO-Civil Society Organization, G2C - Government to Citizen",
+    "transaction_types": [
+      "G2C",
+      "G2G",
+      "G2N"
+    ],
+    "who_may_avail": "Citizen, Company, Client",
+    "description": null
+  },
+  {
+    "office_code": "OG-SDO",
+    "parent": null,
+    "title": "Partnership/Information Dissemination in the Promotion of Philippine Sports at All Levels",
+    "name": "Partnership/Information Dissemination in the Promotion of Philippine Sports at All Levels",
+    "office_division": "PGO - Sports Development Office",
+    "classification": "Simple",
+    "transaction": "G2G - Government to Government, G2N -Government to Non- Government Organization, CSO-Civil Society Organization, G2C - Government to Citizen",
+    "transaction_types": [
+      "G2C",
+      "G2G",
+      "G2N"
+    ],
+    "who_may_avail": "Citizen, Company, Client",
+    "description": null
+  },
+  {
+    "office_code": "OG-BTS",
+    "parent": null,
+    "title": "Enrollment for Scholarship Program",
+    "name": "Enrollment for Scholarship Program",
+    "office_division": "Provincial Governor's Office-Benguet Technical School",
+    "classification": "Simple",
+    "transaction": "Government-to-Citizens (G2C)",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "a) Qualified TESDA Scholars (under TWSP, STEP, and TTSP) b) Qualified DepEd SHS Learners (under the Joint-Delivery Voucher Program between PGO-BTS and DepEd)",
+    "description": null
+  },
+  {
+    "office_code": "OG-BTS",
+    "parent": null,
+    "title": "Enrollment for Regular Program",
+    "name": "Enrollment for Regular Program",
+    "office_division": "Provincial Governor's Office-Benguet Technical School",
+    "classification": "Simple",
+    "transaction": "Government-to-Citizens (G2C)",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Interested Individuals",
+    "description": null
+  },
+  {
+    "office_code": "OG-BTS",
+    "parent": null,
+    "title": "Enrollment for OWWA's Skills for Employment Scholarship Program",
+    "name": "Enrollment for OWWA's Skills for Employment Scholarship Program",
+    "office_division": "Provincial Governor's Office-Benguet Technical School",
+    "classification": "Simple",
+    "transaction": "Government-to-Citizens (G2C)",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Qualified OWWA Members or their Authorized dependents",
+    "description": null
+  },
+  {
+    "office_code": "OG-BTS",
+    "parent": null,
+    "title": "Assessment for Scholarship Beneficiaries",
+    "name": "Assessment for Scholarship Beneficiaries",
+    "office_division": "Provincial Governor's Office-Benguet Technical School",
+    "classification": "Simple",
+    "transaction": "Government-to-Citizens (G2C)",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "a. TESDA Scholars with Relevant NC I and NC II training certificate b. Industry Practitioner c. DepEd SHS-TVL learners (under TESDA Circular 45, s.2024)",
+    "description": null
+  },
+  {
+    "office_code": "OG-BTS",
+    "parent": null,
+    "title": "Assessment of Regular/Walk-in applicants",
+    "name": "Assessment of Regular/Walk-in applicants",
+    "office_division": "Provincial Governor's Office-Benguet Technical School",
+    "classification": "Simple",
+    "transaction": "Government-to-Citizens (G2C)",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "with a. Applicant with NC I and NC II training certificate b. Industry Practitioner",
+    "description": null
+  },
+  {
+    "office_code": "OG-BTS",
+    "parent": null,
+    "title": "Request for School Credentials and Certifications",
+    "name": "Request for School Credentials and Certifications",
+    "office_division": "Provincial Governor's Office-Benguet Technical School",
+    "classification": "Simple",
+    "transaction": "Government-to-Citizens (G2C)",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Completers or Graduates of BTS",
+    "description": null
+  },
+  {
+    "office_code": "OG-BTS",
+    "parent": null,
+    "title": "Assistance to the Conduct of Community-Based Training (CBT)",
+    "name": "Assistance to the Conduct of Community-Based Training (CBT)",
+    "office_division": "Provincial Governor's Office-Benguet Technical School",
+    "classification": "Simple",
+    "transaction": "Government-to-Citizens (G2C)",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "JHS and SHS Leaners enrolled in DepEd Public Schools in Benguet Civic Organizations in Benguet (e.g. La Trinidad Solo Parent Organization, etc...) LGUs",
+    "description": null
+  },
+  {
+    "office_code": "OG-BTS",
+    "parent": null,
+    "title": "Assistance to the Conduct of Community Service",
+    "name": "Assistance to the Conduct of Community Service",
+    "office_division": "Provincial Governor's Office-Benguet Technical School",
+    "classification": "Simple",
+    "transaction": "Government-to-Citizens (G2C)",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Government Employees (LGU/DepEd) JHS and SHS Schools in Benguet",
+    "description": null
+  },
+  {
+    "office_code": "OG-PDRRMO",
+    "parent": "Disaster Preparedness",
+    "title": "Provision of Capability Building",
+    "name": "Disaster Preparedness – Provision of Capability Building",
+    "office_division": "PGO-Provincial Disaster Risk Reduction and Management Office",
+    "classification": "Simple",
+    "transaction": "G2G - Government to Government; G2C - Government to Citizen;",
+    "transaction_types": [
+      "G2C",
+      "G2G"
+    ],
+    "who_may_avail": "Eligible stakeholders",
+    "description": "1.1. Provision of Capability Building PGO - PDRRMO conducts and provides technical assistance in different disaster-related capacity development or capability building especially in safety, search, rescue and retrieval skills."
+  },
+  {
+    "office_code": "OG-PDRRMO",
+    "parent": "Disaster Response",
+    "title": "Transport Services (Ambulance, Cadaver, Other Logistics)",
+    "name": "Disaster Response – Transport Services (Ambulance, Cadaver, Other Logistics)",
+    "office_division": "PGO-Provincial Disaster Risk Reduction and Management Office",
+    "classification": "Simple",
+    "transaction": "G2C - Government to Citizen; G2G - Government to Government; G2N - Government to NGO/CSO",
+    "transaction_types": [
+      "G2C",
+      "G2G",
+      "G2N"
+    ],
+    "who_may_avail": "Eligible Citizen/Client, Government",
+    "description": "PGO -PDRRMO provides transport services to all eligible citizens, stakeholders such as patient transport, cadaver transport as well as other logistics such as but not limited to equipment and supplies, tools, etc."
+  },
+  {
+    "office_code": "OG-PDRRMO",
+    "parent": "Disaster Response",
+    "title": "Heavy Equipment Support Services",
+    "name": "Disaster Response – Heavy Equipment Support Services",
+    "office_division": "PGO-Provincial Disaster Risk Reduction and Management Office",
+    "classification": "Complex",
+    "transaction": "G2G - Government to Government, G2C - Government to Citizen",
+    "transaction_types": [
+      "G2C",
+      "G2G"
+    ],
+    "who_may_avail": "Communities, leaders, groups, or individuals concern",
+    "description": "2.1. Heavy Equipment Support Services PGO-PDRRMO provides heavy equipment support to all eligible stakeholders such as but not limited to road clearing, scraping."
+  },
+  {
+    "office_code": "OG-PDRRMO",
+    "parent": "Disaster Response",
+    "title": "Damage Assessment Inspection",
+    "name": "Disaster Response – Damage Assessment Inspection",
+    "office_division": "PGO - Provincial Disaster Risk Reduction and Management Office",
+    "classification": "Simple",
+    "transaction": "G2G – Government to Government, G2N – Government to NGOs/CSOs",
+    "transaction_types": [
+      "G2G",
+      "G2N"
+    ],
+    "who_may_avail": "Citizens, Government Agencies",
+    "description": "PGO PDRRMO conducts damage assessment on affected areas caused by natural and human-induced disasters."
+  },
+  {
+    "office_code": "OG-PDRRMO",
+    "parent": "Disaster Response",
+    "title": "Emergency Response (Normal Days/During Disaster)",
+    "name": "Disaster Response – Emergency Response (Normal Days/During Disaster)",
+    "office_division": "PGO-Provincial Disaster Risk Reduction and Management Office",
+    "classification": "Simple",
+    "transaction": "G2G - Government to Government, G2C - Government to Citizen All clients that need emergency assistance during",
+    "transaction_types": [
+      "G2C",
+      "G2G"
+    ],
+    "who_may_avail": "emergencies/disaster as well as unexpected events such as vehicular accidents, structural fires and the like.",
+    "description": "PGO-PDRRMO provides emergency response on normal days as well as during disaster to individuals affected by natural and/or human-induced disasters."
+  },
+  {
+    "office_code": "OG-PDRRMO",
+    "parent": "Rehabilitation and Recovery",
+    "title": "Provision of Emergency Goods (Food and Non-food Items), Relief and Recovery Assistance",
+    "name": "Rehabilitation and Recovery – Provision of Emergency Goods (Food and Non-food Items), Relief and Recovery Assistance",
+    "office_division": "PGO-Provincial Disaster Risk Reduction and Management Office",
+    "classification": "Simple",
+    "transaction": "G2G - Government to Government; G2C - Government to Citizen",
+    "transaction_types": [
+      "G2C",
+      "G2G"
+    ],
+    "who_may_avail": "Eligible clients affected by natural and/or human induced disasters who needs food and/or non-food assistance, relief and recovery assistance.",
+    "description": "3.1. Provision of Emergency Goods (Food and Non-food Items), Relief and Recovery Assistance PGO-PDRRMO provides emergency goods, relief and recovery assistance to all eligible affected families/individuals caused by natural and/or human-induced calamities."
+  },
+  {
+    "office_code": "OG-PDRRMO",
+    "parent": "Rehabilitation and Recovery",
+    "title": "Request for Funding from the LDRRMF (Structural and Non-structural PPAs)",
+    "name": "Rehabilitation and Recovery – Request for Funding from the LDRRMF (Structural and Non-structural PPAs)",
+    "office_division": "PGO-Provincial Disaster Risk Reduction and Management Office",
+    "classification": "Simple",
+    "transaction": "G2G - Government to Government; G2N - Government to NGO/CSO",
+    "transaction_types": [
+      "G2G",
+      "G2N"
+    ],
+    "who_may_avail": "B/MLGUs, Government Offices",
+    "description": "PGO-PDRRMO may allot funding from LDRRMF to projects affected by calamities subject to existing rules and regulations on use of LDRRM Fund."
+  },
+  {
+    "office_code": "OG-PTCAO",
+    "parent": null,
+    "title": "Assistance to Researchers and Students",
+    "name": "Assistance to Researchers and Students",
+    "office_division": "Provincial Governor's Office - Tourism",
+    "classification": "Simple",
+    "transaction": "Government to Citizens (G2C)",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Citizen/Client",
+    "description": "Benguet Tourism Office, being the center of information on tourism of the province, provides clients with information on the different tourism attractions, accommodations, and other data relevant to tourism."
+  },
+  {
+    "office_code": "OG-PTCAO",
+    "parent": null,
+    "title": "Assistance to Excursionists, Tourists and Media",
+    "name": "Assistance to Excursionists, Tourists and Media",
+    "office_division": "Provincial Governor's Office - TOURISM",
+    "classification": "Simple",
+    "transaction": "Government to Citizens (G2C), Government to Government (G2G)",
+    "transaction_types": [
+      "G2C",
+      "G2G"
+    ],
+    "who_may_avail": "Citizen/Client",
+    "description": "Benguet Tourism Office, being the center of information on tourism of the province, provides clients with information on the different tourism attractions, accommodations, and other data relevant to tourism. It also gives up-to-date reports on tourism activities and other events."
+  },
+  {
+    "office_code": "OG-PTCAO",
+    "parent": null,
+    "title": "Receiving and Dispatching of Official Communications",
+    "name": "Receiving and Dispatching of Official Communications",
+    "office_division": "PGO - Tourism",
+    "classification": "Simple",
+    "transaction": "Government to Citizens (G2C), Government to Government (G2G) WHERE TO SECURE",
+    "transaction_types": [
+      "G2C",
+      "G2G"
+    ],
+    "who_may_avail": "Citizen/Client",
+    "description": "Benguet Tourism Office, thru its mandate under certain provisions of the Local Government Code to spread the benefits of tourism to a wider segment in the Province, provides assistance on product development and management and in the promotion and marketing of tourism."
+  },
+  {
+    "office_code": "OG-PTCAO",
+    "parent": null,
+    "title": "Acceptance of Project Proposals to the National Commission for Culture and the Arts (NCCA)",
+    "name": "Acceptance of Project Proposals to the National Commission for Culture and the Arts (NCCA)",
+    "office_division": "PGO - Tourism",
+    "classification": "Simple",
+    "transaction": "Government to Citizens (G2C), Government to Government (G2G)",
+    "transaction_types": [
+      "G2C",
+      "G2G"
+    ],
+    "who_may_avail": "Citizen/Client",
+    "description": "Part of the functions of the Benguet Tourism Office is the safeguarding of Benguet culture. Thus, this office maintained its strong partnership with the National Commission for Culture and the Arts (NCCA) to assist MLGUs, BLGUs, schools and other cultural organization on their respective cultural programs/projects."
+  },
+  {
+    "office_code": "OG-PTCAO",
+    "parent": null,
+    "title": "Rental of Cultural Instruments and Benguet Traditional Attire",
+    "name": "Rental of Cultural Instruments and Benguet Traditional Attire",
+    "office_division": "PGO - Tourism",
+    "classification": "Simple",
+    "transaction": "Government to Citizens (G2C)",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Citizen/Client",
+    "description": "Part of the safeguarding of Benguet culture, Benguet Tourism Office rents-out Benguet cultural instruments and Benguet traditional attire and other selected cultural items while it also orients borrowers on its appropriate use."
+  },
+  {
+    "office_code": "OG-PTCAO",
+    "parent": null,
+    "title": "Assistance to Researchers and Students (Museum)",
+    "name": "Assistance to Researchers and Students (Museum)",
+    "office_division": "PGO - TOURISM",
+    "classification": "Simple",
+    "transaction": "Government to Citizens (G2C)",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Citizen/Client",
+    "description": "The Benguet Provincial Museum showcases Benguet Artifacts and promotes understanding and respect of the peoples and culture of Benguet through research and studies, stewardship of collections and public outreach."
+  },
+  {
+    "office_code": "OG-PTCAO",
+    "parent": null,
+    "title": "Assistance to Museum Clients/Guests",
+    "name": "Assistance to Museum Clients/Guests",
+    "office_division": "PGO - TOURISM",
+    "classification": "Simple",
+    "transaction": "Government to Citizens (G2C)",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Citizen/Client",
+    "description": "The Benguet Provincial Museum showcases Benguet Artifacts and promotes understanding of and respect for the peoples and culture of Benguet through research and studies, stewardship of collections and public outreach."
+  },
+  {
+    "office_code": "OG-PWO",
+    "parent": null,
+    "title": "Acceptance of Person Deprived of Liberty (PDL) committed by PNP, NBI, and other law enforcement agencies",
+    "name": "Acceptance of Person Deprived of Liberty (PDL) committed by PNP, NBI, and other law enforcement agencies",
+    "office_division": "Provincial Governor's Office - Benguet Provincial Jail",
+    "classification": "Simple",
+    "transaction": "Government to Government; Government to Citizen",
+    "transaction_types": [
+      "G2C",
+      "G2G"
+    ],
+    "who_may_avail": "Visitors, Lawyers, Counsel",
+    "description": null
+  },
+  {
+    "office_code": "OG-PWO",
+    "parent": null,
+    "title": "Acceptance of Person Deprived of Liberty visitors/lawyers",
+    "name": "Acceptance of Person Deprived of Liberty visitors/lawyers",
+    "office_division": "Provincial Governor's Office - JAIL",
+    "classification": "Simple",
+    "transaction": "Government to Citizen, Government to Government",
+    "transaction_types": [
+      "G2C",
+      "G2G"
+    ],
+    "who_may_avail": "Visitors, Lawyers, Counsel",
+    "description": null
+  },
+  {
+    "office_code": "OG-PWO",
+    "parent": null,
+    "title": "Received Court Orders from different courts",
+    "name": "Received Court Orders from different courts",
+    "office_division": "Provincial Governor's Office - Benguet Provincial Jail",
+    "classification": "Simple",
+    "transaction": "Government to Government",
+    "transaction_types": [
+      "G2G"
+    ],
+    "who_may_avail": "PDL",
+    "description": null
+  },
+  {
+    "office_code": "OG-PWO",
+    "parent": null,
+    "title": "Requests for Certificate of Detention/Discharge/GCTA/TASTM",
+    "name": "Requests for Certificate of Detention/Discharge/GCTA/TASTM",
+    "office_division": "Provincial Governor's Office - Benguet Provincial Jail",
+    "classification": "Simple",
+    "transaction": "Government to Government, Government to Citizen",
+    "transaction_types": [
+      "G2C",
+      "G2G"
+    ],
+    "who_may_avail": "PDL, lawyers, other agencies",
+    "description": null
+  },
+  {
+    "office_code": "OG-Provincial Library",
+    "parent": null,
+    "title": "Registration of Library Clients",
+    "name": "Registration of Library Clients",
+    "office_division": "PGO-Library",
+    "classification": "Simple",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Library Clients / Readers",
+    "description": "First time library clients should register by filling out the library registration form."
+  },
+  {
+    "office_code": "OG-Provincial Library",
+    "parent": null,
+    "title": "Assistance to Library Clients on their researches",
+    "name": "Assistance to Library Clients on their researches",
+    "office_division": "Provincial Governor's Office-Library",
+    "classification": "Simple",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Library Clients / Readers FEES TO",
+    "description": "Walk-in clients will use the OPAC to search the needed materials, while online clients will send their requests thru library social media such as Facebook or Gmail accounts."
+  },
+  {
+    "office_code": "OG-Provincial Library",
+    "parent": null,
+    "title": "Borrowing of library reading materials for overnight-use",
+    "name": "Borrowing of library reading materials for overnight-use",
+    "office_division": "Provincial Governor's Office-Library",
+    "classification": "Simple",
+    "transaction": "Government To Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Library Clients / Readers",
+    "description": "Outsiders who may borrow books for overnight use have to leave their valid ID's such as: Professional license, SSS and GSIS ID, Philippine National ID."
+  },
+  {
+    "office_code": "OG-Provincial Library",
+    "parent": null,
+    "title": "Assistance to Online services through the Technology for Economic Development - Digital Transformation Center (Tech4Ed)",
+    "name": "Assistance to Online services through the Technology for Economic Development - Digital Transformation Center (Tech4Ed)",
+    "office_division": "Provincial Governor's Office-Library",
+    "classification": "Simple",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Library Clients / Readers",
+    "description": "Clients can avail free use of computer, free access library WIFI and online appointments and transactions to the different government services."
+  },
+  {
+    "office_code": "OG-Provincial Library",
+    "parent": null,
+    "title": "General Clearance",
+    "name": "General Clearance",
+    "office_division": "PGO-Library",
+    "classification": "Simple",
+    "transaction": "Government to Government",
+    "transaction_types": [
+      "G2G"
+    ],
+    "who_may_avail": "Library Clients / Readers",
+    "description": "Employees who have no unreturned borrowed books will be cleared, while those who have unreturned borrowed books will not be cleared."
+  },
+  {
+    "office_code": "OVG",
+    "parent": null,
+    "title": "Livelihood Assistance Proposals to SP MSME Accredited Associations",
+    "name": "Livelihood Assistance Proposals to SP MSME Accredited Associations",
+    "office_division": "Provincial Vice Governor's Office",
+    "classification": "Simple",
+    "transaction": "Government-to-Citizens (G2C)",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "SP Accredited MSME Associations in Benguet",
+    "description": "A support program that provides assistance to duly accredited Micro, Small, and Medium Enterprise (MSME) associations in the Province of Benguet. The program aims to strengthen local enterprises by supporting viable livelihood projects that promote income generation, employment, and sustainable economic growth at the community level. Eligible associations may avail of the assistance upon submission of the required documents and endorsement from their respective Sangguniang Barangay."
+  },
+  {
+    "office_code": "OVG",
+    "parent": null,
+    "title": "Request for a Vehicle and Driving Services",
+    "name": "Request for a Vehicle and Driving Services",
+    "office_division": "Provincial Vice Governor's Office",
+    "classification": "Simple",
+    "transaction": "Government-to-Citizens (G2C), Government-to Businesses (G2B), Government-to-Government (G2G)",
+    "transaction_types": [
+      "G2C",
+      "G2B",
+      "G2G"
+    ],
+    "who_may_avail": "PLGU Offices / Walk-In Clients",
+    "description": "The provision of a vehicle and driving services is provided upon the approval of the Provincial Vice Governor or her duly authorized representative after due validation of the request."
+  },
+  {
+    "office_code": "OVG",
+    "parent": null,
+    "title": "Request for an Appointment with the Provincial Vice Governor",
+    "name": "Request for an Appointment with the Provincial Vice Governor",
+    "office_division": "Provincial Vice Governor's Office",
+    "classification": "Simple",
+    "transaction": "Government-to-Citizens (G2C), Government-to-Businesses (G2B), Government-to-Government (G2G)",
+    "transaction_types": [
+      "G2C",
+      "G2B",
+      "G2G"
+    ],
+    "who_may_avail": "Requesting Party / Authorized Representative",
+    "description": "This is a formal process for individuals, groups, or organizations seeking to meet with the Provincial Vice Governor to discuss matters of public interest, raise community concerns, seek assistance, or present specific issues for consideration."
+  },
+  {
+    "office_code": "OVG",
+    "parent": null,
+    "title": "Request For the Enforcement of Laws and Ordinances",
+    "name": "Request For the Enforcement of Laws and Ordinances",
+    "office_division": "Provincial Vice Governor's Office",
+    "classification": "Simple",
+    "transaction": "Government-to-Citizens (G2C), Government-to-Businesses (G2B), Government-to-Government (G2G)",
+    "transaction_types": [
+      "G2C",
+      "G2B",
+      "G2G"
+    ],
+    "who_may_avail": "Requesting Party",
+    "description": "This service covers formal requests from individuals or organizations seeking the intervention of the Provincial Vice Governor in her capacity as Presiding Officer of the Sangguniang Panlalawigan, to facilitate the proper implementation and enforcement of existing provincial laws and ordinances. The Vice Governor may endorse, refer, or elevate such concerns to the appropriate committees, offices, or enforcement agencies for appropriate action in accordance with established legislative and administrative processes."
+  },
+  {
+    "office_code": "PAccO",
+    "parent": null,
+    "title": "Issue Certifications (a. Premium and loan payments; b. claims on traveling expenses and other benefits)",
+    "name": "Issue Certifications (a. Premium and loan payments; b. claims on traveling expenses and other benefits)",
+    "office_division": "Provincial Accounting Office",
+    "classification": "Simple",
+    "transaction": "(G2C) Government-to-Citizens, (G2G) Government-to-Government",
+    "transaction_types": [
+      "G2C",
+      "G2G"
+    ],
+    "who_may_avail": "Provincial Government of Benguet officials and employees or their authorized representatives",
+    "description": null
+  },
+  {
+    "office_code": "PAccO",
+    "parent": null,
+    "title": "Issue Certified Copies of Disbursement Vouchers and/or its' supporting documents",
+    "name": "Issue Certified Copies of Disbursement Vouchers and/or its' supporting documents",
+    "office_division": "Provincial Accounting Office",
+    "classification": "Simple",
+    "transaction": "(G2C) Government-to-Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Citizens",
+    "description": null
+  },
+  {
+    "office_code": "PAgO",
+    "parent": null,
+    "title": "Issue Agricultural Production/Data",
+    "name": "Issue Agricultural Production/Data",
+    "office_division": "Provincial Agriculturist Office",
+    "classification": "Simple",
+    "transaction": "G2C, G2G, G2B",
+    "transaction_types": [
+      "G2C",
+      "G2B",
+      "G2G"
+    ],
+    "who_may_avail": "Government entities; private companies; Researchers; Farmers/Farmers Cooperatives Associations (FCA), Farmers Association (FA), Agricultural input suppliers, Institutions, Students",
+    "description": null
+  },
+  {
+    "office_code": "PAgO",
+    "parent": null,
+    "title": "Acquisition of Planting Materials",
+    "name": "Acquisition of Planting Materials",
+    "office_division": "Provincial Agriculturist Office",
+    "classification": "Simple",
+    "transaction": "Government-G2C, G2G, G2B",
+    "transaction_types": [
+      "G2C",
+      "G2B",
+      "G2G"
+    ],
+    "who_may_avail": "Government and private entities; general public",
+    "description": null
+  },
+  {
+    "office_code": "PAgO",
+    "parent": null,
+    "title": "Technical Guidance/Assistance (Inquiries, Referral, Submission of Documents)",
+    "name": "Technical Guidance/Assistance (Inquiries, Referral, Submission of Documents)",
+    "office_division": "Provincial Agriculturist Office",
+    "classification": "Simple; Highly Technical",
+    "transaction": "Government-G2C, G2G, G2B",
+    "transaction_types": [
+      "G2C",
+      "G2B",
+      "G2G"
+    ],
+    "who_may_avail": "Government entities; private companies; Researchers; Farmers/Farmers Cooperatives Associations (FCA), Farmers Association (FA), Agricultural input suppliers, Institutions, Students",
+    "description": null
+  },
+  {
+    "office_code": "PAgO",
+    "parent": null,
+    "title": "Renting out of facilities",
+    "name": "Renting out of facilities",
+    "office_division": "Provincial Agriculturist Office",
+    "classification": "Simple",
+    "transaction": "G2C, G2B, G2G",
+    "transaction_types": [
+      "G2C",
+      "G2B",
+      "G2G"
+    ],
+    "who_may_avail": "Government and private entities, General public",
+    "description": null
+  },
+  {
+    "office_code": "PAgO",
+    "parent": null,
+    "title": "Livelihood Loan Assistance",
+    "name": "Livelihood Loan Assistance",
+    "office_division": "Provincial Agriculturist Office",
+    "classification": "Simple to Complex",
+    "transaction": "G2C; G2B",
+    "transaction_types": [
+      "G2C",
+      "G2B"
+    ],
+    "who_may_avail": "Organizations (Associations/Cooperatives)",
+    "description": null
+  },
+  {
+    "office_code": "PAgO",
+    "parent": null,
+    "title": "Cold Chain Services",
+    "name": "Cold Chain Services",
+    "office_division": "Provincial Agriculturist Office",
+    "classification": "Simple",
+    "transaction": "G2C, G2B, G2G",
+    "transaction_types": [
+      "G2C",
+      "G2B",
+      "G2G"
+    ],
+    "who_may_avail": "Government and private entities, General public",
+    "description": null
+  },
+  {
+    "office_code": "PAgO",
+    "parent": null,
+    "title": "Validation / Monitoring & inspection services for Project/Program proposals related to INS, FMR and Mechanization Matters",
+    "name": "Validation / Monitoring & inspection services for Project/Program proposals related to INS, FMR and Mechanization Matters",
+    "office_division": "Provincial Agriculturist Office",
+    "classification": "Simple; Highly Technical",
+    "transaction": "Government-G2C, G2G, G2B",
+    "transaction_types": [
+      "G2C",
+      "G2B",
+      "G2G"
+    ],
+    "who_may_avail": "Farmers/Fisherfolks Cooperatives Associations (FCA's), Farmers Association (FA), Irrigators' Associations (IA's)/Small",
+    "description": null
+  },
+  {
+    "office_code": "PAssO",
+    "parent": null,
+    "title": "Processing and Approval of Tax Declaration of Real Property (TDRP)",
+    "name": "Processing and Approval of Tax Declaration of Real Property (TDRP)",
+    "office_division": "Provincial Assessor's Office - Administrative Section, Tax",
+    "classification": "Complex",
+    "transaction": "G2C, G2B, G2G",
+    "transaction_types": [
+      "G2C",
+      "G2B",
+      "G2G"
+    ],
+    "who_may_avail": "General Public",
+    "description": "All assessment documents submitted by the Municipal Assessors are plotted and verified seeing to it that all laws and policies governing the appraisal and assessment of real properties for taxation purposes are properly executed before the approval of the Provincial Assessor."
+  },
+  {
+    "office_code": "PAssO",
+    "parent": null,
+    "title": "Certified/Plain copy of Sketch Plan, Section map and Tax Mapping Control Roll (TMCR); Technical Assistance.",
+    "name": "Certified/Plain copy of Sketch Plan, Section map and Tax Mapping Control Roll (TMCR); Technical Assistance.",
+    "office_division": "Provincial Assessor's Office - Tax Mapping Division",
+    "classification": "Simple",
+    "transaction": "G2C, G2B, G2G",
+    "transaction_types": [
+      "G2C",
+      "G2B",
+      "G2G"
+    ],
+    "who_may_avail": "General Public",
+    "description": "Certified photocopy of Tax Mapping documents is issued upon request of any interested party upon payment of service charge or fee at the Provincial Treasury Office; Technical assistance extended to clients (e.g. Location of real properties per plotting of technical descriptions; boundaries of real properties per section map)."
+  },
+  {
+    "office_code": "PAssO",
+    "parent": null,
+    "title": "Annotation/Cancellation of Mortgage and other Legal Orders",
+    "name": "Annotation/Cancellation of Mortgage and other Legal Orders",
+    "office_division": "Provincial Assessor's Office - Records Office",
+    "classification": "Simple",
+    "transaction": "G2C, G2B, G2G",
+    "transaction_types": [
+      "G2C",
+      "G2B",
+      "G2G"
+    ],
+    "who_may_avail": "General Public",
+    "description": "Mortgages, Notice of Lis Pendens and other legal orders involving a real property are annotated in the tax declaration/s upon submission by the owner of the document duly registered at the Office of the Registry of Deeds and upon payment of annotation fees at the Provincial Treasury Office."
+  },
+  {
+    "office_code": "PAssO",
+    "parent": null,
+    "title": "Issuance of Certified Copy of TDRP and Supporting Documents (with or without TDRP number)",
+    "name": "Issuance of Certified Copy of TDRP and Supporting Documents (with or without TDRP number)",
+    "office_division": "Provincial Assessor's Office - Records Division",
+    "classification": "Simple",
+    "transaction": "G2C, G2B, G2G",
+    "transaction_types": [
+      "G2C",
+      "G2B",
+      "G2G"
+    ],
+    "who_may_avail": "General Public",
+    "description": "Office."
+  },
+  {
+    "office_code": "PAssO",
+    "parent": null,
+    "title": "Issuance of Certificate of Property Holdings/Non-Property, Assessment, Non-encumbrance, etc.",
+    "name": "Issuance of Certificate of Property Holdings/Non-Property, Assessment, Non-encumbrance, etc.",
+    "office_division": "Provincial Assessor's Office",
+    "classification": "Simple",
+    "transaction": "G2C, G2B, G2G",
+    "transaction_types": [
+      "G2C",
+      "G2B",
+      "G2G"
+    ],
+    "who_may_avail": "General Public",
+    "description": "Certification is issued upon request of any interested party upon payment of service charge or fee at the Provincial Treasury Office."
+  },
+  {
+    "office_code": "PAssO",
+    "parent": null,
+    "title": "History of Real Property",
+    "name": "History of Real Property",
+    "office_division": "Provincial Assessor's Office - Records Division",
+    "classification": "Simple",
+    "transaction": "G2C, G2B, G2G",
+    "transaction_types": [
+      "G2C",
+      "G2B",
+      "G2G"
+    ],
+    "who_may_avail": "General Public",
+    "description": "History of Real Property is accomplished/issued upon request of any interested party upon payment of service charge or fee at the Provincial Treasury Office."
+  },
+  {
+    "office_code": "PBO",
+    "parent": null,
+    "title": "Assist Walk-in Municipal/Barangay Officials Regarding Budgetary Matters",
+    "name": "Assist Walk-in Municipal/Barangay Officials Regarding Budgetary Matters",
+    "office_division": "Provincial Budget Office",
+    "classification": "Simple & Complex",
+    "transaction": "Government-to-Citizens (G2C) and Government-to-Government (G2G)",
+    "transaction_types": [
+      "G2C",
+      "G2G"
+    ],
+    "who_may_avail": "Private citizens and Government employees and officials",
+    "description": "Assistance to Municipality/Barangay Officials and other clients provided by the Office."
+  },
+  {
+    "office_code": "PBO",
+    "parent": null,
+    "title": "Assistance to Municipal/Barangay Officials Regarding Budgetary Matters",
+    "name": "Assistance to Municipal/Barangay Officials Regarding Budgetary Matters",
+    "office_division": "Provincial Budget Office",
+    "classification": "Simple & Complex",
+    "transaction": "Government-to-Citizens (G2C) and Government-to-Government (G2G)",
+    "transaction_types": [
+      "G2C",
+      "G2G"
+    ],
+    "who_may_avail": "Private citizens and Government employees and officials",
+    "description": "Written referrals/queries relative to appropriations and expenditures"
+  },
+  {
+    "office_code": "PEO",
+    "parent": null,
+    "title": "Issue Road Right-of- Way Certification",
+    "name": "Issue Road Right-of- Way Certification",
+    "office_division": "Provincial Engineering Office - Planning, Programming & Design",
+    "classification": "Simple/Complex",
+    "transaction": "Government To Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Private Citizen",
+    "description": "The Provincial Engineer's Office conducts site inspection and survey for the issuance of Road-Right of way Certification."
+  },
+  {
+    "office_code": "PEO",
+    "parent": null,
+    "title": "Perform Materials Testing Procedures",
+    "name": "Perform Materials Testing Procedures",
+    "office_division": "Provincial Engineering Office-Materials Testing & Quality Control",
+    "classification": "Complex",
+    "transaction": "Government To Business",
+    "transaction_types": [
+      "G2B"
+    ],
+    "who_may_avail": "Project Contractors",
+    "description": null
+  },
+  {
+    "office_code": "PEO",
+    "parent": null,
+    "title": "Provide Transportation Services",
+    "name": "Provide Transportation Services",
+    "office_division": "Provincial Engineering Office - Motorpool Division",
+    "classification": "Simple",
+    "transaction": "Government To Government",
+    "transaction_types": [
+      "G2G"
+    ],
+    "who_may_avail": "PLGU And Other Government Offices",
+    "description": null
+  },
+  {
+    "office_code": "PEO",
+    "parent": null,
+    "title": "Perform Preventive & Corrective Maintenance Services",
+    "name": "Perform Preventive & Corrective Maintenance Services",
+    "office_division": "Provincial Engineering Office - Motorpool Division",
+    "classification": "Simple/Complex/Highly Technical",
+    "transaction": "Government To Government",
+    "transaction_types": [
+      "G2G"
+    ],
+    "who_may_avail": "PLGU And Other Government Offices",
+    "description": "The office conducts Preventive and/or Corrective Maintenance of all Service Vehicle or Equipment of the Province"
+  },
+  {
+    "office_code": "PENRO-LGU",
+    "parent": null,
+    "title": "Issue Quarry Permit",
+    "name": "Issue Quarry Permit",
+    "office_division": "Benguet Environment & Natural Resources Office - Mineral",
+    "classification": "Complex and Highly Technical",
+    "transaction": "Government-to-Government-to-Citizens",
+    "transaction_types": [
+      "G2C",
+      "G2G"
+    ],
+    "who_may_avail": "Any qualified individuals, Juridical Entity",
+    "description": null
+  },
+  {
+    "office_code": "PENRO-LGU",
+    "parent": null,
+    "title": "Issue Small Scale Mining Contract/Permit",
+    "name": "Issue Small Scale Mining Contract/Permit",
+    "office_division": "Benguet Environment & Natural Resources Office - Mineral",
+    "classification": "Complex and Highly Technical",
+    "transaction": "Government-to-Government-to-Citizens",
+    "transaction_types": [
+      "G2C",
+      "G2G"
+    ],
+    "who_may_avail": "Any qualified individuals, Juridical Entity",
+    "description": null
+  },
+  {
+    "office_code": "PENRO-LGU",
+    "parent": null,
+    "title": "Issue Ore Transport Permit",
+    "name": "Issue Ore Transport Permit",
+    "office_division": "Benguet Environment & Natural Resources Office - Mineral",
+    "classification": "Complex and Highly Technical",
+    "transaction": "Government-to-Government-to-Citizens",
+    "transaction_types": [
+      "G2C",
+      "G2G"
+    ],
+    "who_may_avail": "Any qualified individuals",
+    "description": null
+  },
+  {
+    "office_code": "PENRO-LGU",
+    "parent": null,
+    "title": "Issue Mineral Processor's Permit",
+    "name": "Issue Mineral Processor's Permit",
+    "office_division": "Benguet Environment & Natural Resources Office - Mineral",
+    "classification": "Complex and Highly Technical",
+    "transaction": "Government-to-Government-to-Citizens",
+    "transaction_types": [
+      "G2C",
+      "G2G"
+    ],
+    "who_may_avail": "Any qualified individuals, Juridical entity",
+    "description": null
+  },
+  {
+    "office_code": "PGSO",
+    "parent": null,
+    "title": "Serve Purchase Orders",
+    "name": "Serve Purchase Orders",
+    "office_division": "Provincial General Services Office",
+    "classification": "Simple",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Clients / Citizens",
+    "description": "The Provincial General Services Office (PGSO), thru its Procurement Services Division particularly under its Document Review and Processing Services Unit (DRPSU) serves Purchase Orders to winning dealers of the procured various goods and services"
+  },
+  {
+    "office_code": "PGSO",
+    "parent": null,
+    "title": "Inspection and Acceptance of Deliveries",
+    "name": "Inspection and Acceptance of Deliveries",
+    "office_division": "Provincial General Services Office",
+    "classification": "Simple - Complex",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Clients / Citizens",
+    "description": "The PGSO thru its Procurement Services Division particularly under its Delivery and Inspection Services Unit (DISU) joins the Inspectorate Team in the inspection of delivered goods with reference to the Purchase Order (PO)"
+  },
+  {
+    "office_code": "PGSO",
+    "parent": null,
+    "title": "Renting Out of Facilities",
+    "name": "Renting Out of Facilities",
+    "office_division": "Provincial General Services Office",
+    "classification": "Simple",
+    "transaction": "Government to Government",
+    "transaction_types": [
+      "G2G"
+    ],
+    "who_may_avail": "Provincial departments/other agencies",
+    "description": "The Provincial General Services Office (PGSO), thru its Administrative Section facilitates the renting out of facilities to various clients such as organizations, associations, schools, other government offices, etc."
+  },
+  {
+    "office_code": "PHO",
+    "parent": null,
+    "title": "Microbiological Water Analysis",
+    "name": "Microbiological Water Analysis",
+    "office_division": "Provincial Health Office",
+    "classification": "Complex",
+    "transaction": "Government to Government and Government to General Public",
+    "transaction_types": [
+      "G2C",
+      "G2G"
+    ],
+    "who_may_avail": "Municipalities and General Public",
+    "description": "The Microbiological Water Analysis testing is done for water samples for private water providers, the 13 Municipalities of Benguet, Provincial and District Hospitals. Submission of water sample is every Mondays, Tuesdays and Wednesdays from 8:00 A.M. to 12:00 noon."
+  },
+  {
+    "office_code": "PHO",
+    "parent": null,
+    "title": "NTP Laboratory - Xpert MTB RIF Assay",
+    "name": "NTP Laboratory - Xpert MTB RIF Assay",
+    "office_division": "Provincial Health Office",
+    "classification": "Simple",
+    "transaction": "Government to Government and Government to General Public",
+    "transaction_types": [
+      "G2C",
+      "G2G"
+    ],
+    "who_may_avail": "Municipalities, Health Facilities and General Public",
+    "description": "All patients who will undergo Xpert MTB/FIR Assay should have a request form/ referral form from a physician. This examination is done Monday to Friday (8:00 am to 5:00 pm). Submission of specimen is from 8:00 am to 2:00 pm only)"
+  },
+  {
+    "office_code": "PHO",
+    "parent": null,
+    "title": "Provision of Technical Assistance",
+    "name": "Provision of Technical Assistance",
+    "office_division": "PHO Management",
+    "classification": "Simple",
+    "transaction": "Government to General Public",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Municipalities, Partner agencies and General Public",
+    "description": null
+  },
+  {
+    "office_code": "PHO",
+    "parent": null,
+    "title": "Issuance of Vaccines, Medicines and Medical Supplies",
+    "name": "Issuance of Vaccines, Medicines and Medical Supplies",
+    "office_division": "Provincial Health Office-Health Systems Support Division",
+    "classification": "Simple",
+    "transaction": "Government to General Public",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Rural Health Units, hospitals, General Public, Municipal Health services Offices",
+    "description": "The implementation of the various health programs and depends on the availability and urgency of need. No noon break policy is being implemented."
+  },
+  {
+    "office_code": "PHO",
+    "parent": null,
+    "title": "Issuance of Environmental Health and Sanitation Certificate",
+    "name": "Issuance of Environmental Health and Sanitation Certificate",
+    "office_division": "Provincial Health Office",
+    "classification": "Complex",
+    "transaction": "Government to Government",
+    "transaction_types": [
+      "G2G"
+    ],
+    "who_may_avail": "Individuals, agencies or companies",
+    "description": "The Environmental Health and Sanitation (EHS) Certification with comments and recommendations from the Provincial Health Office is a requirement for issuance of Presidential Proclamation and special patent for land titling purposes. This certification is issued to individuals, agencies or companies applying for Land Titles"
+  },
+  {
+    "office_code": "PHO",
+    "parent": null,
+    "title": "Request for Repair & Preventive Maintenance of Bio-Medical Equipment",
+    "name": "Request for Repair & Preventive Maintenance of Bio-Medical Equipment",
+    "office_division": "Provincial Health Office-Health Systems Support Division",
+    "classification": "Highly Technical",
+    "transaction": "Government to Government",
+    "transaction_types": [
+      "G2G"
+    ],
+    "who_may_avail": "Rural Health Units and District Hospitals",
+    "description": "Repairs of Bio-Medical Equipment are done as requested. The maintenance of equipment in District Hospitals are scheduled least semi-annually. The repair and maintenance are limited to government-owned and acquired properties and equipment in the District Hospitals and Rural Health Units. Cost of spare parts, transportation and other incidental expenses will be borne by the requesting party or end-user while services will be free of charge."
+  },
+  {
+    "office_code": "PHO",
+    "parent": null,
+    "title": "Consultation Services at Benguet Provincial Health Office Yaman ng Kalusugan Program (YAKAP) Clinic",
+    "name": "Consultation Services at Benguet Provincial Health Office Yaman ng Kalusugan Program (YAKAP) Clinic",
+    "office_division": "Provincial Health Office",
+    "classification": "Simple",
+    "transaction": "Government to Citizen (G2C)",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "All PhilHealth Members",
+    "description": "All PhilHealth Members Valid ID, PhilHealth Identification Number (PIN), and/or Proof of Registration (eGovPH app, Member Portal, or printed registration). Clinic services is done Monday to Friday (8:00 am to 5:00 pm)."
+  },
+  {
+    "office_code": "PHRMDO",
+    "parent": null,
+    "title": "Issuance of HR Documents (Service Records, Certificate of Employment, Earned Leaves) and Other HR Records",
+    "name": "Issuance of HR Documents (Service Records, Certificate of Employment, Earned Leaves) and Other HR Records",
+    "office_division": "Provincial Human Resource Management and Development Office",
+    "classification": "Simple",
+    "transaction": null,
+    "transaction_types": [],
+    "who_may_avail": "Active and Former Officials and Employees",
+    "description": "The office is the repository of all provincial officials' and employees' records (201 files) which are the basis for the preparation of service records and certifications needed by the requesting client. Clients are current and former officials, and employees and/or family members of separated officials and employees."
+  },
+  {
+    "office_code": "PLO",
+    "parent": null,
+    "title": "Rendition of Legal Advice/Opinion/Counseling",
+    "name": "Rendition of Legal Advice/Opinion/Counseling",
+    "office_division": "Provincial Legal Office",
+    "classification": "Simple",
+    "transaction": "Government to Citizen, Government to Government, Government to Businesses",
+    "transaction_types": [
+      "G2C",
+      "G2B",
+      "G2G"
+    ],
+    "who_may_avail": "Any client",
+    "description": "The Provincial Legal Office is mandated to render its legal opinion on legal matters."
+  },
+  {
+    "office_code": "PLO",
+    "parent": null,
+    "title": "Issuance of Certified True Copy of Official Documents",
+    "name": "Issuance of Certified True Copy of Official Documents",
+    "office_division": "Provincial Legal Office",
+    "classification": "Simple",
+    "transaction": "Government to Citizen, Government to Government",
+    "transaction_types": [
+      "G2C",
+      "G2G"
+    ],
+    "who_may_avail": "Any client",
+    "description": "Certified true copies of official documents are likewise issued by the office"
+  },
+  {
+    "office_code": "PPDO",
+    "parent": null,
+    "title": "Verification/Request Project/s Listings and Prioritized Projects and Other Documents",
+    "name": "Verification/Request Project/s Listings and Prioritized Projects and Other Documents",
+    "office_division": "Provincial Planning & Development Office",
+    "classification": "Simple",
+    "transaction": "Government to Citizens, Government to Business & Government to Government.",
+    "transaction_types": [
+      "G2C",
+      "G2B",
+      "G2G"
+    ],
+    "who_may_avail": "Citizens/Clients, Other LGUs/Offices, Line Agencies",
+    "description": "Clients from all over the province are referred to the PPDO to verify if their resolutions of request were funded or submitted for funding or considered for future appropriation. Clients are advised to directly submit their resolutions of request for funding to the appropriate office for their appropriate action."
+  },
+  {
+    "office_code": "PPDO",
+    "parent": null,
+    "title": "Validation/ Inspection/ Monitoring of Social, Economic, and Infrastructure Projects/ Issuance of Validation/Inspection, and Monitoring Reports",
+    "name": "Validation/ Inspection/ Monitoring of Social, Economic, and Infrastructure Projects/ Issuance of Validation/Inspection, and Monitoring Reports",
+    "office_division": "Provincial Planning & Development Office",
+    "classification": "Simple, Complex & Highly Technical",
+    "transaction": "Government to Citizens, Government to Business & Government to Government.",
+    "transaction_types": [
+      "G2C",
+      "G2B",
+      "G2G"
+    ],
+    "who_may_avail": "Citizens/Client, Offices, Line Agencies, MLGUs/BLGUs",
+    "description": "The Office's task is to validate, monitor, and evaluate projects being implemented by the different departments/agencies in the province. Validation reports are required before these projects may be considered for funding."
+  },
+  {
+    "office_code": "PPDO",
+    "parent": null,
+    "title": "Provision of Development Plans, Investment programs, maps, demographic data, Physical and Socio-Economic Data, and reports such as Semestral and Annual Projects Status, and Others.",
+    "name": "Provision of Development Plans, Investment programs, maps, demographic data, Physical and Socio-Economic Data, and reports such as Semestral and Annual Projects Status, and Others.",
+    "office_division": "Provincial Planning & Development Office",
+    "classification": "Simple",
+    "transaction": "Government to Citizens, Government to Business & Government to Government.",
+    "transaction_types": [
+      "G2C",
+      "G2B",
+      "G2G"
+    ],
+    "who_may_avail": "Offices, Agencies, Students, Researchers, Funding Agencies, etc.",
+    "description": "Copies of these data are provided for reference purposes to requisitioning client/s."
+  },
+  {
+    "office_code": "PSWDO",
+    "parent": null,
+    "title": "Financial Assistance to Individuals in Crisis Situation (AICS)",
+    "name": "Financial Assistance to Individuals in Crisis Situation (AICS)",
+    "office_division": "Office of the Provincial Social Welfare and Development",
+    "classification": "Complex & Highly Technical",
+    "transaction": "Government to Citizens (G2C)",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "All clients in crisis situations due to illness, death, disasters, other difficult circumstances, etc.",
+    "description": null
+  },
+  {
+    "office_code": "PSWDO",
+    "parent": null,
+    "title": "Children in Conflict with the Law for Admission at Bahay Pag-asa",
+    "name": "Children in Conflict with the Law for Admission at Bahay Pag-asa",
+    "office_division": "Office of the Provincial Social Welfare and Development",
+    "classification": "Complex and Highly Technical",
+    "transaction": "Government to Citizens (G2C)",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Children - in - Conflict with the Law whose cases are being heard in court",
+    "description": null
+  },
+  {
+    "office_code": "PSWDO",
+    "parent": null,
+    "title": "Children in Conflict with the Law (with court decision) for transfer to Rehabilitation Center",
+    "name": "Children in Conflict with the Law (with court decision) for transfer to Rehabilitation Center",
+    "office_division": "Office of the Provincial Social Welfare and Development",
+    "classification": "Complex",
+    "transaction": "Government to Citizens (G2C)",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Bahay Pag-asa residents (CICL) with court decision for transfer to the Rehabilitation Center",
+    "description": null
+  },
+  {
+    "office_code": "PSWDO",
+    "parent": null,
+    "title": "Food for work, Food Assistance",
+    "name": "Food for work, Food Assistance",
+    "office_division": "Office of the Provincial Social Welfare and Development",
+    "classification": "Complex",
+    "transaction": "Government to Citizens (G2C)",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "All clients & families in crisis situation, Organizations, Barangay & Municipalities",
+    "description": null
+  },
+  {
+    "office_code": "PSWDO",
+    "parent": null,
+    "title": "Food Assistance",
+    "name": "Food Assistance",
+    "office_division": "Office of the Provincial Social Welfare and Development",
+    "classification": "Complex",
+    "transaction": "Government to Citizens (G2C)",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "All clients & families in crisis situation, Organizations, Barangay & Municipalities",
+    "description": null
+  },
+  {
+    "office_code": "PSWDO",
+    "parent": null,
+    "title": "Provision of Assistive Devices",
+    "name": "Provision of Assistive Devices",
+    "office_division": "Office of the Provincial Social Welfare and Development",
+    "classification": "Complex",
+    "transaction": "Government to Citizens (G2C)",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "All PWDs in need of assistive devices",
+    "description": null
+  },
+  {
+    "office_code": "PSWDO",
+    "parent": null,
+    "title": "Livelihood Loan Assistance Program (Maximum-1,000,000.00; Minimum-100,000.00)",
+    "name": "Livelihood Loan Assistance Program (Maximum-1,000,000.00; Minimum-100,000.00)",
+    "office_division": "Office of the Provincial Social Welfare and Development",
+    "classification": "Complex and Highly Technical",
+    "transaction": "Government-to-Citizen, Government-to-Businesses",
+    "transaction_types": [
+      "G2C",
+      "G2B"
+    ],
+    "who_may_avail": "Non-Government Organizations/ Peoples Organizations",
+    "description": null
+  },
+  {
+    "office_code": "PTO",
+    "parent": null,
+    "title": "Collection of tax on Transfer of Real Property Ownership",
+    "name": "Collection of tax on Transfer of Real Property Ownership",
+    "office_division": "Provincial Treasury Office - Land Tax and Revenue Division",
+    "classification": "Simple",
+    "transaction": "Government-to-Client",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "All Taxpayers",
+    "description": "Levied tax on the sale, donation barter, or any other mode of transferring ownership or title of real property."
+  },
+  {
+    "office_code": "PTO",
+    "parent": null,
+    "title": "Collection of Tax on Sand, Gravel, and Other Quarry Resources to Contractors",
+    "name": "Collection of Tax on Sand, Gravel, and Other Quarry Resources to Contractors",
+    "office_division": "Provincial Treasury Office - Land Tax and Revenue Division",
+    "classification": "Simple",
+    "transaction": "Government- to-Client",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Project Contractors",
+    "description": "Imposed tax of Ten percent (10%) of the fair market value, or such percentage as reasonably determined by the committee in this Province, per cubic meter."
+  },
+  {
+    "office_code": "PTO",
+    "parent": null,
+    "title": "Collection of Sand and Gravel Tax and Issuance of Delivery Receipts to the Permittee",
+    "name": "Collection of Sand and Gravel Tax and Issuance of Delivery Receipts to the Permittee",
+    "office_division": "Provincial Treasury Office-Land Tax and Revenue Division",
+    "classification": "Simple",
+    "transaction": "Government- to - Client",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Sand and Gravel Permittees",
+    "description": "within the territorial jurisdiction of Benguet province."
+  },
+  {
+    "office_code": "PTO",
+    "parent": null,
+    "title": "Collection of Real Property Tax",
+    "name": "Collection of Real Property Tax",
+    "office_division": "Provincial Treasury Office- Land Tax and Revenue Division",
+    "classification": "Simple",
+    "transaction": "Government -to- Client",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Real Property Taxpayers/Owners",
+    "description": "All real properties are levied an annual AD VALOREM TAX of 1% and an additional 1% tax for SEF on the assessed value of real property, such as land, buildings, machinery, and other improvement."
+  },
+  {
+    "office_code": "PTO",
+    "parent": null,
+    "title": "Collection of Professional Tax",
+    "name": "Collection of Professional Tax",
+    "office_division": "Provincial Treasury Office- Land Tax and Revenue Division",
+    "classification": "Simple",
+    "transaction": "Government-to-Client",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Professional who passed the examinations conducted by the PRC/IBP/ other legally authorized government examinations",
+    "description": "Tax imposed as an annual professional tax on each person engaged in the exercise or practice of his/her profession requiring government examination."
+  },
+  {
+    "office_code": "PTO",
+    "parent": null,
+    "title": "Collection of Franchise Tax & Tax on Printing & Publication",
+    "name": "Collection of Franchise Tax & Tax on Printing & Publication",
+    "office_division": "Provincial Treasury Office- Land Tax and Revenue Division",
+    "classification": "Simple",
+    "transaction": "Government-to-Client",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Taxpayers / Business Owners",
+    "description": "A tax levied on businesses enjoying a Franchise and on persons engaged in the printing and /or publication of books, cards, posters, leaflets, handbills, certificates, receipts, pamphlets, and others of similar nature."
+  },
+  {
+    "office_code": "PTO",
+    "parent": null,
+    "title": "Collection of Annual Fixed Tax on Delivery Trucks/ Vans",
+    "name": "Collection of Annual Fixed Tax on Delivery Trucks/ Vans",
+    "office_division": "Provincial Treasury Office- Land Tax Revenue Division",
+    "classification": "Simple",
+    "transaction": "Government-to-Client",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Business Owners with Delivery Vehicle/s",
+    "description": "Tax imposed for every truck, van, or motor vehicle used by manufacturers, producers, wholesalers, dealers, or retailers in the delivery of products to sales outlets or consumers, whether directly or indirectly within the province."
+  },
+  {
+    "office_code": "PTO",
+    "parent": null,
+    "title": "Collection of Fees and Issuance of Provincial Permit/ Clearance",
+    "name": "Collection of Fees and Issuance of Provincial Permit/ Clearance",
+    "office_division": "Provincial Treasury Office- Land Tax and Revenue Division",
+    "classification": "Simple",
+    "transaction": "Government-to-Client",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Client/Taxpayer",
+    "description": "Fees are imposed for services rendered to private persons and entities and to regulate business and other activities based on the approved Benguet Revenue Code"
+  },
+  {
+    "office_code": "PTO",
+    "parent": null,
+    "title": "Collection of certification Fees, Verification Fees, Rentals, Occupation Fees, Tuition Fees, Bid Documents, Other Fees and Charges",
+    "name": "Collection of certification Fees, Verification Fees, Rentals, Occupation Fees, Tuition Fees, Bid Documents, Other Fees and Charges",
+    "office_division": "Provincial Treasury Office- Land Tax and Revenue Division",
+    "classification": "Simple",
+    "transaction": "Government-to-Client",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Clients/Taxpayers",
+    "description": "Fees and charges are collected based on the rates provided under the 2023 revised Revenue Code of the Province of Benguet."
+  },
+  {
+    "office_code": "PTO",
+    "parent": null,
+    "title": "Payment of Approved Vouchers and Payrolls",
+    "name": "Payment of Approved Vouchers and Payrolls",
+    "office_division": "Provincial Treasury Office- Cash Division",
+    "classification": "Simple",
+    "transaction": "Government-to-Client",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Claimants/concerned clients",
+    "description": "Custody of Public funds and Payment of Approved Claims and Obligations done Through the Office of the Provincial Treasurer."
+  },
+  {
+    "office_code": "PTO",
+    "parent": null,
+    "title": "Release of Approved Checks in Payment of Obligations",
+    "name": "Release of Approved Checks in Payment of Obligations",
+    "office_division": "Provincial Treasury Office -Cash Division",
+    "classification": "Simple",
+    "transaction": "Government-to-citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Concerned Citizen",
+    "description": "Pays all mandatory obligations of the province."
+  },
+  {
+    "office_code": "PTO",
+    "parent": null,
+    "title": "Collection of Payment of Telephone Bills (personal calls), Loans, Bid and Performance Securities, and Other Miscellaneous payments",
+    "name": "Collection of Payment of Telephone Bills (personal calls), Loans, Bid and Performance Securities, and Other Miscellaneous payments",
+    "office_division": "Provincial Treasury Office - Cash Division",
+    "classification": "Simple",
+    "transaction": "Government-to-citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Concerned personnel/concerned citizen",
+    "description": "Collects fees and deposited intact to the Authorized depository banks"
+  },
+  {
+    "office_code": "PTO",
+    "parent": null,
+    "title": "Receipts of Other Agency Transfer Fund",
+    "name": "Receipts of Other Agency Transfer Fund",
+    "office_division": "Provincial Treasury Office -Cash Division",
+    "classification": "Simple",
+    "transaction": "Government-to-Government",
+    "transaction_types": [
+      "G2G"
+    ],
+    "who_may_avail": "LGUs/Authorized Representatives",
+    "description": "Issues official receipts of transfer of funds"
+  },
+  {
+    "office_code": "PTO",
+    "parent": null,
+    "title": "Collection of Remittance of Revenue Division, Field Cashiers, and other Accountable Officers",
+    "name": "Collection of Remittance of Revenue Division, Field Cashiers, and other Accountable Officers",
+    "office_division": "Provincial Treasury Office- Cash Division",
+    "classification": "Simple",
+    "transaction": "Government-to-Government",
+    "transaction_types": [
+      "G2G"
+    ],
+    "who_may_avail": "Officials and other Personnel of the LGU / concerned citizen",
+    "description": "Collects remittances and deposits intact to the Authorized depository banks"
+  },
+  {
+    "office_code": "PTO",
+    "parent": null,
+    "title": "Collection of Remittance of Municipal Treasurers on Provincial Shares",
+    "name": "Collection of Remittance of Municipal Treasurers on Provincial Shares",
+    "office_division": "Provincial Treasury Office- Cash Division",
+    "classification": "Simple",
+    "transaction": "Government-to-Government 205 | P a g e",
+    "transaction_types": [
+      "G2G"
+    ],
+    "who_may_avail": "LGUs",
+    "description": "Collects remittances and deposits intact to the Authorized depository banks"
+  },
+  {
+    "office_code": "PTO",
+    "parent": null,
+    "title": "Issuance of Accountable Forms",
+    "name": "Issuance of Accountable Forms",
+    "office_division": "Provincial Treasury Office - Administrative Section",
+    "classification": "Simple",
+    "transaction": "Government-to-Government",
+    "transaction_types": [
+      "G2G"
+    ],
+    "who_may_avail": "Bonded Accountable Officers",
+    "description": "Accountable forms are purchased by the Provincial Government in bulk and made available to LGUs for their convenience"
+  },
+  {
+    "office_code": "PVO",
+    "parent": null,
+    "title": "Issuance of Veterinary Health Certificate (VHC) and Veterinary Shipping Permit (VSP)",
+    "name": "Issuance of Veterinary Health Certificate (VHC) and Veterinary Shipping Permit (VSP)",
+    "office_division": "Regulatory Division",
+    "classification": "Simple to Complex",
+    "transaction": "Government-to-Citizens, Government-to-Businesses",
+    "transaction_types": [
+      "G2C",
+      "G2B"
+    ],
+    "who_may_avail": "Livestock Raisers, Pet Owners, Livestock Shippers, Businessmen",
+    "description": "Veterinary Health Certificate (VHC) is issued to certify that the animals being transported are apparently healthy. Veterinary Shipping Permit (VSP) is a document required by the Bureau of Animal Industry in the inter-regional movement of animals. The PVO issues VSP for animals to be shipped-out within the Cordillera Administrative Region (CAR). Meanwhile, the Bureau of Animal Industry issues the VSP for animals shipped out to Provinces outside CAR."
+  },
+  {
+    "office_code": "PVO",
+    "parent": null,
+    "title": "Vaccination of Animals",
+    "name": "Vaccination of Animals",
+    "office_division": "Regulatory Division",
+    "classification": "Simple",
+    "transaction": "Government-to-Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Livestock Raisers, Pet Owners",
+    "description": "The process of immunization animals to help the immune system develop immunity from a disease."
+  },
+  {
+    "office_code": "PVO",
+    "parent": null,
+    "title": "Deworming of Animals",
+    "name": "Deworming of Animals",
+    "office_division": "Regulatory Division",
+    "classification": "Simple",
+    "transaction": "Government-to-Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Livestock Raisers, Pet Owners",
+    "description": "The process of administering dewormers to animals to eliminate gastro-intestinal parasites."
+  },
+  {
+    "office_code": "PVO",
+    "parent": null,
+    "title": "Supplementation of Animals with Vitamins and Minerals",
+    "name": "Supplementation of Animals with Vitamins and Minerals",
+    "office_division": "Regulatory Division",
+    "classification": "Simple",
+    "transaction": "Government-to-Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Livestock Raisers, Pet Owners",
+    "description": "The process of administering vitamins and mineral supplements to correct deficiencies for normal body functions."
+  },
+  {
+    "office_code": "PVO",
+    "parent": null,
+    "title": "Treatment of Animals",
+    "name": "Treatment of Animals",
+    "office_division": "Regulatory Division",
+    "classification": "Simple to Complex, Highly Technical",
+    "transaction": "Government-to-Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Livestock Raisers, Pet Owners",
+    "description": null
+  },
+  {
+    "office_code": "PVO",
+    "parent": null,
+    "title": "Consultation",
+    "name": "Consultation",
+    "office_division": "Regulatory Division",
+    "classification": "Simple",
+    "transaction": "Government-to-Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Livestock Raisers, Pet Owners",
+    "description": "Simple veterinary consultation services can be entertained through phone call or through electronic means. However, for consultations needing patient check-up, client must bring the animal personally."
+  },
+  {
+    "office_code": "PVO",
+    "parent": null,
+    "title": "Spay and Neuter of Pets",
+    "name": "Spay and Neuter of Pets",
+    "office_division": "Provincial Veterinary Office - Regulatory Division",
+    "classification": "Highly Technical",
+    "transaction": "Government-to-Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Pet Owners",
+    "description": "Spay refers to the surgical removal of a female dog or cat's uterus and ovaries. Neuter or castration refers to the surgical removal of a male dogs or cats testicles. These procedures are done to control pet population in support to the Rabies Prevention and Control Program."
+  },
+  {
+    "office_code": "PVO",
+    "parent": null,
+    "title": "Castration of Livestock",
+    "name": "Castration of Livestock",
+    "office_division": "Regulatory Division",
+    "classification": "Highly Technical",
+    "transaction": "Government-to-Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Livestock Raisers",
+    "description": "The process of removing the testicles of male animals not intended for breeding."
+  },
+  {
+    "office_code": "PVO",
+    "parent": null,
+    "title": "Animal Disease Surveillance/ Investigation",
+    "name": "Animal Disease Surveillance/ Investigation",
+    "office_division": "Regulatory Division",
+    "classification": "Highly Technical",
+    "transaction": "Government-to-Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Livestock Raisers, Pet Owners",
+    "description": "Animal Disease Surveillance/ Investigation is the conduct of investigation to diagnose the disease and to understand its origin and spread. Control measures are also included in completing this service. Disease surveillance includes collection and examination of laboratory samples."
+  },
+  {
+    "office_code": "PVO",
+    "parent": null,
+    "title": "Biosecurity Assessment of Animal Facilities",
+    "name": "Biosecurity Assessment of Animal Facilities",
+    "office_division": "Regulatory Division",
+    "classification": "Simple",
+    "transaction": "Government-to-Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Livestock Raisers, Pet Owners",
+    "description": "Biosecurity assessment is the on-site evaluation of the disease entry risk levels of livestock and poultry farms using the farm biosecurity assessment form. Biosecurity is scored as good/ needs improvement/poor and advice is given to owners how to lower risk of disease in their farms."
+  },
+  {
+    "office_code": "PVO",
+    "parent": null,
+    "title": "Animal Quarantine Inspection",
+    "name": "Animal Quarantine Inspection",
+    "office_division": "Regulatory Division",
+    "classification": "Simple to Complex",
+    "transaction": "Government-to-Citizen, Government-to-Businesses",
+    "transaction_types": [
+      "G2C",
+      "G2B"
+    ],
+    "who_may_avail": "Livestock Shippers/Owners/Raisers, Businessmen",
+    "description": "Animal Quarantine Inspection is the process of checking animals and meat, by-products and its travel documents at the Provincial Animal Quarantine Checkpoints (located at Salpang, Taloy Sur, Tuba; Camp 6, Kennon Road; San Pascual, Tuba; Palali, Poblacion, Sablan; Pito, Bokod; Cotcot, Bangao, Buguias; Colalo, Tabio, Mankayan and Mangi, Sablan) to prevent entry of animal diseases for public health and food safety."
+  },
+  {
+    "office_code": "PVO",
+    "parent": null,
+    "title": "Artificial Insemination (AI) of Swine",
+    "name": "Artificial Insemination (AI) of Swine",
+    "office_division": "Operations Division",
+    "classification": "Highly Technical",
+    "transaction": "Government-to-Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Livestock Raisers",
+    "description": null
+  },
+  {
+    "office_code": "PVO",
+    "parent": null,
+    "title": "Artificial Insemination (AI) of Ruminant Animals (Sheep, Goat, Cattle and Carabao)",
+    "name": "Artificial Insemination (AI) of Ruminant Animals (Sheep, Goat, Cattle and Carabao)",
+    "office_division": "Operations Division",
+    "classification": "Highly Technical",
+    "transaction": "Government-to-Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Livestock Raisers",
+    "description": "13.Artificial Insemination (AI) of Ruminant Animals (Sheep, Goat, Cattle and Carabao)"
+  },
+  {
+    "office_code": "PVO",
+    "parent": null,
+    "title": "Natural Breeding of Cattle",
+    "name": "Natural Breeding of Cattle",
+    "office_division": "Operations Division",
+    "classification": "Simple",
+    "transaction": "Government-to-Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Livestock Raisers",
+    "description": null
+  },
+  {
+    "office_code": "PVO",
+    "parent": null,
+    "title": "Animal Dispersal and Buck loan",
+    "name": "Animal Dispersal and Buck loan",
+    "office_division": "Operations Division",
+    "classification": "Complex",
+    "transaction": "Government-to-Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Livestock Raisers",
+    "description": null
+  },
+  {
+    "office_code": "PVO",
+    "parent": null,
+    "title": "Livelihood Loan Assistance (Minimum-PHP100,000.00; Maximum- PHP1,000,000.00)",
+    "name": "Livelihood Loan Assistance (Minimum-PHP100,000.00; Maximum- PHP1,000,000.00)",
+    "office_division": "Provincial Veterinary Office",
+    "classification": "Complex",
+    "transaction": "Government-to-Citizen; Government-to-Businesses",
+    "transaction_types": [
+      "G2C",
+      "G2B"
+    ],
+    "who_may_avail": "Farmers' Cooperative/Associations (FCAs) or Organization",
+    "description": "A no interest loan payable in two years to augment farmers' capital in livestock raising granted to accredited FCAs."
+  },
+  {
+    "office_code": "PVO",
+    "parent": null,
+    "title": "Fingerlings (Tilapia) Dispersal",
+    "name": "Fingerlings (Tilapia) Dispersal",
+    "office_division": "Operations Division",
+    "classification": "Simple to Complex",
+    "transaction": "Government-to-Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Fisherfolks, Farmers",
+    "description": "Dispersal of cultured tilapia fingerlings to inland bodies of water to increase production."
+  },
+  {
+    "office_code": "PVO",
+    "parent": null,
+    "title": "Calamity Assistance",
+    "name": "Calamity Assistance",
+    "office_division": "Operations Division",
+    "classification": "Complex",
+    "transaction": "Government-to-Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Farmers, Fisherfolks, Beekeeper",
+    "description": "Calamity assistance includes the assistance given to livestock raisers who incurred damages due to typhoons, earthquakes, diseases, La Ni�a and El Ni�o phenomena and other extreme weather conditions as a result of climate change."
+  },
+  {
+    "office_code": "PVO",
+    "parent": null,
+    "title": "Support to Families with Stunted Children",
+    "name": "Support to Families with Stunted Children",
+    "office_division": "Operations Division",
+    "classification": "Complex",
+    "transaction": "Government-to-Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Families with stunted children",
+    "description": "Families with stunted children identified by the Provincial Health Office (PHO) will receive livelihood assistance package consisting of 50 heads of grower chicks with feeds. This provides opportunity for the beneficiary families to have access to nutritious food thereby, lowering cases of malnutrition among children, while also creating an opportunity for additional income to support their overall well-being."
+  },
+  {
+    "office_code": "OSSP",
+    "parent": null,
+    "title": "Provision of Resolutions, Ordinances, and other Legislative Records",
+    "name": "Provision of Resolutions, Ordinances, and other Legislative Records",
+    "office_division": "Office of the Secretary to the Sangguniang Panlalawigan",
+    "classification": "Simple",
+    "transaction": "Government-to-citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Client/citizen",
+    "description": "The Office of the Secretary to the Sangguniang Panlalawigan is the custodian of the Sangguniang Panlalawigan's Legislative Records. Resolutions and Ordinances are available upon request and upon compliance with the necessary requirements. Requests for legislative documents other than resolutions and ordinances require the approval of the Sangguniang Panlalawigan through the Provincial Vice Governor before the document may be released by the Office of the Secretary to the Sanggunian."
+  },
+  {
+    "office_code": "OSSP",
+    "parent": null,
+    "title": "Provision of Certifications",
+    "name": "Provision of Certifications",
+    "office_division": "Office of the Secretary to the Sangguniang Panlalawigan",
+    "classification": "Simple",
+    "transaction": "Government-to-citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Client/citizen",
+    "description": "The Sangguniang Panlalawigan, through the Office of the Secretary to the Sangguniang Panlalawigan, issues certain certifications upon request and upon compliance with the necessary requirements."
+  },
+  {
+    "office_code": "ADH",
+    "parent": null,
+    "title": "OPD Consultation",
+    "name": "OPD Consultation",
+    "office_division": "Atok District Hospital - Out-Patient Division",
+    "classification": "Simple",
+    "transaction": "Government to citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Individuals/concern people/patients",
+    "description": "Out-Patient Department (OPD) is the place for consultation in the hospital for patients who are not an emergency case. It is also where follow-up check-up is done. OPD is the place where pre-natal check-up, well-baby check-up, family planning services, dental check-up and physical examination for medical certificates is availed of. It is open from Mondays to Fridays from 8:00 AM to 12:00 PM and 1:00 PM to 5:00 PM. It is closed on November 1, December 25 and January 1"
+  },
+  {
+    "office_code": "ADH",
+    "parent": null,
+    "title": "Pharmacy Services",
+    "name": "Pharmacy Services",
+    "office_division": "Atok District Hospital - Pharmacy",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Individuals/concern people/patients",
+    "description": "This is applicable to Out Patients (patients who are not confined/admitted). The Pharmacist will dispense medicines inly to patients with prescription pad. The Pharmacy is opened from Mondays to Sundays 8:00 AM - 12:00 PM and 1:00 PM - 5:00 PM only."
+  },
+  {
+    "office_code": "ADH",
+    "parent": null,
+    "title": "Billing",
+    "name": "Billing",
+    "office_division": "Atok District Hospital - Administrative",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Individuals/concern people/patients",
+    "description": "This is applicable to Out Patients (patients who are not confined/admitted). The Pharmacist will dispense medicines inly to patients with prescription pad. The Pharmacy is opened from Mondays to Sundays 8:00 AM - 12:00 PM and 1:00 PM - 5:00 PM only."
+  },
+  {
+    "office_code": "ADH",
+    "parent": null,
+    "title": "Ambulance Services",
+    "name": "Ambulance Services",
+    "office_division": "Atok District Hospital - Administrative",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Individuals/concern people/patients",
+    "description": "This is applicable when the patient is not a patient of the hospital. If the patient is admitted, the Nurse Attendant on duty automatically notifies the ambulance driver in case a patient is to be referred. The ambulance fee is based on the Provincial Revenue Code which is P25.00 per kilometer travelled."
+  },
+  {
+    "office_code": "ADH",
+    "parent": null,
+    "title": "Referral of Patients to other Facilities",
+    "name": "Referral of Patients to other Facilities",
+    "office_division": "Atok District Hospital - Medical",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Individuals/concern people/patients",
+    "description": "This concerns referring a patient to other facilities on physician's advice"
+  },
+  {
+    "office_code": "ADH",
+    "parent": null,
+    "title": "Availing of X-ray Services",
+    "name": "Availing of X-ray Services",
+    "office_division": "Atok District Hospital - X-ray Department",
+    "classification": "Simple",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Individuals/concern people/patients",
+    "description": "All patient who will undergo X-ray examination should have an x-ray request from a physician. The X-ray section is open on Monday to Friday during office hours only"
+  },
+  {
+    "office_code": "DMDH",
+    "parent": null,
+    "title": "OPD Consultation",
+    "name": "OPD Consultation",
+    "office_division": "Dennis Molintas District Hospital - Medical",
+    "classification": "Complex",
+    "transaction": "Government To Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Patients",
+    "description": null
+  },
+  {
+    "office_code": "DMDH",
+    "parent": null,
+    "title": "Dispensing of Medicines",
+    "name": "Dispensing of Medicines",
+    "office_division": "Dennis Molintas District Hospital - Pharmacy Section",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Patients",
+    "description": "The Pharmacy is open 24 hours."
+  },
+  {
+    "office_code": "DMDH",
+    "parent": null,
+    "title": "Paying old Accounts",
+    "name": "Paying old Accounts",
+    "office_division": "Dennis Molintas District Hospital - Cashier's Section",
+    "classification": "Complex",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Patients",
+    "description": "This is for patients who have an outstanding balance either from OPD, ER or a Hospital Bill not compensated by Philhealth. They signed a promissory note."
+  },
+  {
+    "office_code": "DMDH",
+    "parent": null,
+    "title": "Request for an Ambulance",
+    "name": "Request for an Ambulance",
+    "office_division": "Dennis Molintas District Hospital - Administrative Office",
+    "classification": "Complex",
+    "transaction": "Government To Government",
+    "transaction_types": [
+      "G2G"
+    ],
+    "who_may_avail": "Patients For Referral",
+    "description": null
+  },
+  {
+    "office_code": "DMDH",
+    "parent": null,
+    "title": "Referring a Patient to Higher Facilities",
+    "name": "Referring a Patient to Higher Facilities",
+    "office_division": "Dennis Molintas District Hospital - Medical/Nursing",
+    "classification": "Highly Technical",
+    "transaction": "Government To Government/Private",
+    "transaction_types": [
+      "G2G"
+    ],
+    "who_may_avail": "Patients",
+    "description": "This concerns referring a patient to higher facilities on physician's advice"
+  },
+  {
+    "office_code": "DMDH",
+    "parent": null,
+    "title": "Emergency Room Consultation",
+    "name": "Emergency Room Consultation",
+    "office_division": "Dennis Molintas District Hospital - Medical",
+    "classification": "Complex",
+    "transaction": "Government To Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Patients",
+    "description": "Patients seeking consult or treatment immediately."
+  },
+  {
+    "office_code": "DMDH",
+    "parent": null,
+    "title": "Patients Who Will Undergo Operation",
+    "name": "Patients Who Will Undergo Operation",
+    "office_division": "Dennis Molintas District Hospital - Medical/Nursing",
+    "classification": "Highly Technical",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Patients",
+    "description": null
+  },
+  {
+    "office_code": "DMDH",
+    "parent": null,
+    "title": "Admission of Patient",
+    "name": "Admission of Patient",
+    "office_division": "Dennis Molintas District Hospital - Out-Patient Department /",
+    "classification": "Complex",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Patients",
+    "description": "Patients could be admitted from the emergency room or Out Patient Department. Medicines and other medical supplies could be provided by the hospital if available and will be included in the patient's bill on discharge."
+  },
+  {
+    "office_code": "DMDH",
+    "parent": null,
+    "title": "Discharge of Patient",
+    "name": "Discharge of Patient",
+    "office_division": "Dennis Molintas District Hospital - Medical",
+    "classification": "Complex",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Patients",
+    "description": "These are the steps to be followed when an in-patient (admitted patients)/ Observation (OBS) Patients is to be discharged. PHIC members a dependent should submit all PHIC requirements on or before discharge so that PHIC benefits will be availed. Further, Senior Citizens should present their S. Citizen ID on discharge to avail of the discounts"
+  },
+  {
+    "office_code": "DMDH",
+    "parent": null,
+    "title": "Laboratory Services",
+    "name": "Laboratory Services",
+    "office_division": "Dennis Molintas District Hospital - Laboratory Section",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "All Citizens/Public/All Patients Attended by NBDH",
+    "description": null
+  },
+  {
+    "office_code": "DMDH",
+    "parent": null,
+    "title": "Provision of X-Ray and Ultrasound",
+    "name": "Provision of X-Ray and Ultrasound",
+    "office_division": "Dennis Molintas District Hospital - X-ray & Ultrasound Section",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "All Citizens/Public/All Patients Attended by NBDH",
+    "description": null
+  },
+  {
+    "office_code": "DMDH",
+    "parent": null,
+    "title": "Provision of Dental Services",
+    "name": "Provision of Dental Services",
+    "office_division": "Dennis Molintas District Hospital - Dental Section",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "All Citizens/Public",
+    "description": null
+  },
+  {
+    "office_code": "DMDH",
+    "parent": null,
+    "title": "Provision of Medical Assistance for Indigent Financially Incapacitated Patient (MAIFIP)",
+    "name": "Provision of Medical Assistance for Indigent Financially Incapacitated Patient (MAIFIP)",
+    "office_division": "Dennis Molintas District Hospital - MAIFIP Section",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "All Citizens/Public/ Financially Incapacitated Patient",
+    "description": "13. Provision of Medical Assistance for Indigent Financially Incapacitated Patient MAIFIP"
+  },
+  {
+    "office_code": "DMDH",
+    "parent": null,
+    "title": "Provision of Hemodialysis",
+    "name": "Provision of Hemodialysis",
+    "office_division": "Dennis Molintas District Hospital - Hemodialysis Unit",
+    "classification": "Complex",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "All Citizens/Public/ Financially Incapacitated Patient",
+    "description": null
+  },
+  {
+    "office_code": "IDH",
+    "parent": null,
+    "title": "OPD Consultation",
+    "name": "OPD Consultation",
+    "office_division": "Itogon District Hospital",
+    "classification": "Simple",
+    "transaction": "Government-to- Citizens (G2C)",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Citizen or client",
+    "description": "The Out-Patient Department is the place of consultation for non-emergency cases, which includes pre-natal services, well-baby check-up, family planning services, smoking cessation services and medical examination for the issuance of medical certificates. It is open from Mondays to Fridays from 8:00 AM to 4:00 PM, Saturdays from 8:00 AM to 12:00 NN. It is closed during Sundays and holidays."
+  },
+  {
+    "office_code": "IDH",
+    "parent": null,
+    "title": "Buying Medicines",
+    "name": "Buying Medicines",
+    "office_division": "Itogon District Hospital",
+    "classification": "Simple",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Citizen or Client",
+    "description": "Medicines for out-patients, the Pharmacist will not dispense any medicine without prescription. The Pharmacy is open from Monday to Sunday 7:00AM to 8:00PM."
+  },
+  {
+    "office_code": "IDH",
+    "parent": null,
+    "title": "Referring Patient to Higher Facilities",
+    "name": "Referring Patient to Higher Facilities",
+    "office_division": "Itogon District Hospital",
+    "classification": "Simple",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Citizen or client",
+    "description": "This concerns referring to higher facilities on physician's advice."
+  },
+  {
+    "office_code": "IDH",
+    "parent": null,
+    "title": "Emergency Room Consultation",
+    "name": "Emergency Room Consultation",
+    "office_division": "Itogon District Hospital",
+    "classification": "Simple",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Citizen or client",
+    "description": "There are for patients who are on emergency case that cannot be attended at Out Patient Department OPD."
+  },
+  {
+    "office_code": "IDH",
+    "parent": null,
+    "title": "Patients who will Undergo Operation (Minor, Local Anesthesia)",
+    "name": "Patients who will Undergo Operation (Minor, Local Anesthesia)",
+    "office_division": "Itogon District Hospital",
+    "classification": "Simple",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Citizen or client",
+    "description": "These are patients who are admitted and needs operation"
+  },
+  {
+    "office_code": "IDH",
+    "parent": null,
+    "title": "Admission of Patient",
+    "name": "Admission of Patient",
+    "office_division": "Itogon District Hospital",
+    "classification": "Simple",
+    "transaction": "Government to citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Citizen or client",
+    "description": "Patients could be admitted from the emergency room or Out Patient Department. Medicines and other medical supplies could be provided by the hospital if available and will be included in the patient's bill on discharge. However, if patients prefer to pay to them immediately, he/she can do so by paying when he/she takes the medicine at the pharmacy. PHIC patients are advised to prepare their PHIC requirement on before discharge so that PhilHealth benefits will be availed."
+  },
+  {
+    "office_code": "IDH",
+    "parent": null,
+    "title": "Discharge of Patient",
+    "name": "Discharge of Patient",
+    "office_division": "Itogon District Hospital",
+    "classification": "Simple",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Citizen or client",
+    "description": "These are the steps to be followed when in-patient (admitted patients) is to be discharged. PHIC members and dependents should submit all PHIC requirements on or before discharge so that PHIC benefits will be availed. Further, Senior Citizens should present their senior Citizen ID on discharge to avail of their Senior Citizen discounts."
+  },
+  {
+    "office_code": "IDH",
+    "parent": null,
+    "title": "Hematology",
+    "name": "Hematology",
+    "office_division": "Itogon District Hospital",
+    "classification": "Simple",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Citizen or client",
+    "description": "This includes complete blood count (CBC), hemoglobin, and hematocrit, bleeding and clotting time (CT/BT), platelet count, ABO/RH typing, and malarial smear. These are not done without a laboratory request from a physician. In these examinations minimal blood sample is needed. These examinations are done every day from 7:00 AM to 11:00 PM."
+  },
+  {
+    "office_code": "IDH",
+    "parent": null,
+    "title": "Clinical Microscopy & Microbiology",
+    "name": "Clinical Microscopy & Microbiology",
+    "office_division": "Itogon District Hospital",
+    "classification": "Simple",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Citizen or client",
+    "description": "Urinalysis is the examination of the urine and fecalysis is stool specimen examination. Pregnancy test is a test using urine specimen. Specimen should be voided and/or submitted 30 minutes after collection. These are performed everyday form 8:00 AM to 12:00 NOON and 1:00 PM to 11:00 PM."
+  },
+  {
+    "office_code": "IDH",
+    "parent": null,
+    "title": "Clinical Blood Chemistry",
+    "name": "Clinical Blood Chemistry",
+    "office_division": "Itogon District Hospital",
+    "classification": "Simple",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Citizen of client",
+    "description": "Blood chemistry examinations are blood tests to determine the concentration or amount of these substances in out body. Conducted any day from 8:00 AM to 12:00 Noon and 1:00PM to 5:00 PM."
+  },
+  {
+    "office_code": "IDH",
+    "parent": null,
+    "title": "Immunology/Serology",
+    "name": "Immunology/Serology",
+    "office_division": "Itogon District Hospital",
+    "classification": "Simple",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Citizen or client",
+    "description": "HBsAg is the screening test specific for hepatitis B, Salmonella Typhi IgG/IgM test is a laboratory examination for typhoid fever. Bothe tests need blood samples approximately 1 to 5 ml. This is conducted any day from 8:00 AM to 12:00 Noon and 1:00 PM to 11:00 PM."
+  },
+  {
+    "office_code": "IDH",
+    "parent": "X-Ray Procedure",
+    "title": "Out Patient clients",
+    "name": "X-Ray Procedure – Out Patient clients",
+    "office_division": "Itogon District Hospital",
+    "classification": "Simple",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Citizen or Client CHECKILIST OF REQUIREMENTS WHERE TO SECURE X-ray request form from a Physician Physician / Medical officer on Duty Patient Citizen or Client X-ray result Radiologic Technician on Duty",
+    "description": null
+  },
+  {
+    "office_code": "IDH",
+    "parent": "X-Ray Procedure",
+    "title": "In Patient Clients",
+    "name": "X-Ray Procedure – In Patient Clients",
+    "office_division": "Itogon District Hospital",
+    "classification": "Simple",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "In Patient CHECKILIST OF REQUIREMENTS WHERE TO SECURE X-ray request form from a Physician Physician / Medical officer on Duty Patient Citizen or Client X-ray result Radiologic Technician on Duty CLIENT AGENCY FEES TO BE PAID PROCESSING PERSON",
+    "description": null
+  },
+  {
+    "office_code": "KDH",
+    "parent": null,
+    "title": "OPD Consultation",
+    "name": "OPD Consultation",
+    "office_division": "Kapangan District Hospital - Outpatient Department (OPD)",
+    "classification": "Simple",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Patient / Walk in Clients",
+    "description": "First point of contact between the patient and the hospital staff. Patients visit the OPD for various purposes, like consultation, treatment, investigation, referral, admission, preventive and promotive services and post discharge follow up."
+  },
+  {
+    "office_code": "KDH",
+    "parent": null,
+    "title": "Emergency Room Consultation",
+    "name": "Emergency Room Consultation",
+    "office_division": "Kapangan District Hospital - Emergency Room Department",
+    "classification": "Simple",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Patients requiring emergency care",
+    "description": "Hospital section that operates 24 hours a day to provide the community with vital health care for the acutely ill and injured without prior appointment; either by their own means or by that of an ambulance. Patients requiring urgent attention will always be seen first"
+  },
+  {
+    "office_code": "KDH",
+    "parent": null,
+    "title": "Animal Bite Treatment Service",
+    "name": "Animal Bite Treatment Service",
+    "office_division": "Kapangan District Hospital - ABTC",
+    "classification": "Simple",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Patients requiring animal bite treatment",
+    "description": null
+  },
+  {
+    "office_code": "KDH",
+    "parent": null,
+    "title": "Medical Certificate",
+    "name": "Medical Certificate",
+    "office_division": "Kapangan District Hospital - Outpatient Department",
+    "classification": "Simple",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Patients requiring medical certification",
+    "description": null
+  },
+  {
+    "office_code": "KDH",
+    "parent": null,
+    "title": "Certificate of Live Birth",
+    "name": "Certificate of Live Birth",
+    "office_division": "Kapangan District Hospital - Medical Records",
+    "classification": "Complex",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Mother or Father of newborn / authorized representative",
+    "description": null
+  },
+  {
+    "office_code": "KDH",
+    "parent": null,
+    "title": "Certificate of Death",
+    "name": "Certificate of Death",
+    "office_division": "Kapangan District Hospital - Records Section",
+    "classification": "Simple",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Authorized representative/Family Member",
+    "description": null
+  },
+  {
+    "office_code": "KDH",
+    "parent": null,
+    "title": "Ancillary Services - Laboratory",
+    "name": "Ancillary Services - Laboratory",
+    "office_division": "Kapangan District Hospital - Laboratory",
+    "classification": "Highly Technical",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Patients with laboratory requests",
+    "description": "Section of the hospital where tests are usually done on clinical specimens in order to obtain information about the health of a patient as pertaining to the diagnosis, treatment and prevention of diseases"
+  },
+  {
+    "office_code": "KDH",
+    "parent": null,
+    "title": "Ancillary Services - Radiology",
+    "name": "Ancillary Services - Radiology",
+    "office_division": "Kapangan District Hospital - Radiology",
+    "classification": "Highly Technical",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Patients with imaging requests",
+    "description": "Section of the hospital which uses imaging modalities like X-ray and Ultrasound to diagnose diseases seen within the human body to aid in the diagnosis and treatment of patients."
+  },
+  {
+    "office_code": "KDH",
+    "parent": null,
+    "title": "Ancillary Services - Pharmacy",
+    "name": "Ancillary Services - Pharmacy",
+    "office_division": "Kapangan District Hospital - Pharmacy",
+    "classification": "Simple",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Patients with prescriptions",
+    "description": "Operating under Philippines Laws and Regulations, the hospital pharmacy is responsible for the management of all pharmaceuticals used by the facility"
+  },
+  {
+    "office_code": "KDH",
+    "parent": "Paying of OPD/ER Patients",
+    "title": "Not covered by Insurance",
+    "name": "Paying of OPD/ER Patients – Not covered by Insurance",
+    "office_division": "Kapangan District Hospital - Billing Section",
+    "classification": "Simple",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Patients not covered by insurance",
+    "description": null
+  },
+  {
+    "office_code": "KDH",
+    "parent": "Paying of OPD/ER Patients",
+    "title": "Covered by MAIFIPP (Medical Assistance to Indigent and Financially Incapacitated Patients Program)",
+    "name": "Paying of OPD/ER Patients – Covered by MAIFIPP (Medical Assistance to Indigent and Financially Incapacitated Patients Program)",
+    "office_division": "Kapangan District Hospital - Social Services",
+    "classification": "Simple",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Patients covered by MAIFIPP",
+    "description": null
+  },
+  {
+    "office_code": "KDH",
+    "parent": null,
+    "title": "Admitted and Discharged Patients",
+    "name": "Admitted and Discharged Patients",
+    "office_division": "Kapangan District Hospital - Billing Section",
+    "classification": "Highly Technical",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Admitted and discharged patients",
+    "description": null
+  },
+  {
+    "office_code": "KDH",
+    "parent": null,
+    "title": "Referral of Patients to Higher Facilities",
+    "name": "Referral of Patients to Higher Facilities",
+    "office_division": "Kapangan District Hospital - Emergency Department / OPD",
+    "classification": "Complex",
+    "transaction": "Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Patients who need further evaluation and management",
+    "description": "This is the proper navigation of patients with cases that are beyond the capability of the hospital in the management of the disease through coordination and endorsement of patients to the referral facility."
+  },
+  {
+    "office_code": "NBDH",
+    "parent": null,
+    "title": "Provision of Out-Patient Consultation",
+    "name": "Provision of Out-Patient Consultation",
+    "office_division": "Northern Benguet District Hospital - Out-Patient Section",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "All Citizens/Public",
+    "description": null
+  },
+  {
+    "office_code": "NBDH",
+    "parent": null,
+    "title": "Provision of Emergency Management to Patients at the Emergency Room",
+    "name": "Provision of Emergency Management to Patients at the Emergency Room",
+    "office_division": "Northern Benguet District Hospital - Emergency Room Section",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "All Citizens/Public",
+    "description": null
+  },
+  {
+    "office_code": "NBDH",
+    "parent": null,
+    "title": "Provision of Services for Admitted Patients",
+    "name": "Provision of Services for Admitted Patients",
+    "office_division": "Northern Benguet District Hospital - Nursing/Medical",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "All Citizens/Public",
+    "description": null
+  },
+  {
+    "office_code": "NBDH",
+    "parent": null,
+    "title": "Provision of Services to Discharged Patients",
+    "name": "Provision of Services to Discharged Patients",
+    "office_division": "Northern Benguet District Hospital - Nursing/Medical",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "All Patients Admitted by NBDH",
+    "description": null
+  },
+  {
+    "office_code": "NBDH",
+    "parent": null,
+    "title": "Provision of Medical Certificate, Medico-Legal Certificate, Medical Records and Consent to Release Patient's Medical Information",
+    "name": "Provision of Medical Certificate, Medico-Legal Certificate, Medical Records and Consent to Release Patient's Medical Information",
+    "office_division": "Northern Benguet District Hospital - Administrative Section",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "All Patients Attended by NBDH",
+    "description": null
+  },
+  {
+    "office_code": "NBDH",
+    "parent": null,
+    "title": "Provision of PhilHealth Claims/Processing",
+    "name": "Provision of PhilHealth Claims/Processing",
+    "office_division": "Northern Benguet District Hospital - Administrative Section",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "All PHIC Member-Patients Attended by NBDH",
+    "description": null
+  },
+  {
+    "office_code": "NBDH",
+    "parent": "Provision of Drugs and Medicines to Patients and Billing of Discharges",
+    "title": "Provision of Drugs and Medicines",
+    "name": "Provision of Drugs and Medicines to Patients and Billing of Discharges – Provision of Drugs and Medicines",
+    "office_division": "Northern Benguet District Hospital - Pharmacy Section and",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "All Citizens/Public/All Patients Attended by NBDH",
+    "description": "7. Provisions of Drugs and Medicines to Patients and Billing of Discharges A. Provision of Drugs and Medicines"
+  },
+  {
+    "office_code": "NBDH",
+    "parent": "Provision of Drugs and Medicines to Patients and Billing of Discharges",
+    "title": "Billing of Discharges",
+    "name": "Provision of Drugs and Medicines to Patients and Billing of Discharges – Billing of Discharges",
+    "office_division": "Northern Benguet District Hospital - Pharmacy Section and",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "All Citizens/Public/All Patients Attended by NBDH",
+    "description": null
+  },
+  {
+    "office_code": "NBDH",
+    "parent": "Provision of Drugs and Medicines to Patients and Billing of Discharges",
+    "title": "Provision of Diagnostic",
+    "name": "Provision of Drugs and Medicines to Patients and Billing of Discharges – Provision of Diagnostic",
+    "office_division": "Northern Benguet District Hospital - Laboratory Section and X-ray",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Government to Citizens All Citizens/Public/All Patients Attended by NBDH",
+    "description": null
+  },
+  {
+    "office_code": "NBDH",
+    "parent": "Provision of Drugs and Medicines to Patients and Billing of Discharges",
+    "title": "Provision of X-Ray and Ultrasound",
+    "name": "Provision of Drugs and Medicines to Patients and Billing of Discharges – Provision of X-Ray and Ultrasound",
+    "office_division": "Northern Benguet District Hospital - Laboratory Section and X-ray",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "All Citizens/Public/All Patients Attended by NBDH",
+    "description": null
+  },
+  {
+    "office_code": "NBDH",
+    "parent": null,
+    "title": "Provision of Dental Services",
+    "name": "Provision of Dental Services",
+    "office_division": "Northern Benguet District Hospital - Dental Section",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "All Citizens/Public",
+    "description": null
+  },
+  {
+    "office_code": "NBDH",
+    "parent": null,
+    "title": "Provision of Medical Assistance for Indigent Financially Incapacitated Patient (MAIFIP)",
+    "name": "Provision of Medical Assistance for Indigent Financially Incapacitated Patient (MAIFIP)",
+    "office_division": "Northern Benguet District Hospital - MAIFIP Section",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "All Citizens/Public/ Financially Incapacitated Patient",
+    "description": null
+  },
+  {
+    "office_code": "NBDH",
+    "parent": null,
+    "title": "Provision of Referral of Patients to Higher Facilities",
+    "name": "Provision of Referral of Patients to Higher Facilities",
+    "office_division": "Northern Benguet District Hospital - Emergency Department /",
+    "classification": "Highly Technical",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "All Citizens/Public/ Financially Incapacitated Patient",
+    "description": null
+  },
+  {
+    "office_code": "NBDH",
+    "parent": null,
+    "title": "Provision of OR/DR Complex",
+    "name": "Provision of OR/DR Complex",
+    "office_division": "Northern Benguet District Hospital - OR/DR Complex",
+    "classification": "Highly Technical",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "All Citizens/Public/ Financially Incapacitated Patient",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": null,
+    "title": "Out- Patient Department (OPD) Consultation - Internal Medicine",
+    "name": "Out- Patient Department (OPD) Consultation - Internal Medicine",
+    "office_division": "Benguet General Hospital - Medical OPD",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": "Out Patient Internal Medicine is a division within the hospital designed for the consultation and treatment of adult patients (19 years old) who don't require hospitalization. It is where follow-up, refill of maintenance medications, preoperative evaluation of patients who will undergo surgical procedures and physical examination for medical certificates, are availed of."
+  },
+  {
+    "office_code": "BeGH",
+    "parent": "OPD Consultation – Hemodialysis Unit",
+    "title": "OPD Consultation of Chronic Kidney Disease Stage 5 Patients",
+    "name": "OPD Consultation – Hemodialysis Unit – OPD Consultation of Chronic Kidney Disease Stage 5 Patients",
+    "office_division": "Benguet General Hospital - Hemodialysis Unit",
+    "classification": "Highly Technical",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": "This pertains to the consultation and/or referral of patients diagnosed to have Chronic Kidney Disease Stage 5/End Stage renal disease and are deemed to initiate Renal Replacement Therapy (RTT) or hemodialysis."
+  },
+  {
+    "office_code": "BeGH",
+    "parent": "OPD Consultation – Hemodialysis Unit",
+    "title": "Hemodialysis Initiation",
+    "name": "OPD Consultation – Hemodialysis Unit – Hemodialysis Initiation",
+    "office_division": "Benguet General Hospital - Hemodialysis Unit",
+    "classification": "Highly Technical",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": "OPD Consultation – Hemodialysis Unit",
+    "title": "OPD Hemodialysis",
+    "name": "OPD Consultation – Hemodialysis Unit – OPD Hemodialysis",
+    "office_division": "Benguet General Hospital - Hemodialysis Unit",
+    "classification": "Highly Technical",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": "The OPD Hemodialysis caters to stable CKD patients who need to continue RRT. The patient goes to the unit on the scheduled hemodialysis days and readily go home after treatment, if unremarkable."
+  },
+  {
+    "office_code": "BeGH",
+    "parent": null,
+    "title": "Out- Patient Department (OPD) Consultation - OB-Gyne",
+    "name": "Out- Patient Department (OPD) Consultation - OB-Gyne",
+    "office_division": "OPD - OB GYNE",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": null,
+    "title": "Out-Patient Department (OPD) Consultation - Pedia",
+    "name": "Out-Patient Department (OPD) Consultation - Pedia",
+    "office_division": "Benguet General Hospital -OPD - PEDIATRICS",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": "Out-patient Pediatrics Department provides services to clients 0-18 years old, inclusive of essential newborn care during delivery."
+  },
+  {
+    "office_code": "BeGH",
+    "parent": "OPD Consultation – Surgery",
+    "title": "Special Services – Club Foot Management",
+    "name": "OPD Consultation – Surgery – Special Services – Club Foot Management",
+    "office_division": "Benguet General Hospital - OPD Surgery (Special Services)",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": "OPD Consultation – Surgery",
+    "title": "General Surgery",
+    "name": "OPD Consultation – Surgery – General Surgery",
+    "office_division": "Benguet General Hospital - General Surgery",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": "OPD Consultation – Surgery",
+    "title": "Uro Surgery",
+    "name": "OPD Consultation – Surgery – Uro Surgery",
+    "office_division": "Benguet General Hospital - Uro Surgery",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": "OPD Consultation – Surgery",
+    "title": "Orthopedics",
+    "name": "OPD Consultation – Surgery – Orthopedics",
+    "office_division": "Benguet General Hospital - ORTHOPEDICS",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": "OPD Consultation – Surgery",
+    "title": "Ophthalmology",
+    "name": "OPD Consultation – Surgery – Ophthalmology",
+    "office_division": "Benguet General Hospital - Opthalmology",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": "OPD Consultation – Surgery",
+    "title": "HEENT",
+    "name": "OPD Consultation – Surgery – HEENT",
+    "office_division": "Head, Ears, Neck, and Throat",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": null,
+    "title": "OPD – Animal Bite Treatment Center (ABTC)",
+    "name": "OPD – Animal Bite Treatment Center (ABTC)",
+    "office_division": "Out Patient Department - Animal Bite Treatment Center (ABTC)",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": null,
+    "title": "Management of NTP (TB) Program",
+    "name": "Management of NTP (TB) Program",
+    "office_division": "Benguet General Hospital - Out Patient Department",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": "Central Treatment Room",
+    "title": "Admission Of Patient",
+    "name": "Central Treatment Room – Admission Of Patient",
+    "office_division": "Benguet General Hospital - Central Treatment Room",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": "Central Treatment Room",
+    "title": "Electrocardiogram (ECG) Procedure",
+    "name": "Central Treatment Room – Electrocardiogram (ECG) Procedure",
+    "office_division": "Benguet General Hospital - Central Treatment Room",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": "Central Treatment Room",
+    "title": "Tetanus Toxoid Injection",
+    "name": "Central Treatment Room – Tetanus Toxoid Injection",
+    "office_division": "Benguet General Hospital - Central Treatment Room",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": "Radiology Department",
+    "title": "A.1 X-Ray Procedures: OPD (Paying Patients)",
+    "name": "Radiology Department – A.1 X-Ray Procedures: OPD (Paying Patients)",
+    "office_division": "Benguet General Hospital - Radiology Department",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": "Radiology Department",
+    "title": "A.2 X-Ray Procedures: OPD (Patients Availing Malasakit/Yakap Services)",
+    "name": "Radiology Department – A.2 X-Ray Procedures: OPD (Patients Availing Malasakit/Yakap Services)",
+    "office_division": "Benguet General Hospital - Radiology Department",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": "A.2. X-ray Procedures: OPD (Patients Availing Malasakit/Yakap Services) All patients who will undergo X-ray examination should have a request form from a physician"
+  },
+  {
+    "office_code": "BeGH",
+    "parent": "Radiology Department",
+    "title": "A.3 X-Ray Procedures: ER and In-Patients",
+    "name": "Radiology Department – A.3 X-Ray Procedures: ER and In-Patients",
+    "office_division": "Benguet General Hospital - Radiology Department",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": "Radiology Department",
+    "title": "B.1 Ultrasound Procedures: OPD (Paying Patients)",
+    "name": "Radiology Department – B.1 Ultrasound Procedures: OPD (Paying Patients)",
+    "office_division": "Benguet General Hospital - OPD Ultrasoud",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": "Radiology Department",
+    "title": "B.2 Ultrasound Procedures: OPD (Patients Availing Malasakit/Yakap Services)",
+    "name": "Radiology Department – B.2 Ultrasound Procedures: OPD (Patients Availing Malasakit/Yakap Services)",
+    "office_division": "Benguet General Hospital - OPD Ultrasoud",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": "Radiology Department",
+    "title": "B.3 Ultrasound Procedures: Emergency Room and In-Patients",
+    "name": "Radiology Department – B.3 Ultrasound Procedures: Emergency Room and In-Patients",
+    "office_division": "Benguet General Hospital - OPD Ultrasoud",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": "Radiology Department",
+    "title": "C.1 Mammogram – OPD (Paying Patients)",
+    "name": "Radiology Department – C.1 Mammogram – OPD (Paying Patients)",
+    "office_division": "Benguet General Hospital - Out Patient Department",
+    "classification": "Simple",
+    "transaction": "Government to Citizens 365 | P a g e",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": "Radiology Department",
+    "title": "C.2 Mammogram – OPD (Patients Availing Malasakit/Yakap Services)",
+    "name": "Radiology Department – C.2 Mammogram – OPD (Patients Availing Malasakit/Yakap Services)",
+    "office_division": "Benguet General Hospital - Out Patient Department",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": "Radiology Department",
+    "title": "D.1 CT-Scan – OPD (Paying Patients)",
+    "name": "Radiology Department – D.1 CT-Scan – OPD (Paying Patients)",
+    "office_division": "Benguet General Hospital - Out Patient Department",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": "Radiology Department",
+    "title": "D.2 CT-Scan – OPD (Patients Availing Malasakit Services)",
+    "name": "Radiology Department – D.2 CT-Scan – OPD (Patients Availing Malasakit Services)",
+    "office_division": "Benguet General Hospital - Out Patient Department",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": "Radiology Department",
+    "title": "D.3 CT-Scan – Emergency Room (E.R.) and In-Patients",
+    "name": "Radiology Department – D.3 CT-Scan – Emergency Room (E.R.) and In-Patients",
+    "office_division": "Benguet General Hospital - Out Patient Department",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": null,
+    "title": "Discharge Of Patient",
+    "name": "Discharge Of Patient",
+    "office_division": "IM/OB-GYNE/SURGERY/PEDIA WARD/BILLING SECTION",
+    "classification": "Simple-Complex",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": "This are the steps to be followed when an in-patient is to be discharged. PHIC member or dependents should proceed to the Admitting Section within 24 hours upon admission to check if patient is eligible to avail PHIC benefit"
+  },
+  {
+    "office_code": "BeGH",
+    "parent": null,
+    "title": "Admission of Patient",
+    "name": "Admission of Patient",
+    "office_division": "Benguet General Hospital - Admitting Section",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": null,
+    "title": "Pharmacy Section",
+    "name": "Pharmacy Section",
+    "office_division": "Benguet General Hospital - Pharmacy Department",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": "Below is the procedure to be followed by OPD Patients when buying medicines at the Pharmacy Section. The Pharmacists shall not dispense any medicine without prescription. The pharmacy is open from Monday to Sunday (24 hours)."
+  },
+  {
+    "office_code": "BeGH",
+    "parent": null,
+    "title": "Department Of Pathology And Laboratory Medicine",
+    "name": "Department Of Pathology And Laboratory Medicine",
+    "office_division": "Department of Pathology and Laboratory Medicine",
+    "classification": "Simple-Complex",
+    "transaction": "G2C- Government to Citizen; G2G: Government to Government",
+    "transaction_types": [
+      "G2C",
+      "G2G"
+    ],
+    "who_may_avail": "Public; All patient needing laboratory examinations",
+    "description": "This procedure covers receipt of laboratory requests, specimen collection, processing and releasing of results. Laboratory services are available 24 hours, Monday to Sunday including holidays, except for Drug testing 7am-1 pm Monday to Friday."
+  },
+  {
+    "office_code": "BeGH",
+    "parent": null,
+    "title": "Dental Department",
+    "name": "Dental Department",
+    "office_division": "Benguet General Hospital - Dental Department",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": null,
+    "title": "Cash Section",
+    "name": "Cash Section",
+    "office_division": "Benguet General Hospital - Cash Section",
+    "classification": "Simple",
+    "transaction": "G2C-Government to Citizen; G2B-Government to Business",
+    "transaction_types": [
+      "G2C",
+      "G2B"
+    ],
+    "who_may_avail": "All",
+    "description": "The area is in charge of collecting cash, checks, and bonds for payment of hospital charges/fees for which it issues official receipts. This section goes on a 24-hour service."
+  },
+  {
+    "office_code": "BeGH",
+    "parent": null,
+    "title": "Dispensing Of Supply for Outpatient Department",
+    "name": "Dispensing Of Supply for Outpatient Department",
+    "office_division": "Benguet General Hospital - Central Supply Unit",
+    "classification": "Simple",
+    "transaction": "Government To Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": null,
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": null,
+    "title": "Mental Health Unit - Psychology",
+    "name": "Mental Health Unit - Psychology",
+    "office_division": "Benguet Genral Hospital - Mental Health Unit",
+    "classification": "Simple",
+    "transaction": "G2C-Government to Citizen",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": "The Mental Health Unit - Psychology is a division within the hospital designed for the consultation of clients experiencing mental health concerns that not psychiatric in nature. This unit provides debriefing, counseling, and other related psychosocial processing from child to adult patients."
+  },
+  {
+    "office_code": "BeGH",
+    "parent": null,
+    "title": "Registration of Certificate of Death",
+    "name": "Registration of Certificate of Death",
+    "office_division": "Benguet General Hospital - Records Section",
+    "classification": "Simple",
+    "transaction": "Government To Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": null,
+    "title": "Registration of Certificate of Live Birth",
+    "name": "Registration of Certificate of Live Birth",
+    "office_division": "Benguet General Hospital - Records Section",
+    "classification": "Simple",
+    "transaction": "Government To Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": "Social Services Office",
+    "title": "Classification of Patient",
+    "name": "Social Services Office – Classification of Patient",
+    "office_division": "Social Services Office",
+    "classification": "Simple",
+    "transaction": "Government to Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": "Social Services Office",
+    "title": "Social Work Intervention",
+    "name": "Social Services Office – Social Work Intervention",
+    "office_division": "Benguet General Hospital - Social Services Office",
+    "classification": "Simple",
+    "transaction": "Government To Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  },
+  {
+    "office_code": "BeGH",
+    "parent": "Social Services Office",
+    "title": "MALASAKIT Center Assistance",
+    "name": "Social Services Office – MALASAKIT Center Assistance",
+    "office_division": "Benguet General Hospital - Social Services Office",
+    "classification": "Simple",
+    "transaction": "Government To Citizens",
+    "transaction_types": [
+      "G2C"
+    ],
+    "who_may_avail": "Public",
+    "description": null
+  }
+]

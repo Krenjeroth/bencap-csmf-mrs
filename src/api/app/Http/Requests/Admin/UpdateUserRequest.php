@@ -33,6 +33,7 @@ class UpdateUserRequest extends FormRequest
             'email' => ['sometimes', 'required', 'email:rfc', 'max:255',
                 Rule::unique('users', 'email')->ignore($this->route('user'))],
             'is_active' => ['sometimes', 'boolean'],
+            'office_id' => ['sometimes', 'nullable', 'integer', 'exists:offices,id'],
         ];
     }
 }

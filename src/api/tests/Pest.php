@@ -49,11 +49,15 @@ function userWithPermissions(array $titles, array $attributes = []): User
     return $user;
 }
 
-/** Number of audit rows with this event, optionally for one subject id. */
-function auditCount(string $event, ?string $subjectId = null): int
+/**
+ * Number of audit rows with this event, optionally for one subject id and
+ * type (numeric ids repeat across tables, so pass the type for those).
+ */
+function auditCount(string $event, ?string $subjectId = null, ?string $subjectType = null): int
 {
     return AuditLog::query()
         ->where('event', $event)
         ->when($subjectId, fn ($q) => $q->where('auditable_id', $subjectId))
+        ->when($subjectType, fn ($q) => $q->where('auditable_type', $subjectType))
         ->count();
 }

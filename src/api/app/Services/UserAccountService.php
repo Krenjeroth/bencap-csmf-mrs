@@ -24,13 +24,14 @@ class UserAccountService
      * Creates an account with a one-time password that must be changed on
      * first sign-in.
      *
-     * @param  array{name: string, email: string, is_active?: bool}  $data
+     * @param  array{name: string, email: string, is_active?: bool, office_id?: int|null}  $data
      * @param  Collection<int, int>  $roleIds
      * @return array{0: User, 1: string} The user and the temporary password (shown once).
      */
     public function create(User $actor, array $data, Collection $roleIds): array
     {
         $this->guard->assertMayChangeSystemRole($actor, new User, $roleIds);
+        $this->guard->assertMayAssignOffice($actor, $data['office_id'] ?? null);
 
         return DB::transaction(function () use ($data, $roleIds) {
             $password = TemporaryPassword::generate();
@@ -41,6 +42,7 @@ class UserAccountService
                 'password' => $password,
                 'must_change_password' => true,
                 'is_active' => $data['is_active'] ?? true,
+                'office_id' => $data['office_id'] ?? null,
             ]);
             $user->forceFill(['email_verified_at' => now()])->saveQuietly();
 
@@ -49,13 +51,17 @@ class UserAccountService
                 $this->audit->record('roles_synced', $user, ['roles' => []], ['roles' => $this->titles($roleIds)]);
             }
 
-            return [$user->load('roles'), $password];
+            return [$user->load(['roles', 'office']), $password];
         });
     }
 
-    /** @param  array{name?: string, email?: string, is_active?: bool}  $data */
+    /** @param  array{name?: string, email?: string, is_active?: bool, office_id?: int|null}  $data */
     public function update(User $actor, User $user, array $data): User
     {
+        if (array_key_exists('office_id', $data)) {
+            $this->guard->assertMayAssignOffice($actor, $data['office_id']);
+        }
+
         if (array_key_exists('is_active', $data) && ! $data['is_active'] && $user->is_active) {
             $this->guard->assertNotSelf($actor, $user, 'is_active', 'deactivate');
             $this->guard->assertKeepsASystemAdministrator($user, 'is_active');
@@ -68,7 +74,7 @@ class UserAccountService
                 $this->endSessions($user);
             }
 
-            return $user->load('roles');
+            return $user->load(['roles', 'office']);
         });
     }
 
@@ -89,7 +95,7 @@ class UserAccountService
                 $this->audit->record('roles_synced', $user, ['roles' => $before], ['roles' => $after]);
             }
 
-            return $user->load('roles');
+            return $user->load(['roles', 'office']);
         });
     }
 

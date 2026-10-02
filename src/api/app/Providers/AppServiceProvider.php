@@ -2,8 +2,11 @@
 
 namespace App\Providers;
 
+use App\Models\Office;
 use App\Models\Permission;
 use App\Models\Role;
+use App\Models\Service;
+use App\Models\ServiceType;
 use App\Models\User;
 use App\Observers\AuditObserver;
 use Illuminate\Support\Facades\Gate;
@@ -22,6 +25,9 @@ class AppServiceProvider extends ServiceProvider
         User::observe(AuditObserver::class);
         Role::observe(AuditObserver::class);
         Permission::observe(AuditObserver::class);
+        Office::observe(AuditObserver::class);
+        ServiceType::observe(AuditObserver::class);
+        Service::observe(AuditObserver::class);
     }
 
     /**

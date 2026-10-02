@@ -29,6 +29,7 @@ class StoreUserRequest extends FormRequest
             // Includes soft-deleted accounts, so an address is never reused silently.
             'email' => ['required', 'email:rfc', 'max:255', 'unique:users,email'],
             'is_active' => ['sometimes', 'boolean'],
+            'office_id' => ['sometimes', 'nullable', 'integer', 'exists:offices,id'],
             'role_ids' => ['present', 'array'],
             'role_ids.*' => ['integer', 'distinct', 'exists:roles,id'],
         ];
