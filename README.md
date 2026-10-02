@@ -97,5 +97,9 @@ to `src/api/.env` (and optionally `src/web/.env.example` to
 Sprint 1 (identity & access) complete: sign-in with two-factor, forced
 password change for temporary passwords, Users / Roles / Permissions
 screens, append-only audit log. API contracts: [docs/api](docs/api/README.md).
-Next: Sprint 2, master data (offices, service types, the 2026 services list).
+Sprint 2 (master data) in progress: offices with a one-level hierarchy
+(the OG-* offices under OG), service types, the 241 services of the 2026
+Citizen's Charter (6 Internal), region and SQD question lookups, the
+`csmf:import-services` command, and the Offices / Services / Service types
+screens. Still open: playbook Q5 (OG-OPA and OSMP) and Q9 (region list).
 See the playbook's Tab 04 for the roadmap.

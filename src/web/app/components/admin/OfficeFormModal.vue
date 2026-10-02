@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { z } from 'zod'
 import type { Form, FormSubmitEvent } from '@nuxt/ui'
-import type { Office } from '~/types/api'
+import type { Office, OfficeOption } from '~/types/api'
 import { parseApiError } from '~/utils/apiError'
 
 /** Same pattern the API enforces (OfficeRequest). */
@@ -9,9 +9,11 @@ const SLUG_PATTERN = /^[a-z0-9]+(-[a-z0-9]+)*$/
 
 /**
  * Create or edit an office. The web address is the guest form's /f/{slug};
- * left empty, the API makes it from the code.
+ * left empty, the API makes it from the code. The hierarchy is one level
+ * deep: an office can sit under a top-level office, and an office that
+ * others sit under stays on top (the API enforces both).
  */
-const props = defineProps<{ office: Office | null }>()
+const props = defineProps<{ office: Office | null, officeOptions: OfficeOption[] }>()
 const open = defineModel<boolean>('open', { required: true })
 const emit = defineEmits<{ saved: [] }>()
 
@@ -25,13 +27,27 @@ const schema = z.object({
     .refine(value => value === '' || SLUG_PATTERN.test(value), 'Use lower-case letters, numbers and dashes only, for example og-library.'),
   sort_order: z.number().int('Use a whole number.').min(0).max(65535),
   is_active: z.boolean(),
+  parent_id: z.number().nullable(),
 })
 type Schema = z.output<typeof schema>
 
 const form = useTemplateRef<Form<Schema>>('form')
-const state = reactive<Schema>({ code: '', name: '', slug: '', sort_order: 0, is_active: true })
+const state = reactive<Schema>({ code: '', name: '', slug: '', sort_order: 0, is_active: true, parent_id: null })
 const submitting = ref(false)
 const isEdit = computed(() => props.office !== null)
+const hasChildren = computed(() => (props.office?.children_count ?? 0) > 0)
+
+// The picker needs a non-null value, so "top level" is the string 'none'.
+const parentItems = computed(() => [
+  { label: 'None (top-level office)', value: 'none' },
+  ...props.officeOptions
+    .filter(option => option.parent_id === null && option.id !== props.office?.id)
+    .map(option => ({ label: `${option.code} – ${option.name}`, value: String(option.id) })),
+])
+const parentChoice = computed({
+  get: () => (state.parent_id === null ? 'none' : String(state.parent_id)),
+  set: (value: string) => { state.parent_id = value === 'none' ? null : Number(value) },
+})
 
 watch(open, (isOpen) => {
   if (!isOpen) {
@@ -42,6 +58,7 @@ watch(open, (isOpen) => {
   state.slug = props.office?.slug ?? ''
   state.sort_order = props.office?.sort_order ?? 0
   state.is_active = props.office?.is_active ?? true
+  state.parent_id = props.office?.parent_id ?? null
   form.value?.clear()
 }, { immediate: true })
 
@@ -129,6 +146,21 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
             v-model="state.name"
             class="w-full"
             autocomplete="off"
+          />
+        </UFormField>
+
+        <UFormField
+          label="Sits under"
+          name="parent_id"
+          :description="hasChildren ? `Other offices sit under ${office?.code}, so it stays a top-level office.` : 'For example, the OG-* offices sit under the Office of the Governor.'"
+        >
+          <USelectMenu
+            id="office-parent"
+            v-model="parentChoice"
+            :items="parentItems"
+            value-key="value"
+            :disabled="hasChildren"
+            class="w-full"
           />
         </UFormField>
 

@@ -69,7 +69,7 @@ and return Laravel's `{"data", "links", "meta"}`.
 |---|---|---|---|
 | GET | `/role-options` | `users.view` | `{"data":[{"id","title","is_system"}]}` for role pickers |
 | GET | `/permission-options` | `roles.view` | `{"data":[{"id","title","resource","description"}]}` |
-| GET | `/office-options` | `users.view`, `offices.view` or `services.view` | `{"data":[{"id","code","name","is_active"}]}` in charter order |
+| GET | `/office-options` | `users.view`, `offices.view` or `services.view` | `{"data":[{"id","parent_id","code","name","is_active"}]}` in charter order |
 | GET | `/service-type-options` | `services.view` | `{"data":[{"id","type"}]}` |
 | GET | `/users` | `users.view` | Filters `role_id`, `office_id`, `status=active\|inactive`; sort `name`, `email`, `created_at`, `last_login_at`. Rows include `office` (`{"id","code","name"}` or null) |
 | POST | `/users` | `users.create` | `name`, `email`, `role_ids[]`, `is_active?`, `office_id?` → `201 {"data": user, "temporary_password"}` (shown once) |
@@ -83,8 +83,8 @@ and return Laravel's `{"data", "links", "meta"}`.
 | PUT | `/roles/{id}/permissions` | `roles.update` | `permission_ids[]` |
 | GET / POST | `/permissions` | `permissions.view` / `permissions.create` | Create: `title` (`resource.action`), `description?`; System Administrator gets it automatically |
 | GET / PUT / DELETE | `/permissions/{id}` | `permissions.view` / `permissions.update` / `permissions.delete` | |
-| GET / POST | `/offices` | `offices.view` / `offices.create` | List: filter `status`; sort `sort_order` (default), `code`, `name`; rows include `services_count`, `active_services_count`, `users_count`. Create: `code`, `name`, `slug?` (guest form address `/f/{slug}`, made from the code when empty), `is_active?`, `sort_order?` |
-| GET / PUT / DELETE | `/offices/{id}` | `offices.view` / `offices.update` / `offices.delete` | Delete only when no service or user account refers to it |
+| GET / POST | `/offices` | `offices.view` / `offices.create` | List: filter `status`; sort `sort_order` (default), `code`, `name`; rows include `parent_id`, `parent` (`{"id","code","name"}` or null), `services_count`, `active_services_count`, `users_count`, `children_count`. Create: `code`, `name`, `slug?` (guest form address `/f/{slug}`, made from the code when empty), `parent_id?`, `is_active?`, `sort_order?` |
+| GET / PUT / DELETE | `/offices/{id}` | `offices.view` / `offices.update` / `offices.delete` | Delete only when no office sits under it and no service or user account refers to it |
 | GET / POST | `/service-types` | `service-types.view` / `service-types.create` | List is not paged: `{"data":[{"id","type","description","services_count"}]}`. Create: `type`, `description?` |
 | GET / PUT / DELETE | `/service-types/{id}` | `service-types.view` / `service-types.update` / `service-types.delete` | Delete only when no service uses it |
 | GET / POST | `/services` | `services.view` / `services.create` | List: filters `office_id`, `service_type_id`, `charter_year`, `status`; sort `sort_order` (charter order, default), `name`, `charter_year`. Create: `office_id`, `service_type_id`, `name` (unique per office and charter year), `charter_year?` (default this year), `is_active?`, `sort_order?` (default end of the office's list) |
@@ -104,6 +104,9 @@ and return Laravel's `{"data", "links", "meta"}`.
   description can be edited.
 - An office, service type or service still in use cannot be deleted;
   deactivate it instead.
+- The office hierarchy is one level deep: `parent_id` must be a top-level
+  office other than the office itself, and an office that others sit under
+  cannot be given a parent.
 
 ### Office limit
 

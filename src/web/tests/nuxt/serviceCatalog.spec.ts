@@ -27,9 +27,16 @@ function page<T>(data: T[]) {
   }
 }
 
-const offices: Office[] = [{
-  ...pho, slug: 'pho', is_active: true, sort_order: 21, services_count: 8, active_services_count: 7, users_count: 2, created_at: null, updated_at: null,
-}]
+const og = { id: 1, code: 'OG', name: 'Office of the Governor (OG)' }
+const office = (fields: Partial<Office> & Pick<Office, 'id' | 'code' | 'name' | 'slug'>): Office => ({
+  parent_id: null, parent: null, is_active: true, sort_order: 0, services_count: 0, active_services_count: 0,
+  users_count: 0, children_count: 0, created_at: null, updated_at: null, ...fields,
+})
+const offices: Office[] = [
+  office({ ...og, slug: 'og', sort_order: 1, services_count: 7, active_services_count: 7, children_count: 1 }),
+  office({ id: 9, code: 'OG-BTS', name: 'Benguet Technical School (OG-BTS)', slug: 'og-bts', parent_id: og.id, parent: og, sort_order: 9 }),
+  office({ ...pho, slug: 'pho', sort_order: 21, services_count: 8, active_services_count: 7, users_count: 2 }),
+]
 const services: Service[] = [{
   id: 501, name: 'Issuance of Medical Certificate', charter_year: 2026, is_active: true, sort_order: 1,
   office: pho, service_type: { id: 2, type: 'External' }, created_at: null, updated_at: null,
@@ -42,7 +49,7 @@ const responses: Record<string, unknown> = {
     { id: 1, type: 'Internal', description: 'For PLGU offices and employees', services_count: 10, created_at: null, updated_at: null },
     { id: 2, type: 'External', description: null, services_count: 231, created_at: null, updated_at: null },
   ] },
-  '/api/v1/admin/office-options': { data: [{ ...pho, is_active: true }] },
+  '/api/v1/admin/office-options': { data: [{ ...og, parent_id: null, is_active: true }, { ...pho, parent_id: null, is_active: true }] },
 }
 
 // Answers by endpoint; anything else is refused, as for a missing permission
@@ -106,8 +113,32 @@ describe('offices page', () => {
     expect(view.text()).toContain('Provincial Health Office')
     expect(view.text()).toContain('/f/pho')
     expect(view.text()).toContain('7 of 8')
-    expect(view.text()).toContain('1 office')
+    expect(view.text()).toContain('3 offices')
     expect(view.text()).not.toContain('Add office')
+  })
+
+  it('loads every office on one page for the tree', async () => {
+    clientMock.mockClear()
+    signIn()
+    await mountSuspended(OfficesPage)
+    await flushPromises()
+
+    const listCalls = clientMock.mock.calls.filter(([endpoint]) => endpoint === '/api/v1/admin/offices')
+    expect(listCalls).toHaveLength(1)
+    expect(listCalls[0]?.[1]?.params).toMatchObject({ per_page: 100, sort: 'sort_order' })
+  })
+
+  it('nests child offices under their parent and collapses them', async () => {
+    signIn()
+    const view = await mountSuspended(OfficesPage)
+    await flushPromises()
+
+    const codes = () => view.findAll('tbody tr').map(tr => tr.find('td').text())
+    expect(codes()).toEqual(['OG1', 'OG-BTS', 'PHO'])
+
+    await view.find('button[aria-label="Collapse OG"]').trigger('click')
+    expect(codes()).toEqual(['OG1', 'PHO'])
+    expect(view.find('button[aria-label="Expand OG"]').exists()).toBe(true)
   })
 })
 
@@ -160,7 +191,7 @@ describe('useOptions', () => {
     const { offices: list, loadOffices } = useOptions()
     await loadOffices()
 
-    expect(list.value.map(o => o.code)).toEqual(['PHO'])
+    expect(list.value.map(o => o.code)).toEqual(['OG', 'PHO'])
   })
 
   it('leaves a refused list empty instead of throwing', async () => {

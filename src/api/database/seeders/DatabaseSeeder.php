@@ -18,6 +18,8 @@ class DatabaseSeeder extends Seeder
             OfficeSeeder::class,
             ServiceTypeSeeder::class,
             ServiceSeeder::class,
+            RegionSeeder::class,
+            SqdQuestionSeeder::class,
         ]);
     }
 }

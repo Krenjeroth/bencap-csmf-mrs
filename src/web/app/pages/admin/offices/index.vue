@@ -10,8 +10,64 @@ const client = useSanctumClient()
 const { can } = useCurrentUser()
 const toast = useToast()
 
-const { query, rows, total, loading, error, load } = useAdminList<Office>('/api/v1/admin/offices', { sort: 'sort_order', status: undefined })
-onMounted(load)
+const { query, rows, total, loading, error, load } = useAdminList<Office>('/api/v1/admin/offices', { sort: 'sort_order', status: undefined, per_page: 100 })
+const { offices: officeOptions, loadOffices } = useOptions()
+onMounted(() => {
+  load()
+  loadOffices()
+})
+
+/** After a save: the list, and the parent picker's options. */
+function reload() {
+  load()
+  loadOffices()
+}
+
+// The tree shows every office on one page (the API allows up to 100 per
+// page; the charter has 36 offices), each child right under its parent.
+// The hierarchy is one level deep, so rows are flattened here rather than
+// using the table's expandable rows (which add an empty row per parent).
+type OfficeRow = Office & { depth: 0 | 1, childCount: number }
+const view = ref<'tree' | 'list'>('tree')
+const collapsed = ref(new Set<number>())
+watch(view, (value) => {
+  query.per_page = value === 'tree' ? 100 : 15
+  collapsed.value = new Set()
+})
+function toggle(office: OfficeRow) {
+  const next = new Set(collapsed.value)
+  if (!next.delete(office.id)) {
+    next.add(office.id)
+  }
+  collapsed.value = next
+}
+
+const tableRows = computed<OfficeRow[]>(() => {
+  if (view.value === 'list') {
+    return rows.value.map(office => ({ ...office, depth: 0, childCount: 0 }))
+  }
+  const listed = new Set(rows.value.map(office => office.id))
+  const children = new Map<number, Office[]>()
+  for (const office of rows.value) {
+    if (office.parent_id !== null && listed.has(office.parent_id)) {
+      children.set(office.parent_id, [...(children.get(office.parent_id) ?? []), office])
+    }
+  }
+  // A child whose parent is filtered out shows at the top level.
+  return rows.value
+    .filter(office => office.parent_id === null || !listed.has(office.parent_id))
+    .flatMap((office) => {
+      const kids = children.get(office.id) ?? []
+      const parent: OfficeRow = { ...office, depth: 0, childCount: kids.length }
+      return collapsed.value.has(office.id)
+        ? [parent]
+        : [parent, ...kids.map(kid => ({ ...kid, depth: 1 as const, childCount: 0 }))]
+    })
+})
+const viewItems = [
+  { label: 'Tree', value: 'tree', icon: 'i-lucide-list-tree' },
+  { label: 'List', value: 'list', icon: 'i-lucide-list' },
+]
 
 const statusFilter = computed({
   get: () => (query.status as string | undefined) ?? 'all',
@@ -28,7 +84,7 @@ const sortItems = [
   { label: 'Name A–Z', value: 'name' },
 ]
 
-const columns: TableColumn<Office>[] = [
+const columns: TableColumn<OfficeRow>[] = [
   { accessorKey: 'code', header: 'Code' },
   { accessorKey: 'name', header: 'Office' },
   { id: 'status', header: 'Status' },
@@ -79,15 +135,15 @@ async function confirmDelete() {
 
 function rowActions(office: Office): DropdownMenuItem[][] {
   const groups: DropdownMenuItem[][] = []
-  const view: DropdownMenuItem[] = []
+  const primary: DropdownMenuItem[] = []
   if (can('offices.update')) {
-    view.push({ label: 'Edit', icon: 'i-lucide-pencil', onSelect: () => openEdit(office) })
+    primary.push({ label: 'Edit', icon: 'i-lucide-pencil', onSelect: () => openEdit(office) })
   }
   if (can('services.view')) {
-    view.push({ label: 'View services', icon: 'i-lucide-list-checks', to: { path: '/admin/services', query: { office_id: office.id } } })
+    primary.push({ label: 'View services', icon: 'i-lucide-list-checks', to: { path: '/admin/services', query: { office_id: office.id } } })
   }
-  if (view.length) {
-    groups.push(view)
+  if (primary.length) {
+    groups.push(primary)
   }
   if (can('offices.delete')) {
     groups.push([{ label: 'Delete', icon: 'i-lucide-trash-2', color: 'error', onSelect: () => openDelete(office) }])
@@ -131,6 +187,14 @@ function rowActions(office: Office): DropdownMenuItem[][] {
             class="w-36"
             aria-label="Filter by status"
           />
+          <UTabs
+            v-model="view"
+            :items="viewItems"
+            :content="false"
+            size="xs"
+            class="w-auto"
+            aria-label="View"
+          />
           <USelect
             id="offices-sort"
             v-model="query.sort"
@@ -153,19 +217,52 @@ function rowActions(office: Office): DropdownMenuItem[][] {
       />
 
       <UTable
-        :data="rows"
+        :data="tableRows"
         :columns="columns"
         :loading="loading"
         empty="No offices match these filters."
         :ui="{ thead: '[&>tr]:bg-elevated/50', td: 'border-b border-default' }"
       >
         <template #code-cell="{ row }">
-          <span class="font-mono text-sm font-medium text-highlighted">{{ row.original.code }}</span>
+          <div
+            class="flex items-center gap-1"
+            :style="{ paddingLeft: `${row.original.depth * 1.75}rem` }"
+          >
+            <UButton
+              v-if="row.original.childCount > 0"
+              :icon="collapsed.has(row.original.id) ? 'i-lucide-chevron-right' : 'i-lucide-chevron-down'"
+              color="neutral"
+              variant="ghost"
+              size="xs"
+              :aria-label="`${collapsed.has(row.original.id) ? 'Expand' : 'Collapse'} ${row.original.code}`"
+              :aria-expanded="!collapsed.has(row.original.id)"
+              @click="toggle(row.original)"
+            />
+            <span
+              v-else-if="view === 'tree'"
+              class="inline-block w-6"
+              aria-hidden="true"
+            />
+            <span class="font-mono text-sm font-medium text-highlighted">{{ row.original.code }}</span>
+            <UBadge
+              v-if="row.original.childCount > 0"
+              color="neutral"
+              variant="soft"
+              size="sm"
+              class="tabular-nums"
+              :aria-label="`${row.original.childCount} offices under ${row.original.code}`"
+            >
+              {{ row.original.childCount }}
+            </UBadge>
+          </div>
         </template>
         <template #name-cell="{ row }">
           <div class="flex min-w-0 flex-col">
             <span class="truncate">{{ row.original.name }}</span>
-            <span class="truncate font-mono text-xs text-muted">/f/{{ row.original.slug }}</span>
+            <span class="truncate font-mono text-xs text-muted">
+              /f/{{ row.original.slug }}
+              <template v-if="view === 'list' && row.original.parent"> · under {{ row.original.parent.code }}</template>
+            </span>
           </div>
         </template>
         <template #status-cell="{ row }">
@@ -216,7 +313,8 @@ function rowActions(office: Office): DropdownMenuItem[][] {
       <AdminOfficeFormModal
         v-model:open="formOpen"
         :office="editing"
-        @saved="load"
+        :office-options="officeOptions"
+        @saved="reload"
       />
 
       <AdminConfirmModal

@@ -1,8 +1,10 @@
 <?php
 
 use App\Models\Office;
+use App\Models\Region;
 use App\Models\Service;
 use App\Models\ServiceType;
+use App\Models\SqdQuestion;
 use Database\Seeders\DatabaseSeeder;
 
 function writeCatalog(array $data): string
@@ -53,24 +55,58 @@ describe('seed data', function () {
             ->and(Service::where('name', 'Disaster Response – Heavy Equipment Support Services')->exists())->toBeTrue();
     });
 
+    it('places the twelve OG-* offices under OG and keeps the tree one level deep', function () {
+        $og = Office::where('code', 'OG')->firstOrFail();
+
+        expect($og->parent_id)->toBeNull()
+            ->and($og->children()->count())->toBe(12)
+            ->and(Office::where('code', 'like', 'OG-%')->where('parent_id', '!=', $og->id)->count())->toBe(0)
+            ->and(Office::whereNotNull('parent_id')->count())->toBe(12)
+            ->and(Office::whereIn('parent_id', Office::whereNotNull('parent_id')->select('id'))->count())->toBe(0);
+    });
+
+    it('seeds the region of residence options in tally sheet order', function () {
+        expect(Region::ordered()->pluck('name')->all())->toBe([
+            'Central Office', 'Regional Office 1', 'Regional Office CAR', 'Regional Office 2',
+            'Regional Office 3', 'Regional Office NCR', 'Did not specify',
+        ]);
+    });
+
+    it('seeds SQD0 to SQD8 verbatim, with SQD0 outside the overall score', function () {
+        $questions = SqdQuestion::current()->get();
+
+        expect($questions->pluck('code')->all())->toBe(['SQD0', 'SQD1', 'SQD2', 'SQD3', 'SQD4', 'SQD5', 'SQD6', 'SQD7', 'SQD8'])
+            ->and($questions->where('included_in_overall', false)->pluck('code')->values()->all())->toBe(['SQD0'])
+            ->and($questions->firstWhere('code', 'SQD6')->statement)->toBe('I feel the office was fair to everyone, or “walang palakasan”, during my transaction.')
+            ->and($questions->every(fn (SqdQuestion $q) => mb_strlen($q->statement) <= 255))->toBeTrue();
+    });
+
     it('produces the same data when run twice', function () {
-        $before = [Office::count(), Service::count(), ServiceType::count()];
+        $counts = fn () => [
+            Office::count(), Office::whereNotNull('parent_id')->count(), Service::count(),
+            ServiceType::count(), Region::count(), SqdQuestion::count(),
+        ];
+        $before = $counts();
 
         $this->seed(DatabaseSeeder::class);
 
-        expect([Office::count(), Service::count(), ServiceType::count()])->toBe($before);
+        expect($counts())->toBe($before)->and($before)->toBe([36, 12, 241, 2, 7, 9]);
     });
 
     it('keeps changes made in the screens when re-run', function () {
         $service = Service::where('name', 'Payment of Approved Vouchers and Payrolls')->firstOrFail();
         $service->update(['service_type_id' => ServiceType::where('type', 'Internal')->value('id'), 'is_active' => false]);
         Office::where('code', 'PHO')->update(['name' => 'Provincial Health Office']);
+        Office::where('code', 'OG-BTS')->update(['parent_id' => null]);
+        Region::where('name', 'Did not specify')->update(['is_active' => false]);
 
         $this->seed(DatabaseSeeder::class);
 
         expect($service->fresh()->serviceType->type)->toBe('Internal')
             ->and($service->fresh()->is_active)->toBeFalse()
-            ->and(Office::where('code', 'PHO')->value('name'))->toBe('Provincial Health Office');
+            ->and(Office::where('code', 'PHO')->value('name'))->toBe('Provincial Health Office')
+            ->and(Office::where('code', 'OG-BTS')->value('parent_id'))->toBeNull()
+            ->and(Region::where('name', 'Did not specify')->value('is_active'))->toBeFalse();
     });
 });
 

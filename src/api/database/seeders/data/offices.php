@@ -13,24 +13,27 @@
 | OG-OPA and OSMP have no section in the 2026 charter (on hold: possibly the
 | same as OG Main and OSSP).
 |
-| [code, slug, name]
+| Every OG-* office sits under OG (playbook Q5); OG-IT and OG-Records sit
+| directly under OG too while the OPA question is on hold.
+|
+| [code, slug, name, parent code or null]
 |
 */
 
 return [
     ['OG', 'og', 'Office of the Governor (OG)'],
-    ['OG-OPA', 'og-opa', 'Office of the Provincial Administrator (OPA)'],
-    ['OG-Records', 'og-records', 'Records (OPA-Records)'],
-    ['OG-IT', 'og-it', 'Information Technology (OPA-IT)'],
-    ['OG-PESO', 'og-peso', 'Public Employment Services Office (OG-PESO)'],
-    ['OG-BAC', 'og-bac', 'Bids and Awards Committee (OG-BAC)'],
-    ['OG-CAO', 'og-cao', 'Community Affairs Office (OG-CAO)'],
-    ['OG-SDO', 'og-sdo', 'Sports Development Office (OG-SDO)'],
-    ['OG-BTS', 'og-bts', 'Benguet Technical School (OG-BTS)'],
-    ['OG-PDRRMO', 'og-pdrrmo', 'Provincial Disaster Risk Reduction Management Office (OG-PDRRMO)'],
-    ['OG-PTCAO', 'og-ptcao', 'Provincial Tourism and Cultural Affairs Office (OG-PTCAO)'],
-    ['OG-PWO', 'og-pwo', "Provincial Warden's Office (OG-PWO)"],
-    ['OG-Provincial Library', 'og-library', 'Provincial Library (OG-Library)'],
+    ['OG-OPA', 'og-opa', 'Office of the Provincial Administrator (OPA)', 'OG'],
+    ['OG-Records', 'og-records', 'Records (OPA-Records)', 'OG'],
+    ['OG-IT', 'og-it', 'Information Technology (OPA-IT)', 'OG'],
+    ['OG-PESO', 'og-peso', 'Public Employment Services Office (OG-PESO)', 'OG'],
+    ['OG-BAC', 'og-bac', 'Bids and Awards Committee (OG-BAC)', 'OG'],
+    ['OG-CAO', 'og-cao', 'Community Affairs Office (OG-CAO)', 'OG'],
+    ['OG-SDO', 'og-sdo', 'Sports Development Office (OG-SDO)', 'OG'],
+    ['OG-BTS', 'og-bts', 'Benguet Technical School (OG-BTS)', 'OG'],
+    ['OG-PDRRMO', 'og-pdrrmo', 'Provincial Disaster Risk Reduction Management Office (OG-PDRRMO)', 'OG'],
+    ['OG-PTCAO', 'og-ptcao', 'Provincial Tourism and Cultural Affairs Office (OG-PTCAO)', 'OG'],
+    ['OG-PWO', 'og-pwo', "Provincial Warden's Office (OG-PWO)", 'OG'],
+    ['OG-Provincial Library', 'og-library', 'Provincial Library (OG-Library)', 'OG'],
     ['OVG', 'ovg', 'Office of the Vice-Governor (OVG)'],
     ['PAccO', 'pacco', 'Provincial Accounting Office (PAccO )'],
     ['PAgO', 'pago', 'Provincial Agriculture Office (PAgO)'],

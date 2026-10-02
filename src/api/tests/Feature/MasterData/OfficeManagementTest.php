@@ -112,3 +112,70 @@ it('counts only active services as active', function () {
         ->assertJsonPath('data.0.services_count', 3)
         ->assertJsonPath('data.0.active_services_count', 2);
 });
+
+describe('office hierarchy', function () {
+    it('lists each office with its parent and the number of offices under it', function () {
+        $og = Office::where('code', 'OG')->firstOrFail();
+
+        $this->getJson('/api/v1/admin/offices?q=OG-BTS')
+            ->assertJsonPath('data.0.parent_id', $og->id)
+            ->assertJsonPath('data.0.parent.code', 'OG')
+            ->assertJsonPath('data.0.children_count', 0);
+        $this->getJson("/api/v1/admin/offices/{$og->id}")
+            ->assertJsonPath('data.parent', null)
+            ->assertJsonPath('data.children_count', 12);
+    });
+
+    it('creates an office under a top-level office', function () {
+        $og = Office::where('code', 'OG')->firstOrFail();
+
+        $this->postJson('/api/v1/admin/offices', ['code' => 'OG-NEW', 'name' => 'New Unit', 'parent_id' => $og->id])
+            ->assertCreated()
+            ->assertJsonPath('data.parent.code', 'OG');
+    });
+
+    it('moves an office to the top level and back', function () {
+        $bts = Office::where('code', 'OG-BTS')->firstOrFail();
+        $pho = Office::where('code', 'PHO')->firstOrFail();
+
+        $this->putJson("/api/v1/admin/offices/{$bts->id}", ['parent_id' => null])
+            ->assertOk()->assertJsonPath('data.parent_id', null);
+        $this->putJson("/api/v1/admin/offices/{$bts->id}", ['parent_id' => $pho->id])
+            ->assertOk()->assertJsonPath('data.parent.code', 'PHO');
+    });
+
+    it('refuses a parent that would make the tree deeper or loop', function (string $code, string $parentCode, string $message) {
+        $office = Office::where('code', $code)->firstOrFail();
+        $parent = Office::where('code', $parentCode)->firstOrFail();
+
+        $this->putJson("/api/v1/admin/offices/{$office->id}", ['parent_id' => $parent->id])
+            ->assertJsonValidationErrors(['parent_id' => $message]);
+    })->with([
+        'itself' => ['PHO', 'PHO', 'An office cannot sit under itself.'],
+        'a child office' => ['PHO', 'OG-BTS', 'OG-BTS already sits under another office. Choose a top-level office.'],
+        'an office with children' => ['OG', 'PHO', 'Other offices sit under OG, so it must stay a top-level office.'],
+    ]);
+
+    it('refuses a parent that does not exist', function () {
+        $this->postJson('/api/v1/admin/offices', ['code' => 'X2', 'name' => 'X', 'parent_id' => 999999])
+            ->assertJsonValidationErrors('parent_id');
+    });
+
+    it('will not delete an office that other offices sit under', function () {
+        $parent = Office::factory()->create();
+        Office::factory()->create(['parent_id' => $parent->id]);
+
+        $this->deleteJson("/api/v1/admin/offices/{$parent->id}")
+            ->assertJsonValidationErrors(['office' => '1 office(s) sit under this office. Move them to another office first.']);
+        $this->assertModelExists($parent);
+    });
+
+    it('gives pickers each office parent', function () {
+        $og = Office::where('code', 'OG')->value('id');
+
+        $options = collect($this->getJson('/api/v1/admin/office-options')->assertOk()->json('data'));
+
+        expect($options->firstWhere('code', 'OG-IT')['parent_id'])->toBe($og)
+            ->and($options->firstWhere('code', 'OG')['parent_id'])->toBeNull();
+    });
+});

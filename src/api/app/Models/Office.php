@@ -6,12 +6,14 @@ use Database\Factories\OfficeFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * A provincial office or hospital that runs its own client satisfaction survey.
  *
  * @property int $id
+ * @property int|null $parent_id
  * @property string $code
  * @property string $slug
  * @property string $name
@@ -24,7 +26,7 @@ class Office extends Model
     use HasFactory;
 
     /** @var list<string> */
-    protected $fillable = ['code', 'slug', 'name', 'is_active', 'sort_order'];
+    protected $fillable = ['parent_id', 'code', 'slug', 'name', 'is_active', 'sort_order'];
 
     /** Mirrors the column defaults so new instances are never null. */
     protected $attributes = ['is_active' => true, 'sort_order' => 0];
@@ -32,7 +34,24 @@ class Office extends Model
     /** @return array<string, string> */
     protected function casts(): array
     {
-        return ['is_active' => 'boolean', 'sort_order' => 'integer'];
+        return ['parent_id' => 'integer', 'is_active' => 'boolean', 'sort_order' => 'integer'];
+    }
+
+    /**
+     * The office this one sits under, for example OG for the OG-* offices.
+     * One level only: a parent never has a parent itself.
+     *
+     * @return BelongsTo<Office, $this>
+     */
+    public function parent(): BelongsTo
+    {
+        return $this->belongsTo(Office::class, 'parent_id');
+    }
+
+    /** @return HasMany<Office, $this> */
+    public function children(): HasMany
+    {
+        return $this->hasMany(Office::class, 'parent_id');
     }
 
     /** @return HasMany<Service, $this> */

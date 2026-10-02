@@ -11,16 +11,21 @@ export interface OfficeSummary {
 
 /** GET /api/v1/admin/office-options */
 export interface OfficeOption extends OfficeSummary {
+  parent_id: number | null
   is_active: boolean
 }
 
 export interface Office extends OfficeSummary {
+  /** One level only: a parent office never has a parent itself. */
+  parent_id: number | null
+  parent?: OfficeSummary | null
   slug: string
   is_active: boolean
   sort_order: number
   services_count?: number
   active_services_count?: number
   users_count?: number
+  children_count?: number
   created_at: string | null
   updated_at: string | null
 }

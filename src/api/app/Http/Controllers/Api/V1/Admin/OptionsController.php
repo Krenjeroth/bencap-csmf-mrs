@@ -53,7 +53,7 @@ class OptionsController extends Controller
         return response()->json([
             'data' => Office::query()
                 ->ordered()
-                ->get(['id', 'code', 'name', 'is_active']),
+                ->get(['id', 'parent_id', 'code', 'name', 'is_active']),
         ]);
     }
 

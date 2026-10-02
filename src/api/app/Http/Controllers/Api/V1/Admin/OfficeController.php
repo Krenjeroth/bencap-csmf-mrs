@@ -20,7 +20,8 @@ class OfficeController extends Controller
         [$column, $direction] = $request->sortColumn();
 
         $offices = Office::query()
-            ->withCount(['services', 'users', 'services as active_services_count' => fn ($q) => $q->where('is_active', true)])
+            ->with('parent:id,code,name')
+            ->withCount(['services', 'users', 'children', 'services as active_services_count' => fn ($q) => $q->where('is_active', true)])
             ->when($request->search(), fn ($q, $term) => $q->where(fn ($w) => $w
                 ->where('code', 'like', $term)
                 ->orWhere('name', 'like', $term)))
@@ -37,24 +38,31 @@ class OfficeController extends Controller
     {
         $office = Office::create($request->validated());
 
-        return (new OfficeResource($office->loadCount(['services', 'users'])))->response()->setStatusCode(201);
+        return (new OfficeResource($office->load('parent:id,code,name')->loadCount(['services', 'users', 'children'])))->response()->setStatusCode(201);
     }
 
     public function show(Office $office): OfficeResource
     {
-        return new OfficeResource($office->loadCount(['services', 'users']));
+        return new OfficeResource($office->load('parent:id,code,name')->loadCount(['services', 'users', 'children']));
     }
 
     public function update(OfficeRequest $request, Office $office): OfficeResource
     {
         $office->fill($request->validated())->save();
 
-        return new OfficeResource($office->loadCount(['services', 'users']));
+        return new OfficeResource($office->load('parent:id,code,name')->loadCount(['services', 'users', 'children']));
     }
 
     /** Only an office nothing refers to can be deleted; otherwise deactivate it. */
     public function destroy(Office $office): Response
     {
+        $children = $office->children()->count();
+        if ($children > 0) {
+            throw ValidationException::withMessages([
+                'office' => "{$children} office(s) sit under this office. Move them to another office first.",
+            ]);
+        }
+
         $services = $office->services()->count();
         $users = $office->users()->withTrashed()->count();
         if ($services > 0 || $users > 0) {
