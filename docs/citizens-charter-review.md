@@ -17,8 +17,11 @@ Machine-readable copy of every service below:
   **OG-CAO**, **OG-SDO**.
 - **OG-IT** and **OG-Records** stay as their own offices, because each office has
   its own CSMF.
-- **OG-OPA** is the same as Main, and **OSMP** the same as **OSSP**: on hold until
-  you confirm.
+- **OG-OPA** is the same office as Main (OG), and **OSMP** the same as **OSSP**
+  (confirmed 2026-10-02, playbook Q5). Both duplicates are removed from the
+  offices list, which leaves 34 offices.
+- The `OG-*` offices sit under OG in the office hierarchy, OG-IT and
+  OG-Records included (one level deep).
 - The name matches between the two documents (playbook 1.6) are accepted.
 - Typos in the offices list are left as they are.
 - **OVG** has a section in the 2026 charter (4 services).
@@ -29,7 +32,7 @@ Machine-readable copy of every service below:
 
 - **34 offices**, **241 services** (sub-services counted
   separately, written as “Parent – Service”).
-- **No section** for OSMP or OG-OPA (both on hold above).
+- OSMP and OG-OPA have no section of their own; both are duplicates (above).
 - The office drafts (Word files) had 217 services; the 2026 charter adds new
   ones (for example BGH HEENT and Social Services, KDH certificates, DMDH
   hemodialysis, PHO YAKAP clinic, PVO stunted-children support) and drops a
@@ -159,7 +162,7 @@ reports to the Provincial Governor.
 
 ### OG — Provincial Governor’s Office – Main and Administrative Division
 
-7 services. OG-OPA (Provincial Administrator) is the same as Main, per you; on hold until confirmed.
+7 services. OG-OPA (Provincial Administrator) is the same as Main (confirmed 2026-10-02).
 
 | # | Service | Classification | Transaction | Who may avail |
 |---:|---|---|---|---|

@@ -11,16 +11,16 @@ beforeEach(function () {
 it('lists offices in charter order with service and user counts', function () {
     $this->getJson('/api/v1/admin/offices?per_page=100')
         ->assertOk()
-        ->assertJsonPath('meta.total', 36)
+        ->assertJsonPath('meta.total', 34)
         ->assertJsonPath('data.0.code', 'OG')
         ->assertJsonPath('data.0.services_count', 7)
         ->assertJsonPath('data.0.active_services_count', 7)
-        ->assertJsonPath('data.35.code', 'BeGH')
-        ->assertJsonPath('data.35.services_count', 41);
+        ->assertJsonPath('data.33.code', 'BeGH')
+        ->assertJsonPath('data.33.services_count', 41);
 });
 
 it('searches code and name and filters by status', function () {
-    Office::where('code', 'OSMP')->update(['is_active' => false]);
+    Office::where('code', 'OSSP')->update(['is_active' => false]);
 
     $this->getJson('/api/v1/admin/offices?q=hospital')->assertJsonPath('meta.total', 6);
     $this->getJson('/api/v1/admin/offices?q=PESO')->assertJsonPath('data.0.code', 'OG-PESO');
@@ -68,7 +68,7 @@ it('normalises a typed slug to lower-case dashes', function () {
 });
 
 it('renames and deactivates an office', function () {
-    $office = Office::where('code', 'OSMP')->firstOrFail();
+    $office = Office::where('code', 'OSSP')->firstOrFail();
 
     $this->putJson("/api/v1/admin/offices/{$office->id}", ['name' => 'Sangguniang Panlalawigan Members', 'is_active' => false])
         ->assertOk()
@@ -123,7 +123,7 @@ describe('office hierarchy', function () {
             ->assertJsonPath('data.0.children_count', 0);
         $this->getJson("/api/v1/admin/offices/{$og->id}")
             ->assertJsonPath('data.parent', null)
-            ->assertJsonPath('data.children_count', 12);
+            ->assertJsonPath('data.children_count', 11);
     });
 
     it('creates an office under a top-level office', function () {

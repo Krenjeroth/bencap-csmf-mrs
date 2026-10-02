@@ -27,7 +27,7 @@ it('lists offices for pickers to anyone who may view users, offices or services'
 
     $this->getJson('/api/v1/admin/office-options')
         ->assertOk()
-        ->assertJsonCount(36, 'data')
+        ->assertJsonCount(34, 'data')
         ->assertJsonPath('data.0.code', 'OG');
 })->with(['users.view', 'offices.view', 'services.view']);
 

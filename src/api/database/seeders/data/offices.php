@@ -10,11 +10,10 @@
 | Citizen's Charter but were missing from the list: OG-PESO, OG-BAC,
 | OG-CAO and OG-SDO. Order follows the 2026 charter.
 |
-| OG-OPA and OSMP have no section in the 2026 charter (on hold: possibly the
-| same as OG Main and OSSP).
+| OG-OPA and OSMP from the specification are left out: OG-OPA is the same
+| office as OG, and OSMP the same as OSSP (playbook Q5, decided 2026-10-02).
 |
-| Every OG-* office sits under OG (playbook Q5); OG-IT and OG-Records sit
-| directly under OG too while the OPA question is on hold.
+| Every OG-* office sits under OG (playbook Q5), OG-IT and OG-Records included.
 |
 | [code, slug, name, parent code or null]
 |
@@ -22,7 +21,6 @@
 
 return [
     ['OG', 'og', 'Office of the Governor (OG)'],
-    ['OG-OPA', 'og-opa', 'Office of the Provincial Administrator (OPA)', 'OG'],
     ['OG-Records', 'og-records', 'Records (OPA-Records)', 'OG'],
     ['OG-IT', 'og-it', 'Information Technology (OPA-IT)', 'OG'],
     ['OG-PESO', 'og-peso', 'Public Employment Services Office (OG-PESO)', 'OG'],
@@ -49,7 +47,6 @@ return [
     ['PSWDO', 'pswdo', 'Provincial Social Welfare and Development Office (PSWDO)'],
     ['PTO', 'pto', "Provincial Treasurer's Office"],
     ['PVO', 'pvo', 'Provincial Veterinary Office'],
-    ['OSMP', 'osmp', 'Office of the Sangguniang Panlalawigan Members (OSMP)'],
     ['OSSP', 'ossp', 'Office of the Sangguniang Panlalawigan (OSSP)'],
     ['ADH', 'adh', 'Atok District Hospital'],
     ['DMDH', 'dmdh', 'Dennis Molintas District Hospital'],

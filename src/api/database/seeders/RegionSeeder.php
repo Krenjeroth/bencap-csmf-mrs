@@ -6,21 +6,36 @@ use App\Models\Region;
 use Illuminate\Database\Seeder;
 
 /**
- * Region of residence options, verbatim from the tally sheet (xlsx C10–C15),
- * plus "Did not specify" (playbook Q9). These look like office levels rather
- * than regions; whether the 17 real regions are wanted is still open (Q9).
- * Safe to re-run: existing rows (matched by name) are left as edited.
+ * Region of residence options (playbook Q9, decided 2026-10-02): the 18
+ * Philippine regions, including the Negros Island Region re-created by
+ * RA 12000 (2024), with CAR first because most of Benguet's clients live
+ * there, then the PSA order, then "Did not specify". The tally sheet's
+ * options (Central Office, Regional Office 1 …) were office levels, not
+ * places of residence. Safe to re-run: existing rows (matched by name) are
+ * left as edited.
  */
 class RegionSeeder extends Seeder
 {
     /** @var list<string> */
     public const NAMES = [
-        'Central Office',
-        'Regional Office 1',
-        'Regional Office CAR',
-        'Regional Office 2',
-        'Regional Office 3',
-        'Regional Office NCR',
+        'Cordillera Administrative Region (CAR)',
+        'National Capital Region (NCR)',
+        'Region I – Ilocos Region',
+        'Region II – Cagayan Valley',
+        'Region III – Central Luzon',
+        'Region IV-A – CALABARZON',
+        'MIMAROPA Region',
+        'Region V – Bicol Region',
+        'Region VI – Western Visayas',
+        'Negros Island Region (NIR)',
+        'Region VII – Central Visayas',
+        'Region VIII – Eastern Visayas',
+        'Region IX – Zamboanga Peninsula',
+        'Region X – Northern Mindanao',
+        'Region XI – Davao Region',
+        'Region XII – SOCCSKSARGEN',
+        'Region XIII – Caraga',
+        'Bangsamoro Autonomous Region in Muslim Mindanao (BARMM)',
         'Did not specify',
     ];
 

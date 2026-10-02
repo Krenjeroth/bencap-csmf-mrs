@@ -16,8 +16,9 @@ function writeCatalog(array $data): string
 }
 
 describe('seed data', function () {
-    it('creates the 36 offices in charter order', function () {
-        expect(Office::count())->toBe(36)
+    it('creates the 34 offices in charter order, without the duplicates OG-OPA and OSMP', function () {
+        expect(Office::count())->toBe(34)
+            ->and(Office::whereIn('code', ['OG-OPA', 'OSMP'])->exists())->toBeFalse()
             ->and(Office::ordered()->first()->code)->toBe('OG')
             ->and(Office::ordered()->get()->last()->code)->toBe('BeGH')
             ->and(Office::whereIn('code', ['OG-PESO', 'OG-BAC', 'OG-CAO', 'OG-SDO'])->count())->toBe(4);
@@ -47,7 +48,7 @@ describe('seed data', function () {
     })->with([
         ['OG', 7], ['OG-BAC', 3], ['OG-BTS', 8], ['OG-PDRRMO', 7], ['OVG', 4], ['PBO', 2],
         ['PSWDO', 7], ['PTO', 16], ['PVO', 19], ['IDH', 13], ['KDH', 13], ['NBDH', 14], ['BeGH', 41],
-        ['OG-OPA', 0], ['OSMP', 0],
+        ['OSSP', 2],
     ]);
 
     it('writes sub-services as Parent – Service', function () {
@@ -55,21 +56,25 @@ describe('seed data', function () {
             ->and(Service::where('name', 'Disaster Response – Heavy Equipment Support Services')->exists())->toBeTrue();
     });
 
-    it('places the twelve OG-* offices under OG and keeps the tree one level deep', function () {
+    it('places the eleven OG-* offices under OG and keeps the tree one level deep', function () {
         $og = Office::where('code', 'OG')->firstOrFail();
 
         expect($og->parent_id)->toBeNull()
-            ->and($og->children()->count())->toBe(12)
+            ->and($og->children()->count())->toBe(11)
             ->and(Office::where('code', 'like', 'OG-%')->where('parent_id', '!=', $og->id)->count())->toBe(0)
-            ->and(Office::whereNotNull('parent_id')->count())->toBe(12)
+            ->and(Office::whereNotNull('parent_id')->count())->toBe(11)
             ->and(Office::whereIn('parent_id', Office::whereNotNull('parent_id')->select('id'))->count())->toBe(0);
     });
 
-    it('seeds the region of residence options in tally sheet order', function () {
-        expect(Region::ordered()->pluck('name')->all())->toBe([
-            'Central Office', 'Regional Office 1', 'Regional Office CAR', 'Regional Office 2',
-            'Regional Office 3', 'Regional Office NCR', 'Did not specify',
-        ]);
+    it('seeds the 18 Philippine regions with CAR first and Did not specify last', function () {
+        $names = Region::ordered()->pluck('name');
+
+        expect($names)->toHaveCount(19)
+            ->and($names->first())->toBe('Cordillera Administrative Region (CAR)')
+            ->and($names->last())->toBe('Did not specify')
+            ->and($names->all())->toContain('Negros Island Region (NIR)', 'Bangsamoro Autonomous Region in Muslim Mindanao (BARMM)')
+            ->and($names->every(fn (string $name) => mb_strlen($name) <= 100))->toBeTrue()
+            ->and(Region::where('name', 'like', 'Regional Office%')->exists())->toBeFalse();
     });
 
     it('seeds SQD0 to SQD8 verbatim, with SQD0 outside the overall score', function () {
@@ -90,7 +95,7 @@ describe('seed data', function () {
 
         $this->seed(DatabaseSeeder::class);
 
-        expect($counts())->toBe($before)->and($before)->toBe([36, 12, 241, 2, 7, 9]);
+        expect($counts())->toBe($before)->and($before)->toBe([34, 11, 241, 2, 19, 9]);
     });
 
     it('keeps changes made in the screens when re-run', function () {
