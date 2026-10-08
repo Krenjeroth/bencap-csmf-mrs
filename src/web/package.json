@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@iconify-json/lucide": "^1.2.138",
-    "@nuxt/ui": "^4.11.2",
+    "@nuxt/ui": "^4.11.3",
     "nuxt": "^4.5.2",
     "nuxt-auth-sanctum": "^3.1.2",
     "tailwindcss": "^4.3.3",
